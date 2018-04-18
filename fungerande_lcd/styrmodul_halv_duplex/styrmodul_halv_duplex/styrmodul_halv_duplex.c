@@ -424,25 +424,40 @@ void back_right_forward_end(void)
 */
 
 /************************************************************************************************************
-******************************************Per's benfunktioner************************************************
+******************************************benfunktioner v. 0.3************************************************
 *************************************************************************************************************/
 
 void front_right_leg_forward(void)
 {
+	//forward
 	_delay_ms(500);
-	reg_servo_angle(0x06, 155);
-	reg_servo_angle(0x07, 80);
-	reg_servo_angle(0x08, 220);
+	reg_servo_angle(0x06, 177);
+	reg_servo_angle(0x07, 87);
+	reg_servo_angle(0x08, 226);
 	action();
 	
-	_delay_ms(2000);
-	
-	reg_servo_angle(0x06, 130);
-	reg_servo_angle(0x07, STAND_DEG_07);
-	reg_servo_angle(0x08, STAND_DEG_08);
+	//back
+	_delay_ms(500);
+	reg_servo_angle(0x06, 123);
+	reg_servo_angle(0x07, 104);
+	reg_servo_angle(0x08, 215);
 	action();
 }
 
+void middle_right_leg_forward(void)
+{
+	_delay_ms(500);
+	reg_servo_angle(0x03, 177);
+	reg_servo_angle(0x04, 87);
+	reg_servo_angle(0x05, 226);
+	action();
+	
+	_delay_ms(500);
+	reg_servo_angle(0x03, 123);
+	reg_servo_angle(0x04, 104);
+	reg_servo_angle(0x05, 215);
+	action();
+}
 
 /************************************************************************************************************
 *******************************************  HÅRDKODAD GÅNG  ***********************************************
@@ -563,14 +578,14 @@ int main (void)
 	uint16_t return_packet;
 	LCD_Clear();
 	
-		_delay_ms(500);
-		reg_servo_angle(0x06, 105);
-		reg_servo_angle(0x07, 150);
-		reg_servo_angle(0x08, 100);
-		action();
+		
+		
 	
 	while(1)
 	{
+	
+		middle_right_leg_forward();
+
 	
 		//set_servo_angle(0x06, 80);
 		//_delay_ms(2000);
