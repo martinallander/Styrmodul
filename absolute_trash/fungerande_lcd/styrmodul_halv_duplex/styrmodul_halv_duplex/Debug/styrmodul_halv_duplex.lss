@@ -1,0 +1,2977 @@
+
+styrmodul_halv_duplex.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000015aa  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000030  00000000  00000000  000015fe  2**0
+                  CONTENTS, READONLY
+  2 .debug_aranges 000001a8  00000000  00000000  0000162e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   00004b4b  00000000  00000000  000017d6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 000004a2  00000000  00000000  00006321  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   000012fb  00000000  00000000  000067c3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000400  00000000  00000000  00007ac0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    000004f9  00000000  00000000  00007ec0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    00000c7d  00000000  00000000  000083b9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_ranges 000001a0  00000000  00000000  00009036  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+       2:	00 00       	nop
+       4:	4d c0       	rjmp	.+154    	; 0xa0 <__bad_interrupt>
+       6:	00 00       	nop
+       8:	4b c0       	rjmp	.+150    	; 0xa0 <__bad_interrupt>
+       a:	00 00       	nop
+       c:	49 c0       	rjmp	.+146    	; 0xa0 <__bad_interrupt>
+       e:	00 00       	nop
+      10:	47 c0       	rjmp	.+142    	; 0xa0 <__bad_interrupt>
+      12:	00 00       	nop
+      14:	45 c0       	rjmp	.+138    	; 0xa0 <__bad_interrupt>
+      16:	00 00       	nop
+      18:	43 c0       	rjmp	.+134    	; 0xa0 <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	41 c0       	rjmp	.+130    	; 0xa0 <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	3f c0       	rjmp	.+126    	; 0xa0 <__bad_interrupt>
+      22:	00 00       	nop
+      24:	3d c0       	rjmp	.+122    	; 0xa0 <__bad_interrupt>
+      26:	00 00       	nop
+      28:	3b c0       	rjmp	.+118    	; 0xa0 <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	39 c0       	rjmp	.+114    	; 0xa0 <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	37 c0       	rjmp	.+110    	; 0xa0 <__bad_interrupt>
+      32:	00 00       	nop
+      34:	35 c0       	rjmp	.+106    	; 0xa0 <__bad_interrupt>
+      36:	00 00       	nop
+      38:	33 c0       	rjmp	.+102    	; 0xa0 <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	31 c0       	rjmp	.+98     	; 0xa0 <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	2f c0       	rjmp	.+94     	; 0xa0 <__bad_interrupt>
+      42:	00 00       	nop
+      44:	2d c0       	rjmp	.+90     	; 0xa0 <__bad_interrupt>
+      46:	00 00       	nop
+      48:	2b c0       	rjmp	.+86     	; 0xa0 <__bad_interrupt>
+      4a:	00 00       	nop
+      4c:	29 c0       	rjmp	.+82     	; 0xa0 <__bad_interrupt>
+      4e:	00 00       	nop
+      50:	27 c0       	rjmp	.+78     	; 0xa0 <__bad_interrupt>
+      52:	00 00       	nop
+      54:	25 c0       	rjmp	.+74     	; 0xa0 <__bad_interrupt>
+      56:	00 00       	nop
+      58:	23 c0       	rjmp	.+70     	; 0xa0 <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	21 c0       	rjmp	.+66     	; 0xa0 <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	1f c0       	rjmp	.+62     	; 0xa0 <__bad_interrupt>
+      62:	00 00       	nop
+      64:	1d c0       	rjmp	.+58     	; 0xa0 <__bad_interrupt>
+      66:	00 00       	nop
+      68:	1b c0       	rjmp	.+54     	; 0xa0 <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	19 c0       	rjmp	.+50     	; 0xa0 <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	17 c0       	rjmp	.+46     	; 0xa0 <__bad_interrupt>
+      72:	00 00       	nop
+      74:	15 c0       	rjmp	.+42     	; 0xa0 <__bad_interrupt>
+      76:	00 00       	nop
+      78:	13 c0       	rjmp	.+38     	; 0xa0 <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	11 c0       	rjmp	.+34     	; 0xa0 <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	0f c0       	rjmp	.+30     	; 0xa0 <__bad_interrupt>
+      82:	00 00       	nop
+      84:	0d c0       	rjmp	.+26     	; 0xa0 <__bad_interrupt>
+      86:	00 00       	nop
+      88:	0b c0       	rjmp	.+22     	; 0xa0 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+      8c:	11 24       	eor	r1, r1
+      8e:	1f be       	out	0x3f, r1	; 63
+      90:	cf ef       	ldi	r28, 0xFF	; 255
+      92:	d0 e4       	ldi	r29, 0x40	; 64
+      94:	de bf       	out	0x3e, r29	; 62
+      96:	cd bf       	out	0x3d, r28	; 61
+      98:	0e 94 bc 09 	call	0x1378	; 0x1378 <main>
+      9c:	0c 94 d3 0a 	jmp	0x15a6	; 0x15a6 <_exit>
+
+000000a0 <__bad_interrupt>:
+      a0:	af cf       	rjmp	.-162    	; 0x0 <__vectors>
+
+000000a2 <LCD_Command>:
+	if (row == 0 && pos<16)
+	LCD_Command((pos & 0x0F)|0x80);		/* Command of first row and required position<16 */
+	else if (row == 1 && pos<16)
+	LCD_Command((pos & 0x0F)|0xC0);		/* Command of first row and required position<16 */
+	LCD_String(str);					/* Call LCD string function */
+}
+      a2:	92 b1       	in	r25, 0x02	; 2
+      a4:	28 2f       	mov	r18, r24
+      a6:	20 7f       	andi	r18, 0xF0	; 240
+      a8:	9f 70       	andi	r25, 0x0F	; 15
+      aa:	92 2b       	or	r25, r18
+      ac:	92 b9       	out	0x02, r25	; 2
+      ae:	13 98       	cbi	0x02, 3	; 2
+      b0:	12 9a       	sbi	0x02, 2	; 2
+      b2:	35 e0       	ldi	r19, 0x05	; 5
+      b4:	3a 95       	dec	r19
+      b6:	f1 f7       	brne	.-4      	; 0xb4 <LCD_Command+0x12>
+      b8:	00 00       	nop
+      ba:	12 98       	cbi	0x02, 2	; 2
+      bc:	ef e1       	ldi	r30, 0x1F	; 31
+      be:	f3 e0       	ldi	r31, 0x03	; 3
+      c0:	31 97       	sbiw	r30, 0x01	; 1
+      c2:	f1 f7       	brne	.-4      	; 0xc0 <LCD_Command+0x1e>
+      c4:	00 c0       	rjmp	.+0      	; 0xc6 <LCD_Command+0x24>
+      c6:	00 00       	nop
+      c8:	22 b1       	in	r18, 0x02	; 2
+      ca:	f0 e1       	ldi	r31, 0x10	; 16
+      cc:	8f 9f       	mul	r24, r31
+      ce:	c0 01       	movw	r24, r0
+      d0:	11 24       	eor	r1, r1
+      d2:	92 2f       	mov	r25, r18
+      d4:	9f 70       	andi	r25, 0x0F	; 15
+      d6:	89 2b       	or	r24, r25
+      d8:	82 b9       	out	0x02, r24	; 2
+      da:	12 9a       	sbi	0x02, 2	; 2
+      dc:	35 e0       	ldi	r19, 0x05	; 5
+      de:	3a 95       	dec	r19
+      e0:	f1 f7       	brne	.-4      	; 0xde <LCD_Command+0x3c>
+      e2:	00 00       	nop
+      e4:	12 98       	cbi	0x02, 2	; 2
+      e6:	8f e3       	ldi	r24, 0x3F	; 63
+      e8:	9f e1       	ldi	r25, 0x1F	; 31
+      ea:	01 97       	sbiw	r24, 0x01	; 1
+      ec:	f1 f7       	brne	.-4      	; 0xea <LCD_Command+0x48>
+      ee:	00 c0       	rjmp	.+0      	; 0xf0 <LCD_Command+0x4e>
+      f0:	00 00       	nop
+      f2:	08 95       	ret
+
+000000f4 <LCD_Init>:
+      f4:	8f ef       	ldi	r24, 0xFF	; 255
+      f6:	81 b9       	out	0x01, r24	; 1
+      f8:	2f ef       	ldi	r18, 0xFF	; 255
+      fa:	89 ef       	ldi	r24, 0xF9	; 249
+      fc:	90 e0       	ldi	r25, 0x00	; 0
+      fe:	21 50       	subi	r18, 0x01	; 1
+     100:	80 40       	sbci	r24, 0x00	; 0
+     102:	90 40       	sbci	r25, 0x00	; 0
+     104:	e1 f7       	brne	.-8      	; 0xfe <LCD_Init+0xa>
+     106:	00 c0       	rjmp	.+0      	; 0x108 <LCD_Init+0x14>
+     108:	00 00       	nop
+     10a:	83 e3       	ldi	r24, 0x33	; 51
+     10c:	ca df       	rcall	.-108    	; 0xa2 <LCD_Command>
+     10e:	82 e3       	ldi	r24, 0x32	; 50
+     110:	c8 df       	rcall	.-112    	; 0xa2 <LCD_Command>
+     112:	88 e2       	ldi	r24, 0x28	; 40
+     114:	c6 df       	rcall	.-116    	; 0xa2 <LCD_Command>
+     116:	8c e0       	ldi	r24, 0x0C	; 12
+     118:	c4 df       	rcall	.-120    	; 0xa2 <LCD_Command>
+     11a:	86 e0       	ldi	r24, 0x06	; 6
+     11c:	c2 df       	rcall	.-124    	; 0xa2 <LCD_Command>
+     11e:	81 e0       	ldi	r24, 0x01	; 1
+     120:	c0 df       	rcall	.-128    	; 0xa2 <LCD_Command>
+     122:	8f e3       	ldi	r24, 0x3F	; 63
+     124:	9f e1       	ldi	r25, 0x1F	; 31
+     126:	01 97       	sbiw	r24, 0x01	; 1
+     128:	f1 f7       	brne	.-4      	; 0x126 <LCD_Init+0x32>
+     12a:	00 c0       	rjmp	.+0      	; 0x12c <LCD_Init+0x38>
+     12c:	00 00       	nop
+     12e:	80 e8       	ldi	r24, 0x80	; 128
+     130:	b8 cf       	rjmp	.-144    	; 0xa2 <LCD_Command>
+     132:	08 95       	ret
+
+00000134 <LCD_Clear>:
+
+void LCD_Clear()
+{
+	LCD_Command (0x01);					/* Clear display */
+     134:	81 e0       	ldi	r24, 0x01	; 1
+     136:	b5 df       	rcall	.-150    	; 0xa2 <LCD_Command>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     138:	8f e3       	ldi	r24, 0x3F	; 63
+     13a:	9f e1       	ldi	r25, 0x1F	; 31
+     13c:	01 97       	sbiw	r24, 0x01	; 1
+     13e:	f1 f7       	brne	.-4      	; 0x13c <LCD_Clear+0x8>
+     140:	00 c0       	rjmp	.+0      	; 0x142 <LCD_Clear+0xe>
+     142:	00 00       	nop
+	_delay_ms(2);
+	LCD_Command (0x80);					/* Cursor 1st row 0th position */
+     144:	80 e8       	ldi	r24, 0x80	; 128
+     146:	ad cf       	rjmp	.-166    	; 0xa2 <LCD_Command>
+     148:	08 95       	ret
+
+0000014a <uart_init>:
+	}
+	
+	uint8_t CheckSum = uart_recieve();
+	led_blink(1);													//Signalerar att överföringen är klar
+	return ValueOfParameters;										//Om det är vinklar som hämtas så måste ValueOfParameters multipliceras med (uint16_t)300/1023
+}
+     14a:	10 92 c5 00 	sts	0x00C5, r1
+     14e:	10 92 c4 00 	sts	0x00C4, r1
+     152:	86 e0       	ldi	r24, 0x06	; 6
+     154:	80 93 c2 00 	sts	0x00C2, r24
+     158:	80 e1       	ldi	r24, 0x10	; 16
+     15a:	80 93 c1 00 	sts	0x00C1, r24
+     15e:	08 95       	ret
+
+00000160 <uart_transmit>:
+     160:	e0 ec       	ldi	r30, 0xC0	; 192
+     162:	f0 e0       	ldi	r31, 0x00	; 0
+     164:	90 81       	ld	r25, Z
+     166:	95 ff       	sbrs	r25, 5
+     168:	fd cf       	rjmp	.-6      	; 0x164 <uart_transmit+0x4>
+     16a:	80 93 c6 00 	sts	0x00C6, r24
+     16e:	08 95       	ret
+
+00000170 <send_servo_command>:
+     170:	df 92       	push	r13
+     172:	ef 92       	push	r14
+     174:	ff 92       	push	r15
+     176:	0f 93       	push	r16
+     178:	1f 93       	push	r17
+     17a:	cf 93       	push	r28
+     17c:	df 93       	push	r29
+     17e:	c8 2f       	mov	r28, r24
+     180:	e6 2e       	mov	r14, r22
+     182:	d4 2e       	mov	r13, r20
+     184:	02 2f       	mov	r16, r18
+     186:	13 2f       	mov	r17, r19
+     188:	88 e0       	ldi	r24, 0x08	; 8
+     18a:	80 93 c1 00 	sts	0x00C1, r24
+     18e:	e0 ec       	ldi	r30, 0xC0	; 192
+     190:	f0 e0       	ldi	r31, 0x00	; 0
+     192:	80 81       	ld	r24, Z
+     194:	80 83       	st	Z, r24
+     196:	8f ef       	ldi	r24, 0xFF	; 255
+     198:	e3 df       	rcall	.-58     	; 0x160 <uart_transmit>
+     19a:	8f ef       	ldi	r24, 0xFF	; 255
+     19c:	e1 df       	rcall	.-62     	; 0x160 <uart_transmit>
+     19e:	8c 2f       	mov	r24, r28
+     1a0:	df df       	rcall	.-66     	; 0x160 <uart_transmit>
+     1a2:	82 e0       	ldi	r24, 0x02	; 2
+     1a4:	8d 0d       	add	r24, r13
+     1a6:	dc df       	rcall	.-72     	; 0x160 <uart_transmit>
+     1a8:	8e 2d       	mov	r24, r14
+     1aa:	da df       	rcall	.-76     	; 0x160 <uart_transmit>
+     1ac:	e3 94       	inc	r14
+     1ae:	e3 94       	inc	r14
+     1b0:	ed 0c       	add	r14, r13
+     1b2:	ec 0e       	add	r14, r28
+     1b4:	dd 20       	and	r13, r13
+     1b6:	61 f0       	breq	.+24     	; 0x1d0 <send_servo_command+0x60>
+     1b8:	c0 2f       	mov	r28, r16
+     1ba:	d1 2f       	mov	r29, r17
+     1bc:	f1 2c       	mov	r15, r1
+     1be:	8e 01       	movw	r16, r28
+     1c0:	89 91       	ld	r24, Y+
+     1c2:	ce df       	rcall	.-100    	; 0x160 <uart_transmit>
+     1c4:	f8 01       	movw	r30, r16
+     1c6:	80 81       	ld	r24, Z
+     1c8:	e8 0e       	add	r14, r24
+     1ca:	f3 94       	inc	r15
+     1cc:	fd 10       	cpse	r15, r13
+     1ce:	f7 cf       	rjmp	.-18     	; 0x1be <send_servo_command+0x4e>
+     1d0:	f8 94       	cli
+     1d2:	8e 2d       	mov	r24, r14
+     1d4:	80 95       	com	r24
+     1d6:	c4 df       	rcall	.-120    	; 0x160 <uart_transmit>
+     1d8:	e0 ec       	ldi	r30, 0xC0	; 192
+     1da:	f0 e0       	ldi	r31, 0x00	; 0
+     1dc:	80 81       	ld	r24, Z
+     1de:	86 ff       	sbrs	r24, 6
+     1e0:	fd cf       	rjmp	.-6      	; 0x1dc <send_servo_command+0x6c>
+     1e2:	80 e1       	ldi	r24, 0x10	; 16
+     1e4:	80 93 c1 00 	sts	0x00C1, r24
+     1e8:	78 94       	sei
+     1ea:	df 91       	pop	r29
+     1ec:	cf 91       	pop	r28
+     1ee:	1f 91       	pop	r17
+     1f0:	0f 91       	pop	r16
+     1f2:	ff 90       	pop	r15
+     1f4:	ef 90       	pop	r14
+     1f6:	df 90       	pop	r13
+     1f8:	08 95       	ret
+
+000001fa <set_servo_status_return_level>:
+     1fa:	cf 93       	push	r28
+     1fc:	df 93       	push	r29
+     1fe:	00 d0       	rcall	.+0      	; 0x200 <set_servo_status_return_level+0x6>
+     200:	cd b7       	in	r28, 0x3d	; 61
+     202:	de b7       	in	r29, 0x3e	; 62
+     204:	90 e1       	ldi	r25, 0x10	; 16
+     206:	99 83       	std	Y+1, r25	; 0x01
+     208:	6a 83       	std	Y+2, r22	; 0x02
+     20a:	9e 01       	movw	r18, r28
+     20c:	2f 5f       	subi	r18, 0xFF	; 255
+     20e:	3f 4f       	sbci	r19, 0xFF	; 255
+     210:	42 e0       	ldi	r20, 0x02	; 2
+     212:	63 e0       	ldi	r22, 0x03	; 3
+     214:	ad df       	rcall	.-166    	; 0x170 <send_servo_command>
+     216:	0f 90       	pop	r0
+     218:	0f 90       	pop	r0
+     21a:	df 91       	pop	r29
+     21c:	cf 91       	pop	r28
+     21e:	08 95       	ret
+
+00000220 <set_servo_max_speed>:
+     220:	cf 93       	push	r28
+     222:	df 93       	push	r29
+     224:	00 d0       	rcall	.+0      	; 0x226 <set_servo_max_speed+0x6>
+     226:	1f 92       	push	r1
+     228:	cd b7       	in	r28, 0x3d	; 61
+     22a:	de b7       	in	r29, 0x3e	; 62
+     22c:	90 e2       	ldi	r25, 0x20	; 32
+     22e:	99 83       	std	Y+1, r25	; 0x01
+     230:	6a 83       	std	Y+2, r22	; 0x02
+     232:	7b 83       	std	Y+3, r23	; 0x03
+     234:	9e 01       	movw	r18, r28
+     236:	2f 5f       	subi	r18, 0xFF	; 255
+     238:	3f 4f       	sbci	r19, 0xFF	; 255
+     23a:	43 e0       	ldi	r20, 0x03	; 3
+     23c:	63 e0       	ldi	r22, 0x03	; 3
+     23e:	98 df       	rcall	.-208    	; 0x170 <send_servo_command>
+     240:	0f 90       	pop	r0
+     242:	0f 90       	pop	r0
+     244:	0f 90       	pop	r0
+     246:	df 91       	pop	r29
+     248:	cf 91       	pop	r28
+     24a:	08 95       	ret
+
+0000024c <set_servo_torque>:
+     24c:	cf 93       	push	r28
+     24e:	df 93       	push	r29
+     250:	00 d0       	rcall	.+0      	; 0x252 <set_servo_torque+0x6>
+     252:	1f 92       	push	r1
+     254:	cd b7       	in	r28, 0x3d	; 61
+     256:	de b7       	in	r29, 0x3e	; 62
+     258:	92 e2       	ldi	r25, 0x22	; 34
+     25a:	99 83       	std	Y+1, r25	; 0x01
+     25c:	6a 83       	std	Y+2, r22	; 0x02
+     25e:	7b 83       	std	Y+3, r23	; 0x03
+     260:	9e 01       	movw	r18, r28
+     262:	2f 5f       	subi	r18, 0xFF	; 255
+     264:	3f 4f       	sbci	r19, 0xFF	; 255
+     266:	43 e0       	ldi	r20, 0x03	; 3
+     268:	63 e0       	ldi	r22, 0x03	; 3
+     26a:	82 df       	rcall	.-252    	; 0x170 <send_servo_command>
+     26c:	0f 90       	pop	r0
+     26e:	0f 90       	pop	r0
+     270:	0f 90       	pop	r0
+     272:	df 91       	pop	r29
+     274:	cf 91       	pop	r28
+     276:	08 95       	ret
+
+00000278 <reg_servo_angle>:
+     278:	1f 93       	push	r17
+     27a:	cf 93       	push	r28
+     27c:	df 93       	push	r29
+     27e:	00 d0       	rcall	.+0      	; 0x280 <reg_servo_angle+0x8>
+     280:	1f 92       	push	r1
+     282:	cd b7       	in	r28, 0x3d	; 61
+     284:	de b7       	in	r29, 0x3e	; 62
+     286:	18 2f       	mov	r17, r24
+     288:	cb 01       	movw	r24, r22
+     28a:	ba 01       	movw	r22, r20
+     28c:	21 e7       	ldi	r18, 0x71	; 113
+     28e:	3d e3       	ldi	r19, 0x3D	; 61
+     290:	4a e5       	ldi	r20, 0x5A	; 90
+     292:	50 e4       	ldi	r21, 0x40	; 64
+     294:	0e 94 48 0a 	call	0x1490	; 0x1490 <__mulsf3>
+     298:	0e 94 f3 09 	call	0x13e6	; 0x13e6 <__fixunssfsi>
+     29c:	8e e1       	ldi	r24, 0x1E	; 30
+     29e:	89 83       	std	Y+1, r24	; 0x01
+     2a0:	6a 83       	std	Y+2, r22	; 0x02
+     2a2:	7b 83       	std	Y+3, r23	; 0x03
+     2a4:	9e 01       	movw	r18, r28
+     2a6:	2f 5f       	subi	r18, 0xFF	; 255
+     2a8:	3f 4f       	sbci	r19, 0xFF	; 255
+     2aa:	43 e0       	ldi	r20, 0x03	; 3
+     2ac:	64 e0       	ldi	r22, 0x04	; 4
+     2ae:	81 2f       	mov	r24, r17
+     2b0:	5f df       	rcall	.-322    	; 0x170 <send_servo_command>
+     2b2:	0f 90       	pop	r0
+     2b4:	0f 90       	pop	r0
+     2b6:	0f 90       	pop	r0
+     2b8:	df 91       	pop	r29
+     2ba:	cf 91       	pop	r28
+     2bc:	1f 91       	pop	r17
+     2be:	08 95       	ret
+
+000002c0 <action>:
+     2c0:	cf 93       	push	r28
+     2c2:	df 93       	push	r29
+     2c4:	1f 92       	push	r1
+     2c6:	cd b7       	in	r28, 0x3d	; 61
+     2c8:	de b7       	in	r29, 0x3e	; 62
+     2ca:	19 82       	std	Y+1, r1	; 0x01
+     2cc:	9e 01       	movw	r18, r28
+     2ce:	2f 5f       	subi	r18, 0xFF	; 255
+     2d0:	3f 4f       	sbci	r19, 0xFF	; 255
+     2d2:	40 e0       	ldi	r20, 0x00	; 0
+     2d4:	65 e0       	ldi	r22, 0x05	; 5
+     2d6:	8e ef       	ldi	r24, 0xFE	; 254
+     2d8:	4b df       	rcall	.-362    	; 0x170 <send_servo_command>
+     2da:	0f 90       	pop	r0
+     2dc:	df 91       	pop	r29
+     2de:	cf 91       	pop	r28
+     2e0:	08 95       	ret
+
+000002e2 <stand>:
+     2e2:	40 e0       	ldi	r20, 0x00	; 0
+     2e4:	50 e0       	ldi	r21, 0x00	; 0
+     2e6:	66 e1       	ldi	r22, 0x16	; 22
+     2e8:	73 e4       	ldi	r23, 0x43	; 67
+     2ea:	80 e0       	ldi	r24, 0x00	; 0
+     2ec:	c5 df       	rcall	.-118    	; 0x278 <reg_servo_angle>
+     2ee:	40 e0       	ldi	r20, 0x00	; 0
+     2f0:	50 e0       	ldi	r21, 0x00	; 0
+     2f2:	66 e1       	ldi	r22, 0x16	; 22
+     2f4:	73 e4       	ldi	r23, 0x43	; 67
+     2f6:	83 e0       	ldi	r24, 0x03	; 3
+     2f8:	bf df       	rcall	.-130    	; 0x278 <reg_servo_angle>
+     2fa:	40 e0       	ldi	r20, 0x00	; 0
+     2fc:	50 e0       	ldi	r21, 0x00	; 0
+     2fe:	66 e1       	ldi	r22, 0x16	; 22
+     300:	73 e4       	ldi	r23, 0x43	; 67
+     302:	86 e0       	ldi	r24, 0x06	; 6
+     304:	b9 df       	rcall	.-142    	; 0x278 <reg_servo_angle>
+     306:	40 e0       	ldi	r20, 0x00	; 0
+     308:	50 e0       	ldi	r21, 0x00	; 0
+     30a:	66 e1       	ldi	r22, 0x16	; 22
+     30c:	73 e4       	ldi	r23, 0x43	; 67
+     30e:	89 e0       	ldi	r24, 0x09	; 9
+     310:	b3 df       	rcall	.-154    	; 0x278 <reg_servo_angle>
+     312:	40 e0       	ldi	r20, 0x00	; 0
+     314:	50 e0       	ldi	r21, 0x00	; 0
+     316:	66 e1       	ldi	r22, 0x16	; 22
+     318:	73 e4       	ldi	r23, 0x43	; 67
+     31a:	8c e0       	ldi	r24, 0x0C	; 12
+     31c:	ad df       	rcall	.-166    	; 0x278 <reg_servo_angle>
+     31e:	40 e0       	ldi	r20, 0x00	; 0
+     320:	50 e0       	ldi	r21, 0x00	; 0
+     322:	66 e1       	ldi	r22, 0x16	; 22
+     324:	73 e4       	ldi	r23, 0x43	; 67
+     326:	8f e0       	ldi	r24, 0x0F	; 15
+     328:	a7 df       	rcall	.-178    	; 0x278 <reg_servo_angle>
+     32a:	40 e0       	ldi	r20, 0x00	; 0
+     32c:	50 e0       	ldi	r21, 0x00	; 0
+     32e:	64 eb       	ldi	r22, 0xB4	; 180
+     330:	72 e4       	ldi	r23, 0x42	; 66
+     332:	81 e0       	ldi	r24, 0x01	; 1
+     334:	a1 df       	rcall	.-190    	; 0x278 <reg_servo_angle>
+     336:	40 e0       	ldi	r20, 0x00	; 0
+     338:	50 e0       	ldi	r21, 0x00	; 0
+     33a:	64 eb       	ldi	r22, 0xB4	; 180
+     33c:	72 e4       	ldi	r23, 0x42	; 66
+     33e:	84 e0       	ldi	r24, 0x04	; 4
+     340:	9b df       	rcall	.-202    	; 0x278 <reg_servo_angle>
+     342:	40 e0       	ldi	r20, 0x00	; 0
+     344:	50 e0       	ldi	r21, 0x00	; 0
+     346:	68 ec       	ldi	r22, 0xC8	; 200
+     348:	72 e4       	ldi	r23, 0x42	; 66
+     34a:	87 e0       	ldi	r24, 0x07	; 7
+     34c:	95 df       	rcall	.-214    	; 0x278 <reg_servo_angle>
+     34e:	40 e0       	ldi	r20, 0x00	; 0
+     350:	50 e0       	ldi	r21, 0x00	; 0
+     352:	62 e5       	ldi	r22, 0x52	; 82
+     354:	73 e4       	ldi	r23, 0x43	; 67
+     356:	8a e0       	ldi	r24, 0x0A	; 10
+     358:	8f df       	rcall	.-226    	; 0x278 <reg_servo_angle>
+     35a:	40 e0       	ldi	r20, 0x00	; 0
+     35c:	50 e0       	ldi	r21, 0x00	; 0
+     35e:	62 e5       	ldi	r22, 0x52	; 82
+     360:	73 e4       	ldi	r23, 0x43	; 67
+     362:	8d e0       	ldi	r24, 0x0D	; 13
+     364:	89 df       	rcall	.-238    	; 0x278 <reg_servo_angle>
+     366:	40 e0       	ldi	r20, 0x00	; 0
+     368:	50 e0       	ldi	r21, 0x00	; 0
+     36a:	62 e5       	ldi	r22, 0x52	; 82
+     36c:	73 e4       	ldi	r23, 0x43	; 67
+     36e:	80 e1       	ldi	r24, 0x10	; 16
+     370:	83 df       	rcall	.-250    	; 0x278 <reg_servo_angle>
+     372:	40 e0       	ldi	r20, 0x00	; 0
+     374:	50 e0       	ldi	r21, 0x00	; 0
+     376:	66 e6       	ldi	r22, 0x66	; 102
+     378:	73 e4       	ldi	r23, 0x43	; 67
+     37a:	82 e0       	ldi	r24, 0x02	; 2
+     37c:	7d df       	rcall	.-262    	; 0x278 <reg_servo_angle>
+     37e:	40 e0       	ldi	r20, 0x00	; 0
+     380:	50 e0       	ldi	r21, 0x00	; 0
+     382:	66 e6       	ldi	r22, 0x66	; 102
+     384:	73 e4       	ldi	r23, 0x43	; 67
+     386:	85 e0       	ldi	r24, 0x05	; 5
+     388:	77 df       	rcall	.-274    	; 0x278 <reg_servo_angle>
+     38a:	40 e0       	ldi	r20, 0x00	; 0
+     38c:	50 e0       	ldi	r21, 0x00	; 0
+     38e:	66 e6       	ldi	r22, 0x66	; 102
+     390:	73 e4       	ldi	r23, 0x43	; 67
+     392:	88 e0       	ldi	r24, 0x08	; 8
+     394:	71 df       	rcall	.-286    	; 0x278 <reg_servo_angle>
+     396:	40 e0       	ldi	r20, 0x00	; 0
+     398:	50 e0       	ldi	r21, 0x00	; 0
+     39a:	6c e8       	ldi	r22, 0x8C	; 140
+     39c:	72 e4       	ldi	r23, 0x42	; 66
+     39e:	8b e0       	ldi	r24, 0x0B	; 11
+     3a0:	6b df       	rcall	.-298    	; 0x278 <reg_servo_angle>
+     3a2:	40 e0       	ldi	r20, 0x00	; 0
+     3a4:	50 e0       	ldi	r21, 0x00	; 0
+     3a6:	6c e8       	ldi	r22, 0x8C	; 140
+     3a8:	72 e4       	ldi	r23, 0x42	; 66
+     3aa:	8e e0       	ldi	r24, 0x0E	; 14
+     3ac:	65 df       	rcall	.-310    	; 0x278 <reg_servo_angle>
+     3ae:	40 e0       	ldi	r20, 0x00	; 0
+     3b0:	50 e0       	ldi	r21, 0x00	; 0
+     3b2:	6c e8       	ldi	r22, 0x8C	; 140
+     3b4:	72 e4       	ldi	r23, 0x42	; 66
+     3b6:	81 e1       	ldi	r24, 0x11	; 17
+     3b8:	5f df       	rcall	.-322    	; 0x278 <reg_servo_angle>
+     3ba:	82 cf       	rjmp	.-252    	; 0x2c0 <action>
+     3bc:	08 95       	ret
+
+000003be <one>:
+     3be:	40 e0       	ldi	r20, 0x00	; 0
+     3c0:	50 e0       	ldi	r21, 0x00	; 0
+     3c2:	69 e1       	ldi	r22, 0x19	; 25
+     3c4:	73 e4       	ldi	r23, 0x43	; 67
+     3c6:	86 e0       	ldi	r24, 0x06	; 6
+     3c8:	57 df       	rcall	.-338    	; 0x278 <reg_servo_angle>
+     3ca:	40 e0       	ldi	r20, 0x00	; 0
+     3cc:	50 e0       	ldi	r21, 0x00	; 0
+     3ce:	68 eb       	ldi	r22, 0xB8	; 184
+     3d0:	72 e4       	ldi	r23, 0x42	; 66
+     3d2:	87 e0       	ldi	r24, 0x07	; 7
+     3d4:	51 df       	rcall	.-350    	; 0x278 <reg_servo_angle>
+     3d6:	40 e0       	ldi	r20, 0x00	; 0
+     3d8:	50 e0       	ldi	r21, 0x00	; 0
+     3da:	63 e6       	ldi	r22, 0x63	; 99
+     3dc:	73 e4       	ldi	r23, 0x43	; 67
+     3de:	88 e0       	ldi	r24, 0x08	; 8
+     3e0:	4b df       	rcall	.-362    	; 0x278 <reg_servo_angle>
+     3e2:	40 e0       	ldi	r20, 0x00	; 0
+     3e4:	50 e0       	ldi	r21, 0x00	; 0
+     3e6:	63 e1       	ldi	r22, 0x13	; 19
+     3e8:	73 e4       	ldi	r23, 0x43	; 67
+     3ea:	89 e0       	ldi	r24, 0x09	; 9
+     3ec:	45 df       	rcall	.-374    	; 0x278 <reg_servo_angle>
+     3ee:	40 e0       	ldi	r20, 0x00	; 0
+     3f0:	50 e0       	ldi	r21, 0x00	; 0
+     3f2:	60 e7       	ldi	r22, 0x70	; 112
+     3f4:	73 e4       	ldi	r23, 0x43	; 67
+     3f6:	8a e0       	ldi	r24, 0x0A	; 10
+     3f8:	3f df       	rcall	.-386    	; 0x278 <reg_servo_angle>
+     3fa:	40 e0       	ldi	r20, 0x00	; 0
+     3fc:	50 e0       	ldi	r21, 0x00	; 0
+     3fe:	68 e7       	ldi	r22, 0x78	; 120
+     400:	72 e4       	ldi	r23, 0x42	; 66
+     402:	8b e0       	ldi	r24, 0x0B	; 11
+     404:	39 df       	rcall	.-398    	; 0x278 <reg_servo_angle>
+     406:	40 e0       	ldi	r20, 0x00	; 0
+     408:	50 e0       	ldi	r21, 0x00	; 0
+     40a:	66 e1       	ldi	r22, 0x16	; 22
+     40c:	73 e4       	ldi	r23, 0x43	; 67
+     40e:	83 e0       	ldi	r24, 0x03	; 3
+     410:	33 df       	rcall	.-410    	; 0x278 <reg_servo_angle>
+     412:	40 e0       	ldi	r20, 0x00	; 0
+     414:	50 e0       	ldi	r21, 0x00	; 0
+     416:	60 e8       	ldi	r22, 0x80	; 128
+     418:	72 e4       	ldi	r23, 0x42	; 66
+     41a:	84 e0       	ldi	r24, 0x04	; 4
+     41c:	2d df       	rcall	.-422    	; 0x278 <reg_servo_angle>
+     41e:	40 e0       	ldi	r20, 0x00	; 0
+     420:	50 e0       	ldi	r21, 0x00	; 0
+     422:	6d e6       	ldi	r22, 0x6D	; 109
+     424:	73 e4       	ldi	r23, 0x43	; 67
+     426:	85 e0       	ldi	r24, 0x05	; 5
+     428:	27 df       	rcall	.-434    	; 0x278 <reg_servo_angle>
+     42a:	40 e0       	ldi	r20, 0x00	; 0
+     42c:	50 e0       	ldi	r21, 0x00	; 0
+     42e:	66 e1       	ldi	r22, 0x16	; 22
+     430:	73 e4       	ldi	r23, 0x43	; 67
+     432:	8c e0       	ldi	r24, 0x0C	; 12
+     434:	21 df       	rcall	.-446    	; 0x278 <reg_servo_angle>
+     436:	40 e0       	ldi	r20, 0x00	; 0
+     438:	50 e0       	ldi	r21, 0x00	; 0
+     43a:	60 e5       	ldi	r22, 0x50	; 80
+     43c:	73 e4       	ldi	r23, 0x43	; 67
+     43e:	8d e0       	ldi	r24, 0x0D	; 13
+     440:	1b df       	rcall	.-458    	; 0x278 <reg_servo_angle>
+     442:	40 e0       	ldi	r20, 0x00	; 0
+     444:	50 e0       	ldi	r21, 0x00	; 0
+     446:	62 e9       	ldi	r22, 0x92	; 146
+     448:	72 e4       	ldi	r23, 0x42	; 66
+     44a:	8e e0       	ldi	r24, 0x0E	; 14
+     44c:	15 df       	rcall	.-470    	; 0x278 <reg_servo_angle>
+     44e:	40 e0       	ldi	r20, 0x00	; 0
+     450:	50 e0       	ldi	r21, 0x00	; 0
+     452:	63 e1       	ldi	r22, 0x13	; 19
+     454:	73 e4       	ldi	r23, 0x43	; 67
+     456:	80 e0       	ldi	r24, 0x00	; 0
+     458:	0f df       	rcall	.-482    	; 0x278 <reg_servo_angle>
+     45a:	40 e0       	ldi	r20, 0x00	; 0
+     45c:	50 e0       	ldi	r21, 0x00	; 0
+     45e:	68 eb       	ldi	r22, 0xB8	; 184
+     460:	72 e4       	ldi	r23, 0x42	; 66
+     462:	81 e0       	ldi	r24, 0x01	; 1
+     464:	09 df       	rcall	.-494    	; 0x278 <reg_servo_angle>
+     466:	40 e0       	ldi	r20, 0x00	; 0
+     468:	50 e0       	ldi	r21, 0x00	; 0
+     46a:	63 e6       	ldi	r22, 0x63	; 99
+     46c:	73 e4       	ldi	r23, 0x43	; 67
+     46e:	82 e0       	ldi	r24, 0x02	; 2
+     470:	03 df       	rcall	.-506    	; 0x278 <reg_servo_angle>
+     472:	40 e0       	ldi	r20, 0x00	; 0
+     474:	50 e0       	ldi	r21, 0x00	; 0
+     476:	69 e1       	ldi	r22, 0x19	; 25
+     478:	73 e4       	ldi	r23, 0x43	; 67
+     47a:	8f e0       	ldi	r24, 0x0F	; 15
+     47c:	fd de       	rcall	.-518    	; 0x278 <reg_servo_angle>
+     47e:	40 e0       	ldi	r20, 0x00	; 0
+     480:	50 e0       	ldi	r21, 0x00	; 0
+     482:	60 e7       	ldi	r22, 0x70	; 112
+     484:	73 e4       	ldi	r23, 0x43	; 67
+     486:	80 e1       	ldi	r24, 0x10	; 16
+     488:	f7 de       	rcall	.-530    	; 0x278 <reg_servo_angle>
+     48a:	40 e0       	ldi	r20, 0x00	; 0
+     48c:	50 e0       	ldi	r21, 0x00	; 0
+     48e:	68 e7       	ldi	r22, 0x78	; 120
+     490:	72 e4       	ldi	r23, 0x42	; 66
+     492:	81 e1       	ldi	r24, 0x11	; 17
+     494:	f1 de       	rcall	.-542    	; 0x278 <reg_servo_angle>
+     496:	2f ef       	ldi	r18, 0xFF	; 255
+     498:	82 e5       	ldi	r24, 0x52	; 82
+     49a:	97 e0       	ldi	r25, 0x07	; 7
+     49c:	21 50       	subi	r18, 0x01	; 1
+     49e:	80 40       	sbci	r24, 0x00	; 0
+     4a0:	90 40       	sbci	r25, 0x00	; 0
+     4a2:	e1 f7       	brne	.-8      	; 0x49c <one+0xde>
+     4a4:	00 c0       	rjmp	.+0      	; 0x4a6 <one+0xe8>
+     4a6:	00 00       	nop
+     4a8:	0b cf       	rjmp	.-490    	; 0x2c0 <action>
+     4aa:	08 95       	ret
+
+000004ac <two>:
+     4ac:	40 e0       	ldi	r20, 0x00	; 0
+     4ae:	50 e0       	ldi	r21, 0x00	; 0
+     4b0:	63 e1       	ldi	r22, 0x13	; 19
+     4b2:	73 e4       	ldi	r23, 0x43	; 67
+     4b4:	86 e0       	ldi	r24, 0x06	; 6
+     4b6:	e0 de       	rcall	.-576    	; 0x278 <reg_servo_angle>
+     4b8:	40 e0       	ldi	r20, 0x00	; 0
+     4ba:	50 e0       	ldi	r21, 0x00	; 0
+     4bc:	6e ea       	ldi	r22, 0xAE	; 174
+     4be:	72 e4       	ldi	r23, 0x42	; 66
+     4c0:	87 e0       	ldi	r24, 0x07	; 7
+     4c2:	da de       	rcall	.-588    	; 0x278 <reg_servo_angle>
+     4c4:	40 e0       	ldi	r20, 0x00	; 0
+     4c6:	50 e0       	ldi	r21, 0x00	; 0
+     4c8:	6d e6       	ldi	r22, 0x6D	; 109
+     4ca:	73 e4       	ldi	r23, 0x43	; 67
+     4cc:	88 e0       	ldi	r24, 0x08	; 8
+     4ce:	d4 de       	rcall	.-600    	; 0x278 <reg_servo_angle>
+     4d0:	40 e0       	ldi	r20, 0x00	; 0
+     4d2:	50 e0       	ldi	r21, 0x00	; 0
+     4d4:	6f e0       	ldi	r22, 0x0F	; 15
+     4d6:	73 e4       	ldi	r23, 0x43	; 67
+     4d8:	89 e0       	ldi	r24, 0x09	; 9
+     4da:	ce de       	rcall	.-612    	; 0x278 <reg_servo_angle>
+     4dc:	40 e0       	ldi	r20, 0x00	; 0
+     4de:	50 e0       	ldi	r21, 0x00	; 0
+     4e0:	6b e6       	ldi	r22, 0x6B	; 107
+     4e2:	73 e4       	ldi	r23, 0x43	; 67
+     4e4:	8a e0       	ldi	r24, 0x0A	; 10
+     4e6:	c8 de       	rcall	.-624    	; 0x278 <reg_servo_angle>
+     4e8:	40 e0       	ldi	r20, 0x00	; 0
+     4ea:	50 e0       	ldi	r21, 0x00	; 0
+     4ec:	64 e9       	ldi	r22, 0x94	; 148
+     4ee:	72 e4       	ldi	r23, 0x42	; 66
+     4f0:	8b e0       	ldi	r24, 0x0B	; 11
+     4f2:	c2 de       	rcall	.-636    	; 0x278 <reg_servo_angle>
+     4f4:	40 e0       	ldi	r20, 0x00	; 0
+     4f6:	50 e0       	ldi	r21, 0x00	; 0
+     4f8:	6e e1       	ldi	r22, 0x1E	; 30
+     4fa:	73 e4       	ldi	r23, 0x43	; 67
+     4fc:	83 e0       	ldi	r24, 0x03	; 3
+     4fe:	bc de       	rcall	.-648    	; 0x278 <reg_servo_angle>
+     500:	40 e0       	ldi	r20, 0x00	; 0
+     502:	50 e0       	ldi	r21, 0x00	; 0
+     504:	6c e8       	ldi	r22, 0x8C	; 140
+     506:	72 e4       	ldi	r23, 0x42	; 66
+     508:	84 e0       	ldi	r24, 0x04	; 4
+     50a:	b6 de       	rcall	.-660    	; 0x278 <reg_servo_angle>
+     50c:	40 e0       	ldi	r20, 0x00	; 0
+     50e:	50 e0       	ldi	r21, 0x00	; 0
+     510:	6c e6       	ldi	r22, 0x6C	; 108
+     512:	73 e4       	ldi	r23, 0x43	; 67
+     514:	85 e0       	ldi	r24, 0x05	; 5
+     516:	b0 de       	rcall	.-672    	; 0x278 <reg_servo_angle>
+     518:	40 e0       	ldi	r20, 0x00	; 0
+     51a:	50 e0       	ldi	r21, 0x00	; 0
+     51c:	6e e1       	ldi	r22, 0x1E	; 30
+     51e:	73 e4       	ldi	r23, 0x43	; 67
+     520:	8c e0       	ldi	r24, 0x0C	; 12
+     522:	aa de       	rcall	.-684    	; 0x278 <reg_servo_angle>
+     524:	40 e0       	ldi	r20, 0x00	; 0
+     526:	50 e0       	ldi	r21, 0x00	; 0
+     528:	6f e4       	ldi	r22, 0x4F	; 79
+     52a:	73 e4       	ldi	r23, 0x43	; 67
+     52c:	8d e0       	ldi	r24, 0x0D	; 13
+     52e:	a4 de       	rcall	.-696    	; 0x278 <reg_servo_angle>
+     530:	40 e0       	ldi	r20, 0x00	; 0
+     532:	50 e0       	ldi	r21, 0x00	; 0
+     534:	64 e9       	ldi	r22, 0x94	; 148
+     536:	72 e4       	ldi	r23, 0x42	; 66
+     538:	8e e0       	ldi	r24, 0x0E	; 14
+     53a:	9e de       	rcall	.-708    	; 0x278 <reg_servo_angle>
+     53c:	40 e0       	ldi	r20, 0x00	; 0
+     53e:	50 e0       	ldi	r21, 0x00	; 0
+     540:	6f e0       	ldi	r22, 0x0F	; 15
+     542:	73 e4       	ldi	r23, 0x43	; 67
+     544:	80 e0       	ldi	r24, 0x00	; 0
+     546:	98 de       	rcall	.-720    	; 0x278 <reg_servo_angle>
+     548:	40 e0       	ldi	r20, 0x00	; 0
+     54a:	50 e0       	ldi	r21, 0x00	; 0
+     54c:	62 ec       	ldi	r22, 0xC2	; 194
+     54e:	72 e4       	ldi	r23, 0x42	; 66
+     550:	81 e0       	ldi	r24, 0x01	; 1
+     552:	92 de       	rcall	.-732    	; 0x278 <reg_servo_angle>
+     554:	40 e0       	ldi	r20, 0x00	; 0
+     556:	50 e0       	ldi	r21, 0x00	; 0
+     558:	69 e5       	ldi	r22, 0x59	; 89
+     55a:	73 e4       	ldi	r23, 0x43	; 67
+     55c:	82 e0       	ldi	r24, 0x02	; 2
+     55e:	8c de       	rcall	.-744    	; 0x278 <reg_servo_angle>
+     560:	40 e0       	ldi	r20, 0x00	; 0
+     562:	50 e0       	ldi	r21, 0x00	; 0
+     564:	63 e1       	ldi	r22, 0x13	; 19
+     566:	73 e4       	ldi	r23, 0x43	; 67
+     568:	8f e0       	ldi	r24, 0x0F	; 15
+     56a:	86 de       	rcall	.-756    	; 0x278 <reg_servo_angle>
+     56c:	40 e0       	ldi	r20, 0x00	; 0
+     56e:	50 e0       	ldi	r21, 0x00	; 0
+     570:	60 e7       	ldi	r22, 0x70	; 112
+     572:	73 e4       	ldi	r23, 0x43	; 67
+     574:	80 e1       	ldi	r24, 0x10	; 16
+     576:	80 de       	rcall	.-768    	; 0x278 <reg_servo_angle>
+     578:	40 e0       	ldi	r20, 0x00	; 0
+     57a:	50 e0       	ldi	r21, 0x00	; 0
+     57c:	60 e7       	ldi	r22, 0x70	; 112
+     57e:	72 e4       	ldi	r23, 0x42	; 66
+     580:	81 e1       	ldi	r24, 0x11	; 17
+     582:	7a de       	rcall	.-780    	; 0x278 <reg_servo_angle>
+     584:	2f ef       	ldi	r18, 0xFF	; 255
+     586:	82 e5       	ldi	r24, 0x52	; 82
+     588:	97 e0       	ldi	r25, 0x07	; 7
+     58a:	21 50       	subi	r18, 0x01	; 1
+     58c:	80 40       	sbci	r24, 0x00	; 0
+     58e:	90 40       	sbci	r25, 0x00	; 0
+     590:	e1 f7       	brne	.-8      	; 0x58a <two+0xde>
+     592:	00 c0       	rjmp	.+0      	; 0x594 <two+0xe8>
+     594:	00 00       	nop
+     596:	94 ce       	rjmp	.-728    	; 0x2c0 <action>
+     598:	08 95       	ret
+
+0000059a <three>:
+     59a:	40 e0       	ldi	r20, 0x00	; 0
+     59c:	50 e0       	ldi	r21, 0x00	; 0
+     59e:	63 e1       	ldi	r22, 0x13	; 19
+     5a0:	73 e4       	ldi	r23, 0x43	; 67
+     5a2:	86 e0       	ldi	r24, 0x06	; 6
+     5a4:	69 de       	rcall	.-814    	; 0x278 <reg_servo_angle>
+     5a6:	40 e0       	ldi	r20, 0x00	; 0
+     5a8:	50 e0       	ldi	r21, 0x00	; 0
+     5aa:	6e ea       	ldi	r22, 0xAE	; 174
+     5ac:	72 e4       	ldi	r23, 0x42	; 66
+     5ae:	87 e0       	ldi	r24, 0x07	; 7
+     5b0:	63 de       	rcall	.-826    	; 0x278 <reg_servo_angle>
+     5b2:	40 e0       	ldi	r20, 0x00	; 0
+     5b4:	50 e0       	ldi	r21, 0x00	; 0
+     5b6:	6d e6       	ldi	r22, 0x6D	; 109
+     5b8:	73 e4       	ldi	r23, 0x43	; 67
+     5ba:	88 e0       	ldi	r24, 0x08	; 8
+     5bc:	5d de       	rcall	.-838    	; 0x278 <reg_servo_angle>
+     5be:	40 e0       	ldi	r20, 0x00	; 0
+     5c0:	50 e0       	ldi	r21, 0x00	; 0
+     5c2:	6f e0       	ldi	r22, 0x0F	; 15
+     5c4:	73 e4       	ldi	r23, 0x43	; 67
+     5c6:	89 e0       	ldi	r24, 0x09	; 9
+     5c8:	57 de       	rcall	.-850    	; 0x278 <reg_servo_angle>
+     5ca:	40 e0       	ldi	r20, 0x00	; 0
+     5cc:	50 e0       	ldi	r21, 0x00	; 0
+     5ce:	6b e4       	ldi	r22, 0x4B	; 75
+     5d0:	73 e4       	ldi	r23, 0x43	; 67
+     5d2:	8a e0       	ldi	r24, 0x0A	; 10
+     5d4:	51 de       	rcall	.-862    	; 0x278 <reg_servo_angle>
+     5d6:	40 e0       	ldi	r20, 0x00	; 0
+     5d8:	50 e0       	ldi	r21, 0x00	; 0
+     5da:	66 ea       	ldi	r22, 0xA6	; 166
+     5dc:	72 e4       	ldi	r23, 0x42	; 66
+     5de:	8b e0       	ldi	r24, 0x0B	; 11
+     5e0:	4b de       	rcall	.-874    	; 0x278 <reg_servo_angle>
+     5e2:	40 e0       	ldi	r20, 0x00	; 0
+     5e4:	50 e0       	ldi	r21, 0x00	; 0
+     5e6:	6e e1       	ldi	r22, 0x1E	; 30
+     5e8:	73 e4       	ldi	r23, 0x43	; 67
+     5ea:	83 e0       	ldi	r24, 0x03	; 3
+     5ec:	45 de       	rcall	.-886    	; 0x278 <reg_servo_angle>
+     5ee:	40 e0       	ldi	r20, 0x00	; 0
+     5f0:	50 e0       	ldi	r21, 0x00	; 0
+     5f2:	6a eb       	ldi	r22, 0xBA	; 186
+     5f4:	72 e4       	ldi	r23, 0x42	; 66
+     5f6:	84 e0       	ldi	r24, 0x04	; 4
+     5f8:	3f de       	rcall	.-898    	; 0x278 <reg_servo_angle>
+     5fa:	40 e0       	ldi	r20, 0x00	; 0
+     5fc:	50 e0       	ldi	r21, 0x00	; 0
+     5fe:	62 e6       	ldi	r22, 0x62	; 98
+     600:	73 e4       	ldi	r23, 0x43	; 67
+     602:	85 e0       	ldi	r24, 0x05	; 5
+     604:	39 de       	rcall	.-910    	; 0x278 <reg_servo_angle>
+     606:	40 e0       	ldi	r20, 0x00	; 0
+     608:	50 e0       	ldi	r21, 0x00	; 0
+     60a:	6e e1       	ldi	r22, 0x1E	; 30
+     60c:	73 e4       	ldi	r23, 0x43	; 67
+     60e:	8c e0       	ldi	r24, 0x0C	; 12
+     610:	33 de       	rcall	.-922    	; 0x278 <reg_servo_angle>
+     612:	40 e0       	ldi	r20, 0x00	; 0
+     614:	50 e0       	ldi	r21, 0x00	; 0
+     616:	6f e4       	ldi	r22, 0x4F	; 79
+     618:	73 e4       	ldi	r23, 0x43	; 67
+     61a:	8d e0       	ldi	r24, 0x0D	; 13
+     61c:	2d de       	rcall	.-934    	; 0x278 <reg_servo_angle>
+     61e:	40 e0       	ldi	r20, 0x00	; 0
+     620:	50 e0       	ldi	r21, 0x00	; 0
+     622:	64 e9       	ldi	r22, 0x94	; 148
+     624:	72 e4       	ldi	r23, 0x42	; 66
+     626:	8e e0       	ldi	r24, 0x0E	; 14
+     628:	27 de       	rcall	.-946    	; 0x278 <reg_servo_angle>
+     62a:	40 e0       	ldi	r20, 0x00	; 0
+     62c:	50 e0       	ldi	r21, 0x00	; 0
+     62e:	6f e0       	ldi	r22, 0x0F	; 15
+     630:	73 e4       	ldi	r23, 0x43	; 67
+     632:	80 e0       	ldi	r24, 0x00	; 0
+     634:	21 de       	rcall	.-958    	; 0x278 <reg_servo_angle>
+     636:	40 e0       	ldi	r20, 0x00	; 0
+     638:	50 e0       	ldi	r21, 0x00	; 0
+     63a:	62 ec       	ldi	r22, 0xC2	; 194
+     63c:	72 e4       	ldi	r23, 0x42	; 66
+     63e:	81 e0       	ldi	r24, 0x01	; 1
+     640:	1b de       	rcall	.-970    	; 0x278 <reg_servo_angle>
+     642:	40 e0       	ldi	r20, 0x00	; 0
+     644:	50 e0       	ldi	r21, 0x00	; 0
+     646:	69 e5       	ldi	r22, 0x59	; 89
+     648:	73 e4       	ldi	r23, 0x43	; 67
+     64a:	82 e0       	ldi	r24, 0x02	; 2
+     64c:	15 de       	rcall	.-982    	; 0x278 <reg_servo_angle>
+     64e:	40 e0       	ldi	r20, 0x00	; 0
+     650:	50 e0       	ldi	r21, 0x00	; 0
+     652:	63 e1       	ldi	r22, 0x13	; 19
+     654:	73 e4       	ldi	r23, 0x43	; 67
+     656:	8f e0       	ldi	r24, 0x0F	; 15
+     658:	0f de       	rcall	.-994    	; 0x278 <reg_servo_angle>
+     65a:	40 e0       	ldi	r20, 0x00	; 0
+     65c:	50 e0       	ldi	r21, 0x00	; 0
+     65e:	65 e5       	ldi	r22, 0x55	; 85
+     660:	73 e4       	ldi	r23, 0x43	; 67
+     662:	80 e1       	ldi	r24, 0x10	; 16
+     664:	09 de       	rcall	.-1006   	; 0x278 <reg_servo_angle>
+     666:	40 e0       	ldi	r20, 0x00	; 0
+     668:	50 e0       	ldi	r21, 0x00	; 0
+     66a:	6c e7       	ldi	r22, 0x7C	; 124
+     66c:	72 e4       	ldi	r23, 0x42	; 66
+     66e:	81 e1       	ldi	r24, 0x11	; 17
+     670:	03 de       	rcall	.-1018   	; 0x278 <reg_servo_angle>
+     672:	2f ef       	ldi	r18, 0xFF	; 255
+     674:	82 e5       	ldi	r24, 0x52	; 82
+     676:	97 e0       	ldi	r25, 0x07	; 7
+     678:	21 50       	subi	r18, 0x01	; 1
+     67a:	80 40       	sbci	r24, 0x00	; 0
+     67c:	90 40       	sbci	r25, 0x00	; 0
+     67e:	e1 f7       	brne	.-8      	; 0x678 <three+0xde>
+     680:	00 c0       	rjmp	.+0      	; 0x682 <three+0xe8>
+     682:	00 00       	nop
+     684:	1d ce       	rjmp	.-966    	; 0x2c0 <action>
+     686:	08 95       	ret
+
+00000688 <four>:
+     688:	40 e0       	ldi	r20, 0x00	; 0
+     68a:	50 e0       	ldi	r21, 0x00	; 0
+     68c:	63 e1       	ldi	r22, 0x13	; 19
+     68e:	73 e4       	ldi	r23, 0x43	; 67
+     690:	86 e0       	ldi	r24, 0x06	; 6
+     692:	f2 dd       	rcall	.-1052   	; 0x278 <reg_servo_angle>
+     694:	40 e0       	ldi	r20, 0x00	; 0
+     696:	50 e0       	ldi	r21, 0x00	; 0
+     698:	60 e7       	ldi	r22, 0x70	; 112
+     69a:	72 e4       	ldi	r23, 0x42	; 66
+     69c:	87 e0       	ldi	r24, 0x07	; 7
+     69e:	ec dd       	rcall	.-1064   	; 0x278 <reg_servo_angle>
+     6a0:	40 e0       	ldi	r20, 0x00	; 0
+     6a2:	50 e0       	ldi	r21, 0x00	; 0
+     6a4:	60 e7       	ldi	r22, 0x70	; 112
+     6a6:	73 e4       	ldi	r23, 0x43	; 67
+     6a8:	88 e0       	ldi	r24, 0x08	; 8
+     6aa:	e6 dd       	rcall	.-1076   	; 0x278 <reg_servo_angle>
+     6ac:	40 e0       	ldi	r20, 0x00	; 0
+     6ae:	50 e0       	ldi	r21, 0x00	; 0
+     6b0:	6f e0       	ldi	r22, 0x0F	; 15
+     6b2:	73 e4       	ldi	r23, 0x43	; 67
+     6b4:	89 e0       	ldi	r24, 0x09	; 9
+     6b6:	e0 dd       	rcall	.-1088   	; 0x278 <reg_servo_angle>
+     6b8:	40 e0       	ldi	r20, 0x00	; 0
+     6ba:	50 e0       	ldi	r21, 0x00	; 0
+     6bc:	6b e4       	ldi	r22, 0x4B	; 75
+     6be:	73 e4       	ldi	r23, 0x43	; 67
+     6c0:	8a e0       	ldi	r24, 0x0A	; 10
+     6c2:	da dd       	rcall	.-1100   	; 0x278 <reg_servo_angle>
+     6c4:	40 e0       	ldi	r20, 0x00	; 0
+     6c6:	50 e0       	ldi	r21, 0x00	; 0
+     6c8:	66 ea       	ldi	r22, 0xA6	; 166
+     6ca:	72 e4       	ldi	r23, 0x42	; 66
+     6cc:	8b e0       	ldi	r24, 0x0B	; 11
+     6ce:	d4 dd       	rcall	.-1112   	; 0x278 <reg_servo_angle>
+     6d0:	40 e0       	ldi	r20, 0x00	; 0
+     6d2:	50 e0       	ldi	r21, 0x00	; 0
+     6d4:	6e e1       	ldi	r22, 0x1E	; 30
+     6d6:	73 e4       	ldi	r23, 0x43	; 67
+     6d8:	83 e0       	ldi	r24, 0x03	; 3
+     6da:	ce dd       	rcall	.-1124   	; 0x278 <reg_servo_angle>
+     6dc:	40 e0       	ldi	r20, 0x00	; 0
+     6de:	50 e0       	ldi	r21, 0x00	; 0
+     6e0:	6a eb       	ldi	r22, 0xBA	; 186
+     6e2:	72 e4       	ldi	r23, 0x42	; 66
+     6e4:	84 e0       	ldi	r24, 0x04	; 4
+     6e6:	c8 dd       	rcall	.-1136   	; 0x278 <reg_servo_angle>
+     6e8:	40 e0       	ldi	r20, 0x00	; 0
+     6ea:	50 e0       	ldi	r21, 0x00	; 0
+     6ec:	62 e6       	ldi	r22, 0x62	; 98
+     6ee:	73 e4       	ldi	r23, 0x43	; 67
+     6f0:	85 e0       	ldi	r24, 0x05	; 5
+     6f2:	c2 dd       	rcall	.-1148   	; 0x278 <reg_servo_angle>
+     6f4:	40 e0       	ldi	r20, 0x00	; 0
+     6f6:	50 e0       	ldi	r21, 0x00	; 0
+     6f8:	6e e1       	ldi	r22, 0x1E	; 30
+     6fa:	73 e4       	ldi	r23, 0x43	; 67
+     6fc:	8c e0       	ldi	r24, 0x0C	; 12
+     6fe:	bc dd       	rcall	.-1160   	; 0x278 <reg_servo_angle>
+     700:	40 e0       	ldi	r20, 0x00	; 0
+     702:	50 e0       	ldi	r21, 0x00	; 0
+     704:	6a e6       	ldi	r22, 0x6A	; 106
+     706:	73 e4       	ldi	r23, 0x43	; 67
+     708:	8d e0       	ldi	r24, 0x0D	; 13
+     70a:	b6 dd       	rcall	.-1172   	; 0x278 <reg_servo_angle>
+     70c:	40 e0       	ldi	r20, 0x00	; 0
+     70e:	50 e0       	ldi	r21, 0x00	; 0
+     710:	60 e8       	ldi	r22, 0x80	; 128
+     712:	72 e4       	ldi	r23, 0x42	; 66
+     714:	8e e0       	ldi	r24, 0x0E	; 14
+     716:	b0 dd       	rcall	.-1184   	; 0x278 <reg_servo_angle>
+     718:	40 e0       	ldi	r20, 0x00	; 0
+     71a:	50 e0       	ldi	r21, 0x00	; 0
+     71c:	6f e0       	ldi	r22, 0x0F	; 15
+     71e:	73 e4       	ldi	r23, 0x43	; 67
+     720:	80 e0       	ldi	r24, 0x00	; 0
+     722:	aa dd       	rcall	.-1196   	; 0x278 <reg_servo_angle>
+     724:	40 e0       	ldi	r20, 0x00	; 0
+     726:	50 e0       	ldi	r21, 0x00	; 0
+     728:	60 e7       	ldi	r22, 0x70	; 112
+     72a:	72 e4       	ldi	r23, 0x42	; 66
+     72c:	81 e0       	ldi	r24, 0x01	; 1
+     72e:	a4 dd       	rcall	.-1208   	; 0x278 <reg_servo_angle>
+     730:	40 e0       	ldi	r20, 0x00	; 0
+     732:	50 e0       	ldi	r21, 0x00	; 0
+     734:	62 e6       	ldi	r22, 0x62	; 98
+     736:	73 e4       	ldi	r23, 0x43	; 67
+     738:	82 e0       	ldi	r24, 0x02	; 2
+     73a:	9e dd       	rcall	.-1220   	; 0x278 <reg_servo_angle>
+     73c:	40 e0       	ldi	r20, 0x00	; 0
+     73e:	50 e0       	ldi	r21, 0x00	; 0
+     740:	63 e1       	ldi	r22, 0x13	; 19
+     742:	73 e4       	ldi	r23, 0x43	; 67
+     744:	8f e0       	ldi	r24, 0x0F	; 15
+     746:	98 dd       	rcall	.-1232   	; 0x278 <reg_servo_angle>
+     748:	40 e0       	ldi	r20, 0x00	; 0
+     74a:	50 e0       	ldi	r21, 0x00	; 0
+     74c:	65 e5       	ldi	r22, 0x55	; 85
+     74e:	73 e4       	ldi	r23, 0x43	; 67
+     750:	80 e1       	ldi	r24, 0x10	; 16
+     752:	92 dd       	rcall	.-1244   	; 0x278 <reg_servo_angle>
+     754:	40 e0       	ldi	r20, 0x00	; 0
+     756:	50 e0       	ldi	r21, 0x00	; 0
+     758:	6c e7       	ldi	r22, 0x7C	; 124
+     75a:	72 e4       	ldi	r23, 0x42	; 66
+     75c:	81 e1       	ldi	r24, 0x11	; 17
+     75e:	8c dd       	rcall	.-1256   	; 0x278 <reg_servo_angle>
+     760:	2f ef       	ldi	r18, 0xFF	; 255
+     762:	82 e5       	ldi	r24, 0x52	; 82
+     764:	97 e0       	ldi	r25, 0x07	; 7
+     766:	21 50       	subi	r18, 0x01	; 1
+     768:	80 40       	sbci	r24, 0x00	; 0
+     76a:	90 40       	sbci	r25, 0x00	; 0
+     76c:	e1 f7       	brne	.-8      	; 0x766 <four+0xde>
+     76e:	00 c0       	rjmp	.+0      	; 0x770 <four+0xe8>
+     770:	00 00       	nop
+     772:	a6 cd       	rjmp	.-1204   	; 0x2c0 <action>
+     774:	08 95       	ret
+
+00000776 <five>:
+     776:	40 e0       	ldi	r20, 0x00	; 0
+     778:	50 e0       	ldi	r21, 0x00	; 0
+     77a:	69 e1       	ldi	r22, 0x19	; 25
+     77c:	73 e4       	ldi	r23, 0x43	; 67
+     77e:	86 e0       	ldi	r24, 0x06	; 6
+     780:	7b dd       	rcall	.-1290   	; 0x278 <reg_servo_angle>
+     782:	40 e0       	ldi	r20, 0x00	; 0
+     784:	50 e0       	ldi	r21, 0x00	; 0
+     786:	60 e7       	ldi	r22, 0x70	; 112
+     788:	72 e4       	ldi	r23, 0x42	; 66
+     78a:	87 e0       	ldi	r24, 0x07	; 7
+     78c:	75 dd       	rcall	.-1302   	; 0x278 <reg_servo_angle>
+     78e:	40 e0       	ldi	r20, 0x00	; 0
+     790:	50 e0       	ldi	r21, 0x00	; 0
+     792:	6e e6       	ldi	r22, 0x6E	; 110
+     794:	73 e4       	ldi	r23, 0x43	; 67
+     796:	88 e0       	ldi	r24, 0x08	; 8
+     798:	6f dd       	rcall	.-1314   	; 0x278 <reg_servo_angle>
+     79a:	40 e0       	ldi	r20, 0x00	; 0
+     79c:	50 e0       	ldi	r21, 0x00	; 0
+     79e:	63 e1       	ldi	r22, 0x13	; 19
+     7a0:	73 e4       	ldi	r23, 0x43	; 67
+     7a2:	89 e0       	ldi	r24, 0x09	; 9
+     7a4:	69 dd       	rcall	.-1326   	; 0x278 <reg_servo_angle>
+     7a6:	40 e0       	ldi	r20, 0x00	; 0
+     7a8:	50 e0       	ldi	r21, 0x00	; 0
+     7aa:	60 e5       	ldi	r22, 0x50	; 80
+     7ac:	73 e4       	ldi	r23, 0x43	; 67
+     7ae:	8a e0       	ldi	r24, 0x0A	; 10
+     7b0:	63 dd       	rcall	.-1338   	; 0x278 <reg_servo_angle>
+     7b2:	40 e0       	ldi	r20, 0x00	; 0
+     7b4:	50 e0       	ldi	r21, 0x00	; 0
+     7b6:	62 e9       	ldi	r22, 0x92	; 146
+     7b8:	72 e4       	ldi	r23, 0x42	; 66
+     7ba:	8b e0       	ldi	r24, 0x0B	; 11
+     7bc:	5d dd       	rcall	.-1350   	; 0x278 <reg_servo_angle>
+     7be:	40 e0       	ldi	r20, 0x00	; 0
+     7c0:	50 e0       	ldi	r21, 0x00	; 0
+     7c2:	66 e1       	ldi	r22, 0x16	; 22
+     7c4:	73 e4       	ldi	r23, 0x43	; 67
+     7c6:	83 e0       	ldi	r24, 0x03	; 3
+     7c8:	57 dd       	rcall	.-1362   	; 0x278 <reg_servo_angle>
+     7ca:	40 e0       	ldi	r20, 0x00	; 0
+     7cc:	50 e0       	ldi	r21, 0x00	; 0
+     7ce:	68 eb       	ldi	r22, 0xB8	; 184
+     7d0:	72 e4       	ldi	r23, 0x42	; 66
+     7d2:	84 e0       	ldi	r24, 0x04	; 4
+     7d4:	51 dd       	rcall	.-1374   	; 0x278 <reg_servo_angle>
+     7d6:	40 e0       	ldi	r20, 0x00	; 0
+     7d8:	50 e0       	ldi	r21, 0x00	; 0
+     7da:	63 e6       	ldi	r22, 0x63	; 99
+     7dc:	73 e4       	ldi	r23, 0x43	; 67
+     7de:	85 e0       	ldi	r24, 0x05	; 5
+     7e0:	4b dd       	rcall	.-1386   	; 0x278 <reg_servo_angle>
+     7e2:	40 e0       	ldi	r20, 0x00	; 0
+     7e4:	50 e0       	ldi	r21, 0x00	; 0
+     7e6:	66 e1       	ldi	r22, 0x16	; 22
+     7e8:	73 e4       	ldi	r23, 0x43	; 67
+     7ea:	8c e0       	ldi	r24, 0x0C	; 12
+     7ec:	45 dd       	rcall	.-1398   	; 0x278 <reg_servo_angle>
+     7ee:	40 e0       	ldi	r20, 0x00	; 0
+     7f0:	50 e0       	ldi	r21, 0x00	; 0
+     7f2:	6b e6       	ldi	r22, 0x6B	; 107
+     7f4:	73 e4       	ldi	r23, 0x43	; 67
+     7f6:	8d e0       	ldi	r24, 0x0D	; 13
+     7f8:	3f dd       	rcall	.-1410   	; 0x278 <reg_servo_angle>
+     7fa:	40 e0       	ldi	r20, 0x00	; 0
+     7fc:	50 e0       	ldi	r21, 0x00	; 0
+     7fe:	6c e7       	ldi	r22, 0x7C	; 124
+     800:	72 e4       	ldi	r23, 0x42	; 66
+     802:	8e e0       	ldi	r24, 0x0E	; 14
+     804:	39 dd       	rcall	.-1422   	; 0x278 <reg_servo_angle>
+     806:	40 e0       	ldi	r20, 0x00	; 0
+     808:	50 e0       	ldi	r21, 0x00	; 0
+     80a:	63 e1       	ldi	r22, 0x13	; 19
+     80c:	73 e4       	ldi	r23, 0x43	; 67
+     80e:	80 e0       	ldi	r24, 0x00	; 0
+     810:	33 dd       	rcall	.-1434   	; 0x278 <reg_servo_angle>
+     812:	40 e0       	ldi	r20, 0x00	; 0
+     814:	50 e0       	ldi	r21, 0x00	; 0
+     816:	60 e7       	ldi	r22, 0x70	; 112
+     818:	72 e4       	ldi	r23, 0x42	; 66
+     81a:	81 e0       	ldi	r24, 0x01	; 1
+     81c:	2d dd       	rcall	.-1446   	; 0x278 <reg_servo_angle>
+     81e:	40 e0       	ldi	r20, 0x00	; 0
+     820:	50 e0       	ldi	r21, 0x00	; 0
+     822:	6e e6       	ldi	r22, 0x6E	; 110
+     824:	73 e4       	ldi	r23, 0x43	; 67
+     826:	82 e0       	ldi	r24, 0x02	; 2
+     828:	27 dd       	rcall	.-1458   	; 0x278 <reg_servo_angle>
+     82a:	40 e0       	ldi	r20, 0x00	; 0
+     82c:	50 e0       	ldi	r21, 0x00	; 0
+     82e:	69 e1       	ldi	r22, 0x19	; 25
+     830:	73 e4       	ldi	r23, 0x43	; 67
+     832:	8f e0       	ldi	r24, 0x0F	; 15
+     834:	21 dd       	rcall	.-1470   	; 0x278 <reg_servo_angle>
+     836:	40 e0       	ldi	r20, 0x00	; 0
+     838:	50 e0       	ldi	r21, 0x00	; 0
+     83a:	60 e5       	ldi	r22, 0x50	; 80
+     83c:	73 e4       	ldi	r23, 0x43	; 67
+     83e:	80 e1       	ldi	r24, 0x10	; 16
+     840:	1b dd       	rcall	.-1482   	; 0x278 <reg_servo_angle>
+     842:	40 e0       	ldi	r20, 0x00	; 0
+     844:	50 e0       	ldi	r21, 0x00	; 0
+     846:	62 e9       	ldi	r22, 0x92	; 146
+     848:	72 e4       	ldi	r23, 0x42	; 66
+     84a:	81 e1       	ldi	r24, 0x11	; 17
+     84c:	15 dd       	rcall	.-1494   	; 0x278 <reg_servo_angle>
+     84e:	2f ef       	ldi	r18, 0xFF	; 255
+     850:	82 e5       	ldi	r24, 0x52	; 82
+     852:	97 e0       	ldi	r25, 0x07	; 7
+     854:	21 50       	subi	r18, 0x01	; 1
+     856:	80 40       	sbci	r24, 0x00	; 0
+     858:	90 40       	sbci	r25, 0x00	; 0
+     85a:	e1 f7       	brne	.-8      	; 0x854 <five+0xde>
+     85c:	00 c0       	rjmp	.+0      	; 0x85e <five+0xe8>
+     85e:	00 00       	nop
+     860:	2f cd       	rjmp	.-1442   	; 0x2c0 <action>
+     862:	08 95       	ret
+
+00000864 <six>:
+     864:	40 e0       	ldi	r20, 0x00	; 0
+     866:	50 e0       	ldi	r21, 0x00	; 0
+     868:	6d e1       	ldi	r22, 0x1D	; 29
+     86a:	73 e4       	ldi	r23, 0x43	; 67
+     86c:	86 e0       	ldi	r24, 0x06	; 6
+     86e:	04 dd       	rcall	.-1528   	; 0x278 <reg_servo_angle>
+     870:	40 e0       	ldi	r20, 0x00	; 0
+     872:	50 e0       	ldi	r21, 0x00	; 0
+     874:	60 e7       	ldi	r22, 0x70	; 112
+     876:	72 e4       	ldi	r23, 0x42	; 66
+     878:	87 e0       	ldi	r24, 0x07	; 7
+     87a:	fe dc       	rcall	.-1540   	; 0x278 <reg_servo_angle>
+     87c:	40 e0       	ldi	r20, 0x00	; 0
+     87e:	50 e0       	ldi	r21, 0x00	; 0
+     880:	62 e6       	ldi	r22, 0x62	; 98
+     882:	73 e4       	ldi	r23, 0x43	; 67
+     884:	88 e0       	ldi	r24, 0x08	; 8
+     886:	f8 dc       	rcall	.-1552   	; 0x278 <reg_servo_angle>
+     888:	40 e0       	ldi	r20, 0x00	; 0
+     88a:	50 e0       	ldi	r21, 0x00	; 0
+     88c:	69 e1       	ldi	r22, 0x19	; 25
+     88e:	73 e4       	ldi	r23, 0x43	; 67
+     890:	89 e0       	ldi	r24, 0x09	; 9
+     892:	f2 dc       	rcall	.-1564   	; 0x278 <reg_servo_angle>
+     894:	40 e0       	ldi	r20, 0x00	; 0
+     896:	50 e0       	ldi	r21, 0x00	; 0
+     898:	65 e5       	ldi	r22, 0x55	; 85
+     89a:	73 e4       	ldi	r23, 0x43	; 67
+     89c:	8a e0       	ldi	r24, 0x0A	; 10
+     89e:	ec dc       	rcall	.-1576   	; 0x278 <reg_servo_angle>
+     8a0:	40 e0       	ldi	r20, 0x00	; 0
+     8a2:	50 e0       	ldi	r21, 0x00	; 0
+     8a4:	6c e7       	ldi	r22, 0x7C	; 124
+     8a6:	72 e4       	ldi	r23, 0x42	; 66
+     8a8:	8b e0       	ldi	r24, 0x0B	; 11
+     8aa:	e6 dc       	rcall	.-1588   	; 0x278 <reg_servo_angle>
+     8ac:	40 e0       	ldi	r20, 0x00	; 0
+     8ae:	50 e0       	ldi	r21, 0x00	; 0
+     8b0:	6e e0       	ldi	r22, 0x0E	; 14
+     8b2:	73 e4       	ldi	r23, 0x43	; 67
+     8b4:	83 e0       	ldi	r24, 0x03	; 3
+     8b6:	e0 dc       	rcall	.-1600   	; 0x278 <reg_servo_angle>
+     8b8:	40 e0       	ldi	r20, 0x00	; 0
+     8ba:	50 e0       	ldi	r21, 0x00	; 0
+     8bc:	6a eb       	ldi	r22, 0xBA	; 186
+     8be:	72 e4       	ldi	r23, 0x42	; 66
+     8c0:	84 e0       	ldi	r24, 0x04	; 4
+     8c2:	da dc       	rcall	.-1612   	; 0x278 <reg_servo_angle>
+     8c4:	40 e0       	ldi	r20, 0x00	; 0
+     8c6:	50 e0       	ldi	r21, 0x00	; 0
+     8c8:	62 e6       	ldi	r22, 0x62	; 98
+     8ca:	73 e4       	ldi	r23, 0x43	; 67
+     8cc:	85 e0       	ldi	r24, 0x05	; 5
+     8ce:	d4 dc       	rcall	.-1624   	; 0x278 <reg_servo_angle>
+     8d0:	40 e0       	ldi	r20, 0x00	; 0
+     8d2:	50 e0       	ldi	r21, 0x00	; 0
+     8d4:	6e e0       	ldi	r22, 0x0E	; 14
+     8d6:	73 e4       	ldi	r23, 0x43	; 67
+     8d8:	8c e0       	ldi	r24, 0x0C	; 12
+     8da:	ce dc       	rcall	.-1636   	; 0x278 <reg_servo_angle>
+     8dc:	40 e0       	ldi	r20, 0x00	; 0
+     8de:	50 e0       	ldi	r21, 0x00	; 0
+     8e0:	6b e6       	ldi	r22, 0x6B	; 107
+     8e2:	73 e4       	ldi	r23, 0x43	; 67
+     8e4:	8d e0       	ldi	r24, 0x0D	; 13
+     8e6:	c8 dc       	rcall	.-1648   	; 0x278 <reg_servo_angle>
+     8e8:	40 e0       	ldi	r20, 0x00	; 0
+     8ea:	50 e0       	ldi	r21, 0x00	; 0
+     8ec:	60 e8       	ldi	r22, 0x80	; 128
+     8ee:	72 e4       	ldi	r23, 0x42	; 66
+     8f0:	8e e0       	ldi	r24, 0x0E	; 14
+     8f2:	c2 dc       	rcall	.-1660   	; 0x278 <reg_servo_angle>
+     8f4:	40 e0       	ldi	r20, 0x00	; 0
+     8f6:	50 e0       	ldi	r21, 0x00	; 0
+     8f8:	69 e1       	ldi	r22, 0x19	; 25
+     8fa:	73 e4       	ldi	r23, 0x43	; 67
+     8fc:	80 e0       	ldi	r24, 0x00	; 0
+     8fe:	bc dc       	rcall	.-1672   	; 0x278 <reg_servo_angle>
+     900:	40 e0       	ldi	r20, 0x00	; 0
+     902:	50 e0       	ldi	r21, 0x00	; 0
+     904:	60 e7       	ldi	r22, 0x70	; 112
+     906:	72 e4       	ldi	r23, 0x42	; 66
+     908:	81 e0       	ldi	r24, 0x01	; 1
+     90a:	b6 dc       	rcall	.-1684   	; 0x278 <reg_servo_angle>
+     90c:	40 e0       	ldi	r20, 0x00	; 0
+     90e:	50 e0       	ldi	r21, 0x00	; 0
+     910:	60 e7       	ldi	r22, 0x70	; 112
+     912:	73 e4       	ldi	r23, 0x43	; 67
+     914:	82 e0       	ldi	r24, 0x02	; 2
+     916:	b0 dc       	rcall	.-1696   	; 0x278 <reg_servo_angle>
+     918:	40 e0       	ldi	r20, 0x00	; 0
+     91a:	50 e0       	ldi	r21, 0x00	; 0
+     91c:	6d e1       	ldi	r22, 0x1D	; 29
+     91e:	73 e4       	ldi	r23, 0x43	; 67
+     920:	8f e0       	ldi	r24, 0x0F	; 15
+     922:	aa dc       	rcall	.-1708   	; 0x278 <reg_servo_angle>
+     924:	40 e0       	ldi	r20, 0x00	; 0
+     926:	50 e0       	ldi	r21, 0x00	; 0
+     928:	6b e4       	ldi	r22, 0x4B	; 75
+     92a:	73 e4       	ldi	r23, 0x43	; 67
+     92c:	80 e1       	ldi	r24, 0x10	; 16
+     92e:	a4 dc       	rcall	.-1720   	; 0x278 <reg_servo_angle>
+     930:	40 e0       	ldi	r20, 0x00	; 0
+     932:	50 e0       	ldi	r21, 0x00	; 0
+     934:	66 ea       	ldi	r22, 0xA6	; 166
+     936:	72 e4       	ldi	r23, 0x42	; 66
+     938:	81 e1       	ldi	r24, 0x11	; 17
+     93a:	9e dc       	rcall	.-1732   	; 0x278 <reg_servo_angle>
+     93c:	2f ef       	ldi	r18, 0xFF	; 255
+     93e:	82 e5       	ldi	r24, 0x52	; 82
+     940:	97 e0       	ldi	r25, 0x07	; 7
+     942:	21 50       	subi	r18, 0x01	; 1
+     944:	80 40       	sbci	r24, 0x00	; 0
+     946:	90 40       	sbci	r25, 0x00	; 0
+     948:	e1 f7       	brne	.-8      	; 0x942 <six+0xde>
+     94a:	00 c0       	rjmp	.+0      	; 0x94c <six+0xe8>
+     94c:	00 00       	nop
+     94e:	b8 cc       	rjmp	.-1680   	; 0x2c0 <action>
+     950:	08 95       	ret
+
+00000952 <seven>:
+     952:	40 e0       	ldi	r20, 0x00	; 0
+     954:	50 e0       	ldi	r21, 0x00	; 0
+     956:	6d e1       	ldi	r22, 0x1D	; 29
+     958:	73 e4       	ldi	r23, 0x43	; 67
+     95a:	86 e0       	ldi	r24, 0x06	; 6
+     95c:	8d dc       	rcall	.-1766   	; 0x278 <reg_servo_angle>
+     95e:	40 e0       	ldi	r20, 0x00	; 0
+     960:	50 e0       	ldi	r21, 0x00	; 0
+     962:	62 ec       	ldi	r22, 0xC2	; 194
+     964:	72 e4       	ldi	r23, 0x42	; 66
+     966:	87 e0       	ldi	r24, 0x07	; 7
+     968:	87 dc       	rcall	.-1778   	; 0x278 <reg_servo_angle>
+     96a:	40 e0       	ldi	r20, 0x00	; 0
+     96c:	50 e0       	ldi	r21, 0x00	; 0
+     96e:	69 e5       	ldi	r22, 0x59	; 89
+     970:	73 e4       	ldi	r23, 0x43	; 67
+     972:	88 e0       	ldi	r24, 0x08	; 8
+     974:	81 dc       	rcall	.-1790   	; 0x278 <reg_servo_angle>
+     976:	40 e0       	ldi	r20, 0x00	; 0
+     978:	50 e0       	ldi	r21, 0x00	; 0
+     97a:	69 e1       	ldi	r22, 0x19	; 25
+     97c:	73 e4       	ldi	r23, 0x43	; 67
+     97e:	89 e0       	ldi	r24, 0x09	; 9
+     980:	7b dc       	rcall	.-1802   	; 0x278 <reg_servo_angle>
+     982:	40 e0       	ldi	r20, 0x00	; 0
+     984:	50 e0       	ldi	r21, 0x00	; 0
+     986:	65 e5       	ldi	r22, 0x55	; 85
+     988:	73 e4       	ldi	r23, 0x43	; 67
+     98a:	8a e0       	ldi	r24, 0x0A	; 10
+     98c:	75 dc       	rcall	.-1814   	; 0x278 <reg_servo_angle>
+     98e:	40 e0       	ldi	r20, 0x00	; 0
+     990:	50 e0       	ldi	r21, 0x00	; 0
+     992:	6c e7       	ldi	r22, 0x7C	; 124
+     994:	72 e4       	ldi	r23, 0x42	; 66
+     996:	8b e0       	ldi	r24, 0x0B	; 11
+     998:	6f dc       	rcall	.-1826   	; 0x278 <reg_servo_angle>
+     99a:	40 e0       	ldi	r20, 0x00	; 0
+     99c:	50 e0       	ldi	r21, 0x00	; 0
+     99e:	6e e0       	ldi	r22, 0x0E	; 14
+     9a0:	73 e4       	ldi	r23, 0x43	; 67
+     9a2:	83 e0       	ldi	r24, 0x03	; 3
+     9a4:	69 dc       	rcall	.-1838   	; 0x278 <reg_servo_angle>
+     9a6:	40 e0       	ldi	r20, 0x00	; 0
+     9a8:	50 e0       	ldi	r21, 0x00	; 0
+     9aa:	6a eb       	ldi	r22, 0xBA	; 186
+     9ac:	72 e4       	ldi	r23, 0x42	; 66
+     9ae:	84 e0       	ldi	r24, 0x04	; 4
+     9b0:	63 dc       	rcall	.-1850   	; 0x278 <reg_servo_angle>
+     9b2:	40 e0       	ldi	r20, 0x00	; 0
+     9b4:	50 e0       	ldi	r21, 0x00	; 0
+     9b6:	62 e6       	ldi	r22, 0x62	; 98
+     9b8:	73 e4       	ldi	r23, 0x43	; 67
+     9ba:	85 e0       	ldi	r24, 0x05	; 5
+     9bc:	5d dc       	rcall	.-1862   	; 0x278 <reg_servo_angle>
+     9be:	40 e0       	ldi	r20, 0x00	; 0
+     9c0:	50 e0       	ldi	r21, 0x00	; 0
+     9c2:	6e e0       	ldi	r22, 0x0E	; 14
+     9c4:	73 e4       	ldi	r23, 0x43	; 67
+     9c6:	8c e0       	ldi	r24, 0x0C	; 12
+     9c8:	57 dc       	rcall	.-1874   	; 0x278 <reg_servo_angle>
+     9ca:	40 e0       	ldi	r20, 0x00	; 0
+     9cc:	50 e0       	ldi	r21, 0x00	; 0
+     9ce:	6f e4       	ldi	r22, 0x4F	; 79
+     9d0:	73 e4       	ldi	r23, 0x43	; 67
+     9d2:	8d e0       	ldi	r24, 0x0D	; 13
+     9d4:	51 dc       	rcall	.-1886   	; 0x278 <reg_servo_angle>
+     9d6:	40 e0       	ldi	r20, 0x00	; 0
+     9d8:	50 e0       	ldi	r21, 0x00	; 0
+     9da:	64 e9       	ldi	r22, 0x94	; 148
+     9dc:	72 e4       	ldi	r23, 0x42	; 66
+     9de:	8e e0       	ldi	r24, 0x0E	; 14
+     9e0:	4b dc       	rcall	.-1898   	; 0x278 <reg_servo_angle>
+     9e2:	40 e0       	ldi	r20, 0x00	; 0
+     9e4:	50 e0       	ldi	r21, 0x00	; 0
+     9e6:	69 e1       	ldi	r22, 0x19	; 25
+     9e8:	73 e4       	ldi	r23, 0x43	; 67
+     9ea:	80 e0       	ldi	r24, 0x00	; 0
+     9ec:	45 dc       	rcall	.-1910   	; 0x278 <reg_servo_angle>
+     9ee:	40 e0       	ldi	r20, 0x00	; 0
+     9f0:	50 e0       	ldi	r21, 0x00	; 0
+     9f2:	6e ea       	ldi	r22, 0xAE	; 174
+     9f4:	72 e4       	ldi	r23, 0x42	; 66
+     9f6:	81 e0       	ldi	r24, 0x01	; 1
+     9f8:	3f dc       	rcall	.-1922   	; 0x278 <reg_servo_angle>
+     9fa:	40 e0       	ldi	r20, 0x00	; 0
+     9fc:	50 e0       	ldi	r21, 0x00	; 0
+     9fe:	6d e6       	ldi	r22, 0x6D	; 109
+     a00:	73 e4       	ldi	r23, 0x43	; 67
+     a02:	82 e0       	ldi	r24, 0x02	; 2
+     a04:	39 dc       	rcall	.-1934   	; 0x278 <reg_servo_angle>
+     a06:	40 e0       	ldi	r20, 0x00	; 0
+     a08:	50 e0       	ldi	r21, 0x00	; 0
+     a0a:	6d e1       	ldi	r22, 0x1D	; 29
+     a0c:	73 e4       	ldi	r23, 0x43	; 67
+     a0e:	8f e0       	ldi	r24, 0x0F	; 15
+     a10:	33 dc       	rcall	.-1946   	; 0x278 <reg_servo_angle>
+     a12:	40 e0       	ldi	r20, 0x00	; 0
+     a14:	50 e0       	ldi	r21, 0x00	; 0
+     a16:	6b e4       	ldi	r22, 0x4B	; 75
+     a18:	73 e4       	ldi	r23, 0x43	; 67
+     a1a:	80 e1       	ldi	r24, 0x10	; 16
+     a1c:	2d dc       	rcall	.-1958   	; 0x278 <reg_servo_angle>
+     a1e:	40 e0       	ldi	r20, 0x00	; 0
+     a20:	50 e0       	ldi	r21, 0x00	; 0
+     a22:	66 ea       	ldi	r22, 0xA6	; 166
+     a24:	72 e4       	ldi	r23, 0x42	; 66
+     a26:	81 e1       	ldi	r24, 0x11	; 17
+     a28:	27 dc       	rcall	.-1970   	; 0x278 <reg_servo_angle>
+     a2a:	2f ef       	ldi	r18, 0xFF	; 255
+     a2c:	82 e5       	ldi	r24, 0x52	; 82
+     a2e:	97 e0       	ldi	r25, 0x07	; 7
+     a30:	21 50       	subi	r18, 0x01	; 1
+     a32:	80 40       	sbci	r24, 0x00	; 0
+     a34:	90 40       	sbci	r25, 0x00	; 0
+     a36:	e1 f7       	brne	.-8      	; 0xa30 <seven+0xde>
+     a38:	00 c0       	rjmp	.+0      	; 0xa3a <seven+0xe8>
+     a3a:	00 00       	nop
+     a3c:	41 cc       	rjmp	.-1918   	; 0x2c0 <action>
+     a3e:	08 95       	ret
+
+00000a40 <eight>:
+     a40:	40 e0       	ldi	r20, 0x00	; 0
+     a42:	50 e0       	ldi	r21, 0x00	; 0
+     a44:	6d e1       	ldi	r22, 0x1D	; 29
+     a46:	73 e4       	ldi	r23, 0x43	; 67
+     a48:	86 e0       	ldi	r24, 0x06	; 6
+     a4a:	16 dc       	rcall	.-2004   	; 0x278 <reg_servo_angle>
+     a4c:	40 e0       	ldi	r20, 0x00	; 0
+     a4e:	50 e0       	ldi	r21, 0x00	; 0
+     a50:	62 ec       	ldi	r22, 0xC2	; 194
+     a52:	72 e4       	ldi	r23, 0x42	; 66
+     a54:	87 e0       	ldi	r24, 0x07	; 7
+     a56:	10 dc       	rcall	.-2016   	; 0x278 <reg_servo_angle>
+     a58:	40 e0       	ldi	r20, 0x00	; 0
+     a5a:	50 e0       	ldi	r21, 0x00	; 0
+     a5c:	69 e5       	ldi	r22, 0x59	; 89
+     a5e:	73 e4       	ldi	r23, 0x43	; 67
+     a60:	88 e0       	ldi	r24, 0x08	; 8
+     a62:	0a dc       	rcall	.-2028   	; 0x278 <reg_servo_angle>
+     a64:	40 e0       	ldi	r20, 0x00	; 0
+     a66:	50 e0       	ldi	r21, 0x00	; 0
+     a68:	69 e1       	ldi	r22, 0x19	; 25
+     a6a:	73 e4       	ldi	r23, 0x43	; 67
+     a6c:	89 e0       	ldi	r24, 0x09	; 9
+     a6e:	04 dc       	rcall	.-2040   	; 0x278 <reg_servo_angle>
+     a70:	40 e0       	ldi	r20, 0x00	; 0
+     a72:	50 e0       	ldi	r21, 0x00	; 0
+     a74:	60 e7       	ldi	r22, 0x70	; 112
+     a76:	73 e4       	ldi	r23, 0x43	; 67
+     a78:	8a e0       	ldi	r24, 0x0A	; 10
+     a7a:	fe db       	rcall	.-2052   	; 0x278 <reg_servo_angle>
+     a7c:	40 e0       	ldi	r20, 0x00	; 0
+     a7e:	50 e0       	ldi	r21, 0x00	; 0
+     a80:	60 e7       	ldi	r22, 0x70	; 112
+     a82:	72 e4       	ldi	r23, 0x42	; 66
+     a84:	8b e0       	ldi	r24, 0x0B	; 11
+     a86:	f8 db       	rcall	.-2064   	; 0x278 <reg_servo_angle>
+     a88:	40 e0       	ldi	r20, 0x00	; 0
+     a8a:	50 e0       	ldi	r21, 0x00	; 0
+     a8c:	6e e0       	ldi	r22, 0x0E	; 14
+     a8e:	73 e4       	ldi	r23, 0x43	; 67
+     a90:	83 e0       	ldi	r24, 0x03	; 3
+     a92:	f2 db       	rcall	.-2076   	; 0x278 <reg_servo_angle>
+     a94:	40 e0       	ldi	r20, 0x00	; 0
+     a96:	50 e0       	ldi	r21, 0x00	; 0
+     a98:	62 e8       	ldi	r22, 0x82	; 130
+     a9a:	72 e4       	ldi	r23, 0x42	; 66
+     a9c:	84 e0       	ldi	r24, 0x04	; 4
+     a9e:	ec db       	rcall	.-2088   	; 0x278 <reg_servo_angle>
+     aa0:	40 e0       	ldi	r20, 0x00	; 0
+     aa2:	50 e0       	ldi	r21, 0x00	; 0
+     aa4:	6c e6       	ldi	r22, 0x6C	; 108
+     aa6:	73 e4       	ldi	r23, 0x43	; 67
+     aa8:	85 e0       	ldi	r24, 0x05	; 5
+     aaa:	e6 db       	rcall	.-2100   	; 0x278 <reg_servo_angle>
+     aac:	40 e0       	ldi	r20, 0x00	; 0
+     aae:	50 e0       	ldi	r21, 0x00	; 0
+     ab0:	6e e0       	ldi	r22, 0x0E	; 14
+     ab2:	73 e4       	ldi	r23, 0x43	; 67
+     ab4:	8c e0       	ldi	r24, 0x0C	; 12
+     ab6:	e0 db       	rcall	.-2112   	; 0x278 <reg_servo_angle>
+     ab8:	40 e0       	ldi	r20, 0x00	; 0
+     aba:	50 e0       	ldi	r21, 0x00	; 0
+     abc:	6f e4       	ldi	r22, 0x4F	; 79
+     abe:	73 e4       	ldi	r23, 0x43	; 67
+     ac0:	8d e0       	ldi	r24, 0x0D	; 13
+     ac2:	da db       	rcall	.-2124   	; 0x278 <reg_servo_angle>
+     ac4:	40 e0       	ldi	r20, 0x00	; 0
+     ac6:	50 e0       	ldi	r21, 0x00	; 0
+     ac8:	64 e9       	ldi	r22, 0x94	; 148
+     aca:	72 e4       	ldi	r23, 0x42	; 66
+     acc:	8e e0       	ldi	r24, 0x0E	; 14
+     ace:	d4 db       	rcall	.-2136   	; 0x278 <reg_servo_angle>
+     ad0:	40 e0       	ldi	r20, 0x00	; 0
+     ad2:	50 e0       	ldi	r21, 0x00	; 0
+     ad4:	69 e1       	ldi	r22, 0x19	; 25
+     ad6:	73 e4       	ldi	r23, 0x43	; 67
+     ad8:	80 e0       	ldi	r24, 0x00	; 0
+     ada:	ce db       	rcall	.-2148   	; 0x278 <reg_servo_angle>
+     adc:	40 e0       	ldi	r20, 0x00	; 0
+     ade:	50 e0       	ldi	r21, 0x00	; 0
+     ae0:	6e ea       	ldi	r22, 0xAE	; 174
+     ae2:	72 e4       	ldi	r23, 0x42	; 66
+     ae4:	81 e0       	ldi	r24, 0x01	; 1
+     ae6:	c8 db       	rcall	.-2160   	; 0x278 <reg_servo_angle>
+     ae8:	40 e0       	ldi	r20, 0x00	; 0
+     aea:	50 e0       	ldi	r21, 0x00	; 0
+     aec:	6d e6       	ldi	r22, 0x6D	; 109
+     aee:	73 e4       	ldi	r23, 0x43	; 67
+     af0:	82 e0       	ldi	r24, 0x02	; 2
+     af2:	c2 db       	rcall	.-2172   	; 0x278 <reg_servo_angle>
+     af4:	40 e0       	ldi	r20, 0x00	; 0
+     af6:	50 e0       	ldi	r21, 0x00	; 0
+     af8:	6d e1       	ldi	r22, 0x1D	; 29
+     afa:	73 e4       	ldi	r23, 0x43	; 67
+     afc:	8f e0       	ldi	r24, 0x0F	; 15
+     afe:	bc db       	rcall	.-2184   	; 0x278 <reg_servo_angle>
+     b00:	40 e0       	ldi	r20, 0x00	; 0
+     b02:	50 e0       	ldi	r21, 0x00	; 0
+     b04:	60 e7       	ldi	r22, 0x70	; 112
+     b06:	73 e4       	ldi	r23, 0x43	; 67
+     b08:	80 e1       	ldi	r24, 0x10	; 16
+     b0a:	b6 db       	rcall	.-2196   	; 0x278 <reg_servo_angle>
+     b0c:	40 e0       	ldi	r20, 0x00	; 0
+     b0e:	50 e0       	ldi	r21, 0x00	; 0
+     b10:	64 e9       	ldi	r22, 0x94	; 148
+     b12:	72 e4       	ldi	r23, 0x42	; 66
+     b14:	81 e1       	ldi	r24, 0x11	; 17
+     b16:	b0 db       	rcall	.-2208   	; 0x278 <reg_servo_angle>
+     b18:	2f ef       	ldi	r18, 0xFF	; 255
+     b1a:	82 e5       	ldi	r24, 0x52	; 82
+     b1c:	97 e0       	ldi	r25, 0x07	; 7
+     b1e:	21 50       	subi	r18, 0x01	; 1
+     b20:	80 40       	sbci	r24, 0x00	; 0
+     b22:	90 40       	sbci	r25, 0x00	; 0
+     b24:	e1 f7       	brne	.-8      	; 0xb1e <eight+0xde>
+     b26:	00 c0       	rjmp	.+0      	; 0xb28 <eight+0xe8>
+     b28:	00 00       	nop
+     b2a:	ca cb       	rjmp	.-2156   	; 0x2c0 <action>
+     b2c:	08 95       	ret
+
+00000b2e <forward>:
+     b2e:	88 df       	rcall	.-240    	; 0xa40 <eight>
+     b30:	46 dc       	rcall	.-1908   	; 0x3be <one>
+     b32:	bc dc       	rcall	.-1672   	; 0x4ac <two>
+     b34:	32 dd       	rcall	.-1436   	; 0x59a <three>
+     b36:	a8 dd       	rcall	.-1200   	; 0x688 <four>
+     b38:	1e de       	rcall	.-964    	; 0x776 <five>
+     b3a:	94 de       	rcall	.-728    	; 0x864 <six>
+     b3c:	0a cf       	rjmp	.-492    	; 0x952 <seven>
+     b3e:	08 95       	ret
+
+00000b40 <backward>:
+     b40:	08 df       	rcall	.-496    	; 0x952 <seven>
+     b42:	90 de       	rcall	.-736    	; 0x864 <six>
+     b44:	18 de       	rcall	.-976    	; 0x776 <five>
+     b46:	a0 dd       	rcall	.-1216   	; 0x688 <four>
+     b48:	28 dd       	rcall	.-1456   	; 0x59a <three>
+     b4a:	b0 dc       	rcall	.-1696   	; 0x4ac <two>
+     b4c:	38 dc       	rcall	.-1936   	; 0x3be <one>
+     b4e:	78 cf       	rjmp	.-272    	; 0xa40 <eight>
+     b50:	08 95       	ret
+
+00000b52 <one_rot>:
+     b52:	40 e0       	ldi	r20, 0x00	; 0
+     b54:	50 e0       	ldi	r21, 0x00	; 0
+     b56:	66 e1       	ldi	r22, 0x16	; 22
+     b58:	73 e4       	ldi	r23, 0x43	; 67
+     b5a:	86 e0       	ldi	r24, 0x06	; 6
+     b5c:	8d db       	rcall	.-2278   	; 0x278 <reg_servo_angle>
+     b5e:	40 e0       	ldi	r20, 0x00	; 0
+     b60:	50 e0       	ldi	r21, 0x00	; 0
+     b62:	64 eb       	ldi	r22, 0xB4	; 180
+     b64:	72 e4       	ldi	r23, 0x42	; 66
+     b66:	87 e0       	ldi	r24, 0x07	; 7
+     b68:	87 db       	rcall	.-2290   	; 0x278 <reg_servo_angle>
+     b6a:	40 e0       	ldi	r20, 0x00	; 0
+     b6c:	50 e0       	ldi	r21, 0x00	; 0
+     b6e:	6c e5       	ldi	r22, 0x5C	; 92
+     b70:	73 e4       	ldi	r23, 0x43	; 67
+     b72:	88 e0       	ldi	r24, 0x08	; 8
+     b74:	81 db       	rcall	.-2302   	; 0x278 <reg_servo_angle>
+     b76:	40 e0       	ldi	r20, 0x00	; 0
+     b78:	50 e0       	ldi	r21, 0x00	; 0
+     b7a:	65 e2       	ldi	r22, 0x25	; 37
+     b7c:	73 e4       	ldi	r23, 0x43	; 67
+     b7e:	89 e0       	ldi	r24, 0x09	; 9
+     b80:	7b db       	rcall	.-2314   	; 0x278 <reg_servo_angle>
+     b82:	40 e0       	ldi	r20, 0x00	; 0
+     b84:	50 e0       	ldi	r21, 0x00	; 0
+     b86:	6d e5       	ldi	r22, 0x5D	; 93
+     b88:	73 e4       	ldi	r23, 0x43	; 67
+     b8a:	8a e0       	ldi	r24, 0x0A	; 10
+     b8c:	75 db       	rcall	.-2326   	; 0x278 <reg_servo_angle>
+     b8e:	40 e0       	ldi	r20, 0x00	; 0
+     b90:	50 e0       	ldi	r21, 0x00	; 0
+     b92:	64 ea       	ldi	r22, 0xA4	; 164
+     b94:	72 e4       	ldi	r23, 0x42	; 66
+     b96:	8b e0       	ldi	r24, 0x0B	; 11
+     b98:	6f db       	rcall	.-2338   	; 0x278 <reg_servo_angle>
+     b9a:	40 e0       	ldi	r20, 0x00	; 0
+     b9c:	50 e0       	ldi	r21, 0x00	; 0
+     b9e:	64 e2       	ldi	r22, 0x24	; 36
+     ba0:	73 e4       	ldi	r23, 0x43	; 67
+     ba2:	83 e0       	ldi	r24, 0x03	; 3
+     ba4:	69 db       	rcall	.-2350   	; 0x278 <reg_servo_angle>
+     ba6:	40 e0       	ldi	r20, 0x00	; 0
+     ba8:	50 e0       	ldi	r21, 0x00	; 0
+     baa:	62 e9       	ldi	r22, 0x92	; 146
+     bac:	72 e4       	ldi	r23, 0x42	; 66
+     bae:	84 e0       	ldi	r24, 0x04	; 4
+     bb0:	63 db       	rcall	.-2362   	; 0x278 <reg_servo_angle>
+     bb2:	40 e0       	ldi	r20, 0x00	; 0
+     bb4:	50 e0       	ldi	r21, 0x00	; 0
+     bb6:	63 e6       	ldi	r22, 0x63	; 99
+     bb8:	73 e4       	ldi	r23, 0x43	; 67
+     bba:	85 e0       	ldi	r24, 0x05	; 5
+     bbc:	5d db       	rcall	.-2374   	; 0x278 <reg_servo_angle>
+     bbe:	40 e0       	ldi	r20, 0x00	; 0
+     bc0:	50 e0       	ldi	r21, 0x00	; 0
+     bc2:	66 e1       	ldi	r22, 0x16	; 22
+     bc4:	73 e4       	ldi	r23, 0x43	; 67
+     bc6:	8c e0       	ldi	r24, 0x0C	; 12
+     bc8:	57 db       	rcall	.-2386   	; 0x278 <reg_servo_angle>
+     bca:	40 e0       	ldi	r20, 0x00	; 0
+     bcc:	50 e0       	ldi	r21, 0x00	; 0
+     bce:	62 e5       	ldi	r22, 0x52	; 82
+     bd0:	73 e4       	ldi	r23, 0x43	; 67
+     bd2:	8d e0       	ldi	r24, 0x0D	; 13
+     bd4:	51 db       	rcall	.-2398   	; 0x278 <reg_servo_angle>
+     bd6:	40 e0       	ldi	r20, 0x00	; 0
+     bd8:	50 e0       	ldi	r21, 0x00	; 0
+     bda:	60 ea       	ldi	r22, 0xA0	; 160
+     bdc:	72 e4       	ldi	r23, 0x42	; 66
+     bde:	8e e0       	ldi	r24, 0x0E	; 14
+     be0:	4b db       	rcall	.-2410   	; 0x278 <reg_servo_angle>
+     be2:	40 e0       	ldi	r20, 0x00	; 0
+     be4:	50 e0       	ldi	r21, 0x00	; 0
+     be6:	66 e1       	ldi	r22, 0x16	; 22
+     be8:	73 e4       	ldi	r23, 0x43	; 67
+     bea:	80 e0       	ldi	r24, 0x00	; 0
+     bec:	45 db       	rcall	.-2422   	; 0x278 <reg_servo_angle>
+     bee:	40 e0       	ldi	r20, 0x00	; 0
+     bf0:	50 e0       	ldi	r21, 0x00	; 0
+     bf2:	64 eb       	ldi	r22, 0xB4	; 180
+     bf4:	72 e4       	ldi	r23, 0x42	; 66
+     bf6:	81 e0       	ldi	r24, 0x01	; 1
+     bf8:	3f db       	rcall	.-2434   	; 0x278 <reg_servo_angle>
+     bfa:	40 e0       	ldi	r20, 0x00	; 0
+     bfc:	50 e0       	ldi	r21, 0x00	; 0
+     bfe:	6c e5       	ldi	r22, 0x5C	; 92
+     c00:	73 e4       	ldi	r23, 0x43	; 67
+     c02:	82 e0       	ldi	r24, 0x02	; 2
+     c04:	39 db       	rcall	.-2446   	; 0x278 <reg_servo_angle>
+     c06:	40 e0       	ldi	r20, 0x00	; 0
+     c08:	50 e0       	ldi	r21, 0x00	; 0
+     c0a:	65 e2       	ldi	r22, 0x25	; 37
+     c0c:	73 e4       	ldi	r23, 0x43	; 67
+     c0e:	8f e0       	ldi	r24, 0x0F	; 15
+     c10:	33 db       	rcall	.-2458   	; 0x278 <reg_servo_angle>
+     c12:	40 e0       	ldi	r20, 0x00	; 0
+     c14:	50 e0       	ldi	r21, 0x00	; 0
+     c16:	6d e5       	ldi	r22, 0x5D	; 93
+     c18:	73 e4       	ldi	r23, 0x43	; 67
+     c1a:	80 e1       	ldi	r24, 0x10	; 16
+     c1c:	2d db       	rcall	.-2470   	; 0x278 <reg_servo_angle>
+     c1e:	40 e0       	ldi	r20, 0x00	; 0
+     c20:	50 e0       	ldi	r21, 0x00	; 0
+     c22:	64 ea       	ldi	r22, 0xA4	; 164
+     c24:	72 e4       	ldi	r23, 0x42	; 66
+     c26:	81 e1       	ldi	r24, 0x11	; 17
+     c28:	27 db       	rcall	.-2482   	; 0x278 <reg_servo_angle>
+     c2a:	2f ef       	ldi	r18, 0xFF	; 255
+     c2c:	82 e5       	ldi	r24, 0x52	; 82
+     c2e:	97 e0       	ldi	r25, 0x07	; 7
+     c30:	21 50       	subi	r18, 0x01	; 1
+     c32:	80 40       	sbci	r24, 0x00	; 0
+     c34:	90 40       	sbci	r25, 0x00	; 0
+     c36:	e1 f7       	brne	.-8      	; 0xc30 <one_rot+0xde>
+     c38:	00 c0       	rjmp	.+0      	; 0xc3a <one_rot+0xe8>
+     c3a:	00 00       	nop
+     c3c:	41 cb       	rjmp	.-2430   	; 0x2c0 <action>
+     c3e:	08 95       	ret
+
+00000c40 <two_rot>:
+     c40:	40 e0       	ldi	r20, 0x00	; 0
+     c42:	50 e0       	ldi	r21, 0x00	; 0
+     c44:	66 e1       	ldi	r22, 0x16	; 22
+     c46:	73 e4       	ldi	r23, 0x43	; 67
+     c48:	86 e0       	ldi	r24, 0x06	; 6
+     c4a:	16 db       	rcall	.-2516   	; 0x278 <reg_servo_angle>
+     c4c:	40 e0       	ldi	r20, 0x00	; 0
+     c4e:	50 e0       	ldi	r21, 0x00	; 0
+     c50:	64 eb       	ldi	r22, 0xB4	; 180
+     c52:	72 e4       	ldi	r23, 0x42	; 66
+     c54:	87 e0       	ldi	r24, 0x07	; 7
+     c56:	10 db       	rcall	.-2528   	; 0x278 <reg_servo_angle>
+     c58:	40 e0       	ldi	r20, 0x00	; 0
+     c5a:	50 e0       	ldi	r21, 0x00	; 0
+     c5c:	6c e5       	ldi	r22, 0x5C	; 92
+     c5e:	73 e4       	ldi	r23, 0x43	; 67
+     c60:	88 e0       	ldi	r24, 0x08	; 8
+     c62:	0a db       	rcall	.-2540   	; 0x278 <reg_servo_angle>
+     c64:	40 e0       	ldi	r20, 0x00	; 0
+     c66:	50 e0       	ldi	r21, 0x00	; 0
+     c68:	62 e3       	ldi	r22, 0x32	; 50
+     c6a:	73 e4       	ldi	r23, 0x43	; 67
+     c6c:	89 e0       	ldi	r24, 0x09	; 9
+     c6e:	04 db       	rcall	.-2552   	; 0x278 <reg_servo_angle>
+     c70:	40 e0       	ldi	r20, 0x00	; 0
+     c72:	50 e0       	ldi	r21, 0x00	; 0
+     c74:	63 e5       	ldi	r22, 0x53	; 83
+     c76:	73 e4       	ldi	r23, 0x43	; 67
+     c78:	8a e0       	ldi	r24, 0x0A	; 10
+     c7a:	fe da       	rcall	.-2564   	; 0x278 <reg_servo_angle>
+     c7c:	40 e0       	ldi	r20, 0x00	; 0
+     c7e:	50 e0       	ldi	r21, 0x00	; 0
+     c80:	6e eb       	ldi	r22, 0xBE	; 190
+     c82:	72 e4       	ldi	r23, 0x42	; 66
+     c84:	8b e0       	ldi	r24, 0x0B	; 11
+     c86:	f8 da       	rcall	.-2576   	; 0x278 <reg_servo_angle>
+     c88:	40 e0       	ldi	r20, 0x00	; 0
+     c8a:	50 e0       	ldi	r21, 0x00	; 0
+     c8c:	60 e3       	ldi	r22, 0x30	; 48
+     c8e:	73 e4       	ldi	r23, 0x43	; 67
+     c90:	83 e0       	ldi	r24, 0x03	; 3
+     c92:	f2 da       	rcall	.-2588   	; 0x278 <reg_servo_angle>
+     c94:	40 e0       	ldi	r20, 0x00	; 0
+     c96:	50 e0       	ldi	r21, 0x00	; 0
+     c98:	66 e9       	ldi	r22, 0x96	; 150
+     c9a:	72 e4       	ldi	r23, 0x42	; 66
+     c9c:	84 e0       	ldi	r24, 0x04	; 4
+     c9e:	ec da       	rcall	.-2600   	; 0x278 <reg_servo_angle>
+     ca0:	40 e0       	ldi	r20, 0x00	; 0
+     ca2:	50 e0       	ldi	r21, 0x00	; 0
+     ca4:	60 e6       	ldi	r22, 0x60	; 96
+     ca6:	73 e4       	ldi	r23, 0x43	; 67
+     ca8:	85 e0       	ldi	r24, 0x05	; 5
+     caa:	e6 da       	rcall	.-2612   	; 0x278 <reg_servo_angle>
+     cac:	40 e0       	ldi	r20, 0x00	; 0
+     cae:	50 e0       	ldi	r21, 0x00	; 0
+     cb0:	66 e1       	ldi	r22, 0x16	; 22
+     cb2:	73 e4       	ldi	r23, 0x43	; 67
+     cb4:	8c e0       	ldi	r24, 0x0C	; 12
+     cb6:	e0 da       	rcall	.-2624   	; 0x278 <reg_servo_angle>
+     cb8:	40 e0       	ldi	r20, 0x00	; 0
+     cba:	50 e0       	ldi	r21, 0x00	; 0
+     cbc:	62 e5       	ldi	r22, 0x52	; 82
+     cbe:	73 e4       	ldi	r23, 0x43	; 67
+     cc0:	8d e0       	ldi	r24, 0x0D	; 13
+     cc2:	da da       	rcall	.-2636   	; 0x278 <reg_servo_angle>
+     cc4:	40 e0       	ldi	r20, 0x00	; 0
+     cc6:	50 e0       	ldi	r21, 0x00	; 0
+     cc8:	60 ea       	ldi	r22, 0xA0	; 160
+     cca:	72 e4       	ldi	r23, 0x42	; 66
+     ccc:	8e e0       	ldi	r24, 0x0E	; 14
+     cce:	d4 da       	rcall	.-2648   	; 0x278 <reg_servo_angle>
+     cd0:	40 e0       	ldi	r20, 0x00	; 0
+     cd2:	50 e0       	ldi	r21, 0x00	; 0
+     cd4:	66 e1       	ldi	r22, 0x16	; 22
+     cd6:	73 e4       	ldi	r23, 0x43	; 67
+     cd8:	80 e0       	ldi	r24, 0x00	; 0
+     cda:	ce da       	rcall	.-2660   	; 0x278 <reg_servo_angle>
+     cdc:	40 e0       	ldi	r20, 0x00	; 0
+     cde:	50 e0       	ldi	r21, 0x00	; 0
+     ce0:	64 eb       	ldi	r22, 0xB4	; 180
+     ce2:	72 e4       	ldi	r23, 0x42	; 66
+     ce4:	81 e0       	ldi	r24, 0x01	; 1
+     ce6:	c8 da       	rcall	.-2672   	; 0x278 <reg_servo_angle>
+     ce8:	40 e0       	ldi	r20, 0x00	; 0
+     cea:	50 e0       	ldi	r21, 0x00	; 0
+     cec:	6c e5       	ldi	r22, 0x5C	; 92
+     cee:	73 e4       	ldi	r23, 0x43	; 67
+     cf0:	82 e0       	ldi	r24, 0x02	; 2
+     cf2:	c2 da       	rcall	.-2684   	; 0x278 <reg_servo_angle>
+     cf4:	40 e0       	ldi	r20, 0x00	; 0
+     cf6:	50 e0       	ldi	r21, 0x00	; 0
+     cf8:	62 e3       	ldi	r22, 0x32	; 50
+     cfa:	73 e4       	ldi	r23, 0x43	; 67
+     cfc:	8f e0       	ldi	r24, 0x0F	; 15
+     cfe:	bc da       	rcall	.-2696   	; 0x278 <reg_servo_angle>
+     d00:	40 e0       	ldi	r20, 0x00	; 0
+     d02:	50 e0       	ldi	r21, 0x00	; 0
+     d04:	63 e5       	ldi	r22, 0x53	; 83
+     d06:	73 e4       	ldi	r23, 0x43	; 67
+     d08:	80 e1       	ldi	r24, 0x10	; 16
+     d0a:	b6 da       	rcall	.-2708   	; 0x278 <reg_servo_angle>
+     d0c:	40 e0       	ldi	r20, 0x00	; 0
+     d0e:	50 e0       	ldi	r21, 0x00	; 0
+     d10:	6e eb       	ldi	r22, 0xBE	; 190
+     d12:	72 e4       	ldi	r23, 0x42	; 66
+     d14:	81 e1       	ldi	r24, 0x11	; 17
+     d16:	b0 da       	rcall	.-2720   	; 0x278 <reg_servo_angle>
+     d18:	2f ef       	ldi	r18, 0xFF	; 255
+     d1a:	82 e5       	ldi	r24, 0x52	; 82
+     d1c:	97 e0       	ldi	r25, 0x07	; 7
+     d1e:	21 50       	subi	r18, 0x01	; 1
+     d20:	80 40       	sbci	r24, 0x00	; 0
+     d22:	90 40       	sbci	r25, 0x00	; 0
+     d24:	e1 f7       	brne	.-8      	; 0xd1e <two_rot+0xde>
+     d26:	00 c0       	rjmp	.+0      	; 0xd28 <two_rot+0xe8>
+     d28:	00 00       	nop
+     d2a:	ca ca       	rjmp	.-2668   	; 0x2c0 <action>
+     d2c:	08 95       	ret
+
+00000d2e <three_rot>:
+     d2e:	40 e0       	ldi	r20, 0x00	; 0
+     d30:	50 e0       	ldi	r21, 0x00	; 0
+     d32:	66 e1       	ldi	r22, 0x16	; 22
+     d34:	73 e4       	ldi	r23, 0x43	; 67
+     d36:	86 e0       	ldi	r24, 0x06	; 6
+     d38:	9f da       	rcall	.-2754   	; 0x278 <reg_servo_angle>
+     d3a:	40 e0       	ldi	r20, 0x00	; 0
+     d3c:	50 e0       	ldi	r21, 0x00	; 0
+     d3e:	64 eb       	ldi	r22, 0xB4	; 180
+     d40:	72 e4       	ldi	r23, 0x42	; 66
+     d42:	87 e0       	ldi	r24, 0x07	; 7
+     d44:	99 da       	rcall	.-2766   	; 0x278 <reg_servo_angle>
+     d46:	40 e0       	ldi	r20, 0x00	; 0
+     d48:	50 e0       	ldi	r21, 0x00	; 0
+     d4a:	6c e5       	ldi	r22, 0x5C	; 92
+     d4c:	73 e4       	ldi	r23, 0x43	; 67
+     d4e:	88 e0       	ldi	r24, 0x08	; 8
+     d50:	93 da       	rcall	.-2778   	; 0x278 <reg_servo_angle>
+     d52:	40 e0       	ldi	r20, 0x00	; 0
+     d54:	50 e0       	ldi	r21, 0x00	; 0
+     d56:	62 e3       	ldi	r22, 0x32	; 50
+     d58:	73 e4       	ldi	r23, 0x43	; 67
+     d5a:	89 e0       	ldi	r24, 0x09	; 9
+     d5c:	8d da       	rcall	.-2790   	; 0x278 <reg_servo_angle>
+     d5e:	40 e0       	ldi	r20, 0x00	; 0
+     d60:	50 e0       	ldi	r21, 0x00	; 0
+     d62:	67 e4       	ldi	r22, 0x47	; 71
+     d64:	73 e4       	ldi	r23, 0x43	; 67
+     d66:	8a e0       	ldi	r24, 0x0A	; 10
+     d68:	87 da       	rcall	.-2802   	; 0x278 <reg_servo_angle>
+     d6a:	40 e0       	ldi	r20, 0x00	; 0
+     d6c:	50 e0       	ldi	r21, 0x00	; 0
+     d6e:	6c ec       	ldi	r22, 0xCC	; 204
+     d70:	72 e4       	ldi	r23, 0x42	; 66
+     d72:	8b e0       	ldi	r24, 0x0B	; 11
+     d74:	81 da       	rcall	.-2814   	; 0x278 <reg_servo_angle>
+     d76:	40 e0       	ldi	r20, 0x00	; 0
+     d78:	50 e0       	ldi	r21, 0x00	; 0
+     d7a:	60 e3       	ldi	r22, 0x30	; 48
+     d7c:	73 e4       	ldi	r23, 0x43	; 67
+     d7e:	83 e0       	ldi	r24, 0x03	; 3
+     d80:	7b da       	rcall	.-2826   	; 0x278 <reg_servo_angle>
+     d82:	40 e0       	ldi	r20, 0x00	; 0
+     d84:	50 e0       	ldi	r21, 0x00	; 0
+     d86:	62 eb       	ldi	r22, 0xB2	; 178
+     d88:	72 e4       	ldi	r23, 0x42	; 66
+     d8a:	84 e0       	ldi	r24, 0x04	; 4
+     d8c:	75 da       	rcall	.-2838   	; 0x278 <reg_servo_angle>
+     d8e:	40 e0       	ldi	r20, 0x00	; 0
+     d90:	50 e0       	ldi	r21, 0x00	; 0
+     d92:	69 e5       	ldi	r22, 0x59	; 89
+     d94:	73 e4       	ldi	r23, 0x43	; 67
+     d96:	85 e0       	ldi	r24, 0x05	; 5
+     d98:	6f da       	rcall	.-2850   	; 0x278 <reg_servo_angle>
+     d9a:	40 e0       	ldi	r20, 0x00	; 0
+     d9c:	50 e0       	ldi	r21, 0x00	; 0
+     d9e:	66 e1       	ldi	r22, 0x16	; 22
+     da0:	73 e4       	ldi	r23, 0x43	; 67
+     da2:	8c e0       	ldi	r24, 0x0C	; 12
+     da4:	69 da       	rcall	.-2862   	; 0x278 <reg_servo_angle>
+     da6:	40 e0       	ldi	r20, 0x00	; 0
+     da8:	50 e0       	ldi	r21, 0x00	; 0
+     daa:	62 e5       	ldi	r22, 0x52	; 82
+     dac:	73 e4       	ldi	r23, 0x43	; 67
+     dae:	8d e0       	ldi	r24, 0x0D	; 13
+     db0:	63 da       	rcall	.-2874   	; 0x278 <reg_servo_angle>
+     db2:	40 e0       	ldi	r20, 0x00	; 0
+     db4:	50 e0       	ldi	r21, 0x00	; 0
+     db6:	60 ea       	ldi	r22, 0xA0	; 160
+     db8:	72 e4       	ldi	r23, 0x42	; 66
+     dba:	8e e0       	ldi	r24, 0x0E	; 14
+     dbc:	5d da       	rcall	.-2886   	; 0x278 <reg_servo_angle>
+     dbe:	40 e0       	ldi	r20, 0x00	; 0
+     dc0:	50 e0       	ldi	r21, 0x00	; 0
+     dc2:	66 e1       	ldi	r22, 0x16	; 22
+     dc4:	73 e4       	ldi	r23, 0x43	; 67
+     dc6:	80 e0       	ldi	r24, 0x00	; 0
+     dc8:	57 da       	rcall	.-2898   	; 0x278 <reg_servo_angle>
+     dca:	40 e0       	ldi	r20, 0x00	; 0
+     dcc:	50 e0       	ldi	r21, 0x00	; 0
+     dce:	64 eb       	ldi	r22, 0xB4	; 180
+     dd0:	72 e4       	ldi	r23, 0x42	; 66
+     dd2:	81 e0       	ldi	r24, 0x01	; 1
+     dd4:	51 da       	rcall	.-2910   	; 0x278 <reg_servo_angle>
+     dd6:	40 e0       	ldi	r20, 0x00	; 0
+     dd8:	50 e0       	ldi	r21, 0x00	; 0
+     dda:	6c e5       	ldi	r22, 0x5C	; 92
+     ddc:	73 e4       	ldi	r23, 0x43	; 67
+     dde:	82 e0       	ldi	r24, 0x02	; 2
+     de0:	4b da       	rcall	.-2922   	; 0x278 <reg_servo_angle>
+     de2:	40 e0       	ldi	r20, 0x00	; 0
+     de4:	50 e0       	ldi	r21, 0x00	; 0
+     de6:	62 e3       	ldi	r22, 0x32	; 50
+     de8:	73 e4       	ldi	r23, 0x43	; 67
+     dea:	8f e0       	ldi	r24, 0x0F	; 15
+     dec:	45 da       	rcall	.-2934   	; 0x278 <reg_servo_angle>
+     dee:	40 e0       	ldi	r20, 0x00	; 0
+     df0:	50 e0       	ldi	r21, 0x00	; 0
+     df2:	67 e4       	ldi	r22, 0x47	; 71
+     df4:	73 e4       	ldi	r23, 0x43	; 67
+     df6:	80 e1       	ldi	r24, 0x10	; 16
+     df8:	3f da       	rcall	.-2946   	; 0x278 <reg_servo_angle>
+     dfa:	40 e0       	ldi	r20, 0x00	; 0
+     dfc:	50 e0       	ldi	r21, 0x00	; 0
+     dfe:	6c ec       	ldi	r22, 0xCC	; 204
+     e00:	72 e4       	ldi	r23, 0x42	; 66
+     e02:	81 e1       	ldi	r24, 0x11	; 17
+     e04:	39 da       	rcall	.-2958   	; 0x278 <reg_servo_angle>
+     e06:	2f ef       	ldi	r18, 0xFF	; 255
+     e08:	82 e5       	ldi	r24, 0x52	; 82
+     e0a:	97 e0       	ldi	r25, 0x07	; 7
+     e0c:	21 50       	subi	r18, 0x01	; 1
+     e0e:	80 40       	sbci	r24, 0x00	; 0
+     e10:	90 40       	sbci	r25, 0x00	; 0
+     e12:	e1 f7       	brne	.-8      	; 0xe0c <three_rot+0xde>
+     e14:	00 c0       	rjmp	.+0      	; 0xe16 <three_rot+0xe8>
+     e16:	00 00       	nop
+     e18:	53 ca       	rjmp	.-2906   	; 0x2c0 <action>
+     e1a:	08 95       	ret
+
+00000e1c <four_rot>:
+     e1c:	40 e0       	ldi	r20, 0x00	; 0
+     e1e:	50 e0       	ldi	r21, 0x00	; 0
+     e20:	66 e1       	ldi	r22, 0x16	; 22
+     e22:	73 e4       	ldi	r23, 0x43	; 67
+     e24:	86 e0       	ldi	r24, 0x06	; 6
+     e26:	28 da       	rcall	.-2992   	; 0x278 <reg_servo_angle>
+     e28:	40 e0       	ldi	r20, 0x00	; 0
+     e2a:	50 e0       	ldi	r21, 0x00	; 0
+     e2c:	6c e8       	ldi	r22, 0x8C	; 140
+     e2e:	72 e4       	ldi	r23, 0x42	; 66
+     e30:	87 e0       	ldi	r24, 0x07	; 7
+     e32:	22 da       	rcall	.-3004   	; 0x278 <reg_servo_angle>
+     e34:	40 e0       	ldi	r20, 0x00	; 0
+     e36:	50 e0       	ldi	r21, 0x00	; 0
+     e38:	6c e5       	ldi	r22, 0x5C	; 92
+     e3a:	73 e4       	ldi	r23, 0x43	; 67
+     e3c:	88 e0       	ldi	r24, 0x08	; 8
+     e3e:	1c da       	rcall	.-3016   	; 0x278 <reg_servo_angle>
+     e40:	40 e0       	ldi	r20, 0x00	; 0
+     e42:	50 e0       	ldi	r21, 0x00	; 0
+     e44:	62 e3       	ldi	r22, 0x32	; 50
+     e46:	73 e4       	ldi	r23, 0x43	; 67
+     e48:	89 e0       	ldi	r24, 0x09	; 9
+     e4a:	16 da       	rcall	.-3028   	; 0x278 <reg_servo_angle>
+     e4c:	40 e0       	ldi	r20, 0x00	; 0
+     e4e:	50 e0       	ldi	r21, 0x00	; 0
+     e50:	67 e4       	ldi	r22, 0x47	; 71
+     e52:	73 e4       	ldi	r23, 0x43	; 67
+     e54:	8a e0       	ldi	r24, 0x0A	; 10
+     e56:	10 da       	rcall	.-3040   	; 0x278 <reg_servo_angle>
+     e58:	40 e0       	ldi	r20, 0x00	; 0
+     e5a:	50 e0       	ldi	r21, 0x00	; 0
+     e5c:	6c ec       	ldi	r22, 0xCC	; 204
+     e5e:	72 e4       	ldi	r23, 0x42	; 66
+     e60:	8b e0       	ldi	r24, 0x0B	; 11
+     e62:	0a da       	rcall	.-3052   	; 0x278 <reg_servo_angle>
+     e64:	40 e0       	ldi	r20, 0x00	; 0
+     e66:	50 e0       	ldi	r21, 0x00	; 0
+     e68:	60 e3       	ldi	r22, 0x30	; 48
+     e6a:	73 e4       	ldi	r23, 0x43	; 67
+     e6c:	83 e0       	ldi	r24, 0x03	; 3
+     e6e:	04 da       	rcall	.-3064   	; 0x278 <reg_servo_angle>
+     e70:	40 e0       	ldi	r20, 0x00	; 0
+     e72:	50 e0       	ldi	r21, 0x00	; 0
+     e74:	62 eb       	ldi	r22, 0xB2	; 178
+     e76:	72 e4       	ldi	r23, 0x42	; 66
+     e78:	84 e0       	ldi	r24, 0x04	; 4
+     e7a:	fe d9       	rcall	.-3076   	; 0x278 <reg_servo_angle>
+     e7c:	40 e0       	ldi	r20, 0x00	; 0
+     e7e:	50 e0       	ldi	r21, 0x00	; 0
+     e80:	69 e5       	ldi	r22, 0x59	; 89
+     e82:	73 e4       	ldi	r23, 0x43	; 67
+     e84:	85 e0       	ldi	r24, 0x05	; 5
+     e86:	f8 d9       	rcall	.-3088   	; 0x278 <reg_servo_angle>
+     e88:	40 e0       	ldi	r20, 0x00	; 0
+     e8a:	50 e0       	ldi	r21, 0x00	; 0
+     e8c:	66 e1       	ldi	r22, 0x16	; 22
+     e8e:	73 e4       	ldi	r23, 0x43	; 67
+     e90:	8c e0       	ldi	r24, 0x0C	; 12
+     e92:	f2 d9       	rcall	.-3100   	; 0x278 <reg_servo_angle>
+     e94:	40 e0       	ldi	r20, 0x00	; 0
+     e96:	50 e0       	ldi	r21, 0x00	; 0
+     e98:	66 e6       	ldi	r22, 0x66	; 102
+     e9a:	73 e4       	ldi	r23, 0x43	; 67
+     e9c:	8d e0       	ldi	r24, 0x0D	; 13
+     e9e:	ec d9       	rcall	.-3112   	; 0x278 <reg_servo_angle>
+     ea0:	40 e0       	ldi	r20, 0x00	; 0
+     ea2:	50 e0       	ldi	r21, 0x00	; 0
+     ea4:	60 ea       	ldi	r22, 0xA0	; 160
+     ea6:	72 e4       	ldi	r23, 0x42	; 66
+     ea8:	8e e0       	ldi	r24, 0x0E	; 14
+     eaa:	e6 d9       	rcall	.-3124   	; 0x278 <reg_servo_angle>
+     eac:	40 e0       	ldi	r20, 0x00	; 0
+     eae:	50 e0       	ldi	r21, 0x00	; 0
+     eb0:	66 e1       	ldi	r22, 0x16	; 22
+     eb2:	73 e4       	ldi	r23, 0x43	; 67
+     eb4:	80 e0       	ldi	r24, 0x00	; 0
+     eb6:	e0 d9       	rcall	.-3136   	; 0x278 <reg_servo_angle>
+     eb8:	40 e0       	ldi	r20, 0x00	; 0
+     eba:	50 e0       	ldi	r21, 0x00	; 0
+     ebc:	6c e8       	ldi	r22, 0x8C	; 140
+     ebe:	72 e4       	ldi	r23, 0x42	; 66
+     ec0:	81 e0       	ldi	r24, 0x01	; 1
+     ec2:	da d9       	rcall	.-3148   	; 0x278 <reg_servo_angle>
+     ec4:	40 e0       	ldi	r20, 0x00	; 0
+     ec6:	50 e0       	ldi	r21, 0x00	; 0
+     ec8:	6c e5       	ldi	r22, 0x5C	; 92
+     eca:	73 e4       	ldi	r23, 0x43	; 67
+     ecc:	82 e0       	ldi	r24, 0x02	; 2
+     ece:	d4 d9       	rcall	.-3160   	; 0x278 <reg_servo_angle>
+     ed0:	40 e0       	ldi	r20, 0x00	; 0
+     ed2:	50 e0       	ldi	r21, 0x00	; 0
+     ed4:	62 e3       	ldi	r22, 0x32	; 50
+     ed6:	73 e4       	ldi	r23, 0x43	; 67
+     ed8:	8f e0       	ldi	r24, 0x0F	; 15
+     eda:	ce d9       	rcall	.-3172   	; 0x278 <reg_servo_angle>
+     edc:	40 e0       	ldi	r20, 0x00	; 0
+     ede:	50 e0       	ldi	r21, 0x00	; 0
+     ee0:	67 e4       	ldi	r22, 0x47	; 71
+     ee2:	73 e4       	ldi	r23, 0x43	; 67
+     ee4:	80 e1       	ldi	r24, 0x10	; 16
+     ee6:	c8 d9       	rcall	.-3184   	; 0x278 <reg_servo_angle>
+     ee8:	40 e0       	ldi	r20, 0x00	; 0
+     eea:	50 e0       	ldi	r21, 0x00	; 0
+     eec:	6c ec       	ldi	r22, 0xCC	; 204
+     eee:	72 e4       	ldi	r23, 0x42	; 66
+     ef0:	81 e1       	ldi	r24, 0x11	; 17
+     ef2:	c2 d9       	rcall	.-3196   	; 0x278 <reg_servo_angle>
+     ef4:	2f ef       	ldi	r18, 0xFF	; 255
+     ef6:	82 e5       	ldi	r24, 0x52	; 82
+     ef8:	97 e0       	ldi	r25, 0x07	; 7
+     efa:	21 50       	subi	r18, 0x01	; 1
+     efc:	80 40       	sbci	r24, 0x00	; 0
+     efe:	90 40       	sbci	r25, 0x00	; 0
+     f00:	e1 f7       	brne	.-8      	; 0xefa <four_rot+0xde>
+     f02:	00 c0       	rjmp	.+0      	; 0xf04 <four_rot+0xe8>
+     f04:	00 00       	nop
+     f06:	dc c9       	rjmp	.-3144   	; 0x2c0 <action>
+     f08:	08 95       	ret
+
+00000f0a <five_rot>:
+     f0a:	40 e0       	ldi	r20, 0x00	; 0
+     f0c:	50 e0       	ldi	r21, 0x00	; 0
+     f0e:	66 e1       	ldi	r22, 0x16	; 22
+     f10:	73 e4       	ldi	r23, 0x43	; 67
+     f12:	86 e0       	ldi	r24, 0x06	; 6
+     f14:	b1 d9       	rcall	.-3230   	; 0x278 <reg_servo_angle>
+     f16:	40 e0       	ldi	r20, 0x00	; 0
+     f18:	50 e0       	ldi	r21, 0x00	; 0
+     f1a:	6c e8       	ldi	r22, 0x8C	; 140
+     f1c:	72 e4       	ldi	r23, 0x42	; 66
+     f1e:	87 e0       	ldi	r24, 0x07	; 7
+     f20:	ab d9       	rcall	.-3242   	; 0x278 <reg_servo_angle>
+     f22:	40 e0       	ldi	r20, 0x00	; 0
+     f24:	50 e0       	ldi	r21, 0x00	; 0
+     f26:	6c e5       	ldi	r22, 0x5C	; 92
+     f28:	73 e4       	ldi	r23, 0x43	; 67
+     f2a:	88 e0       	ldi	r24, 0x08	; 8
+     f2c:	a5 d9       	rcall	.-3254   	; 0x278 <reg_servo_angle>
+     f2e:	40 e0       	ldi	r20, 0x00	; 0
+     f30:	50 e0       	ldi	r21, 0x00	; 0
+     f32:	65 e2       	ldi	r22, 0x25	; 37
+     f34:	73 e4       	ldi	r23, 0x43	; 67
+     f36:	89 e0       	ldi	r24, 0x09	; 9
+     f38:	9f d9       	rcall	.-3266   	; 0x278 <reg_servo_angle>
+     f3a:	40 e0       	ldi	r20, 0x00	; 0
+     f3c:	50 e0       	ldi	r21, 0x00	; 0
+     f3e:	62 e5       	ldi	r22, 0x52	; 82
+     f40:	73 e4       	ldi	r23, 0x43	; 67
+     f42:	8a e0       	ldi	r24, 0x0A	; 10
+     f44:	99 d9       	rcall	.-3278   	; 0x278 <reg_servo_angle>
+     f46:	40 e0       	ldi	r20, 0x00	; 0
+     f48:	50 e0       	ldi	r21, 0x00	; 0
+     f4a:	6a ea       	ldi	r22, 0xAA	; 170
+     f4c:	72 e4       	ldi	r23, 0x42	; 66
+     f4e:	8b e0       	ldi	r24, 0x0B	; 11
+     f50:	93 d9       	rcall	.-3290   	; 0x278 <reg_servo_angle>
+     f52:	40 e0       	ldi	r20, 0x00	; 0
+     f54:	50 e0       	ldi	r21, 0x00	; 0
+     f56:	61 e2       	ldi	r22, 0x21	; 33
+     f58:	73 e4       	ldi	r23, 0x43	; 67
+     f5a:	83 e0       	ldi	r24, 0x03	; 3
+     f5c:	8d d9       	rcall	.-3302   	; 0x278 <reg_servo_angle>
+     f5e:	40 e0       	ldi	r20, 0x00	; 0
+     f60:	50 e0       	ldi	r21, 0x00	; 0
+     f62:	6c ea       	ldi	r22, 0xAC	; 172
+     f64:	72 e4       	ldi	r23, 0x42	; 66
+     f66:	84 e0       	ldi	r24, 0x04	; 4
+     f68:	87 d9       	rcall	.-3314   	; 0x278 <reg_servo_angle>
+     f6a:	40 e0       	ldi	r20, 0x00	; 0
+     f6c:	50 e0       	ldi	r21, 0x00	; 0
+     f6e:	6e e5       	ldi	r22, 0x5E	; 94
+     f70:	73 e4       	ldi	r23, 0x43	; 67
+     f72:	85 e0       	ldi	r24, 0x05	; 5
+     f74:	81 d9       	rcall	.-3326   	; 0x278 <reg_servo_angle>
+     f76:	40 e0       	ldi	r20, 0x00	; 0
+     f78:	50 e0       	ldi	r21, 0x00	; 0
+     f7a:	66 e1       	ldi	r22, 0x16	; 22
+     f7c:	73 e4       	ldi	r23, 0x43	; 67
+     f7e:	8c e0       	ldi	r24, 0x0C	; 12
+     f80:	7b d9       	rcall	.-3338   	; 0x278 <reg_servo_angle>
+     f82:	40 e0       	ldi	r20, 0x00	; 0
+     f84:	50 e0       	ldi	r21, 0x00	; 0
+     f86:	66 e6       	ldi	r22, 0x66	; 102
+     f88:	73 e4       	ldi	r23, 0x43	; 67
+     f8a:	8d e0       	ldi	r24, 0x0D	; 13
+     f8c:	75 d9       	rcall	.-3350   	; 0x278 <reg_servo_angle>
+     f8e:	40 e0       	ldi	r20, 0x00	; 0
+     f90:	50 e0       	ldi	r21, 0x00	; 0
+     f92:	60 ea       	ldi	r22, 0xA0	; 160
+     f94:	72 e4       	ldi	r23, 0x42	; 66
+     f96:	8e e0       	ldi	r24, 0x0E	; 14
+     f98:	6f d9       	rcall	.-3362   	; 0x278 <reg_servo_angle>
+     f9a:	40 e0       	ldi	r20, 0x00	; 0
+     f9c:	50 e0       	ldi	r21, 0x00	; 0
+     f9e:	66 e1       	ldi	r22, 0x16	; 22
+     fa0:	73 e4       	ldi	r23, 0x43	; 67
+     fa2:	80 e0       	ldi	r24, 0x00	; 0
+     fa4:	69 d9       	rcall	.-3374   	; 0x278 <reg_servo_angle>
+     fa6:	40 e0       	ldi	r20, 0x00	; 0
+     fa8:	50 e0       	ldi	r21, 0x00	; 0
+     faa:	6c e8       	ldi	r22, 0x8C	; 140
+     fac:	72 e4       	ldi	r23, 0x42	; 66
+     fae:	81 e0       	ldi	r24, 0x01	; 1
+     fb0:	63 d9       	rcall	.-3386   	; 0x278 <reg_servo_angle>
+     fb2:	40 e0       	ldi	r20, 0x00	; 0
+     fb4:	50 e0       	ldi	r21, 0x00	; 0
+     fb6:	6c e5       	ldi	r22, 0x5C	; 92
+     fb8:	73 e4       	ldi	r23, 0x43	; 67
+     fba:	82 e0       	ldi	r24, 0x02	; 2
+     fbc:	5d d9       	rcall	.-3398   	; 0x278 <reg_servo_angle>
+     fbe:	40 e0       	ldi	r20, 0x00	; 0
+     fc0:	50 e0       	ldi	r21, 0x00	; 0
+     fc2:	65 e2       	ldi	r22, 0x25	; 37
+     fc4:	73 e4       	ldi	r23, 0x43	; 67
+     fc6:	8f e0       	ldi	r24, 0x0F	; 15
+     fc8:	57 d9       	rcall	.-3410   	; 0x278 <reg_servo_angle>
+     fca:	40 e0       	ldi	r20, 0x00	; 0
+     fcc:	50 e0       	ldi	r21, 0x00	; 0
+     fce:	62 e5       	ldi	r22, 0x52	; 82
+     fd0:	73 e4       	ldi	r23, 0x43	; 67
+     fd2:	80 e1       	ldi	r24, 0x10	; 16
+     fd4:	51 d9       	rcall	.-3422   	; 0x278 <reg_servo_angle>
+     fd6:	40 e0       	ldi	r20, 0x00	; 0
+     fd8:	50 e0       	ldi	r21, 0x00	; 0
+     fda:	6a ea       	ldi	r22, 0xAA	; 170
+     fdc:	72 e4       	ldi	r23, 0x42	; 66
+     fde:	81 e1       	ldi	r24, 0x11	; 17
+     fe0:	4b d9       	rcall	.-3434   	; 0x278 <reg_servo_angle>
+     fe2:	2f ef       	ldi	r18, 0xFF	; 255
+     fe4:	82 e5       	ldi	r24, 0x52	; 82
+     fe6:	97 e0       	ldi	r25, 0x07	; 7
+     fe8:	21 50       	subi	r18, 0x01	; 1
+     fea:	80 40       	sbci	r24, 0x00	; 0
+     fec:	90 40       	sbci	r25, 0x00	; 0
+     fee:	e1 f7       	brne	.-8      	; 0xfe8 <five_rot+0xde>
+     ff0:	00 c0       	rjmp	.+0      	; 0xff2 <five_rot+0xe8>
+     ff2:	00 00       	nop
+     ff4:	65 c9       	rjmp	.-3382   	; 0x2c0 <action>
+     ff6:	08 95       	ret
+
+00000ff8 <six_rot>:
+     ff8:	40 e0       	ldi	r20, 0x00	; 0
+     ffa:	50 e0       	ldi	r21, 0x00	; 0
+     ffc:	66 e1       	ldi	r22, 0x16	; 22
+     ffe:	73 e4       	ldi	r23, 0x43	; 67
+    1000:	86 e0       	ldi	r24, 0x06	; 6
+    1002:	3a d9       	rcall	.-3468   	; 0x278 <reg_servo_angle>
+    1004:	40 e0       	ldi	r20, 0x00	; 0
+    1006:	50 e0       	ldi	r21, 0x00	; 0
+    1008:	6c e8       	ldi	r22, 0x8C	; 140
+    100a:	72 e4       	ldi	r23, 0x42	; 66
+    100c:	87 e0       	ldi	r24, 0x07	; 7
+    100e:	34 d9       	rcall	.-3480   	; 0x278 <reg_servo_angle>
+    1010:	40 e0       	ldi	r20, 0x00	; 0
+    1012:	50 e0       	ldi	r21, 0x00	; 0
+    1014:	6c e5       	ldi	r22, 0x5C	; 92
+    1016:	73 e4       	ldi	r23, 0x43	; 67
+    1018:	88 e0       	ldi	r24, 0x08	; 8
+    101a:	2e d9       	rcall	.-3492   	; 0x278 <reg_servo_angle>
+    101c:	40 e0       	ldi	r20, 0x00	; 0
+    101e:	50 e0       	ldi	r21, 0x00	; 0
+    1020:	66 e1       	ldi	r22, 0x16	; 22
+    1022:	73 e4       	ldi	r23, 0x43	; 67
+    1024:	89 e0       	ldi	r24, 0x09	; 9
+    1026:	28 d9       	rcall	.-3504   	; 0x278 <reg_servo_angle>
+    1028:	40 e0       	ldi	r20, 0x00	; 0
+    102a:	50 e0       	ldi	r21, 0x00	; 0
+    102c:	63 e5       	ldi	r22, 0x53	; 83
+    102e:	73 e4       	ldi	r23, 0x43	; 67
+    1030:	8a e0       	ldi	r24, 0x0A	; 10
+    1032:	22 d9       	rcall	.-3516   	; 0x278 <reg_servo_angle>
+    1034:	40 e0       	ldi	r20, 0x00	; 0
+    1036:	50 e0       	ldi	r21, 0x00	; 0
+    1038:	64 ea       	ldi	r22, 0xA4	; 164
+    103a:	72 e4       	ldi	r23, 0x42	; 66
+    103c:	8b e0       	ldi	r24, 0x0B	; 11
+    103e:	1c d9       	rcall	.-3528   	; 0x278 <reg_servo_angle>
+    1040:	40 e0       	ldi	r20, 0x00	; 0
+    1042:	50 e0       	ldi	r21, 0x00	; 0
+    1044:	66 e1       	ldi	r22, 0x16	; 22
+    1046:	73 e4       	ldi	r23, 0x43	; 67
+    1048:	83 e0       	ldi	r24, 0x03	; 3
+    104a:	16 d9       	rcall	.-3540   	; 0x278 <reg_servo_angle>
+    104c:	40 e0       	ldi	r20, 0x00	; 0
+    104e:	50 e0       	ldi	r21, 0x00	; 0
+    1050:	62 eb       	ldi	r22, 0xB2	; 178
+    1052:	72 e4       	ldi	r23, 0x42	; 66
+    1054:	84 e0       	ldi	r24, 0x04	; 4
+    1056:	10 d9       	rcall	.-3552   	; 0x278 <reg_servo_angle>
+    1058:	40 e0       	ldi	r20, 0x00	; 0
+    105a:	50 e0       	ldi	r21, 0x00	; 0
+    105c:	6a e5       	ldi	r22, 0x5A	; 90
+    105e:	73 e4       	ldi	r23, 0x43	; 67
+    1060:	85 e0       	ldi	r24, 0x05	; 5
+    1062:	0a d9       	rcall	.-3564   	; 0x278 <reg_servo_angle>
+    1064:	40 e0       	ldi	r20, 0x00	; 0
+    1066:	50 e0       	ldi	r21, 0x00	; 0
+    1068:	66 e1       	ldi	r22, 0x16	; 22
+    106a:	73 e4       	ldi	r23, 0x43	; 67
+    106c:	8c e0       	ldi	r24, 0x0C	; 12
+    106e:	04 d9       	rcall	.-3576   	; 0x278 <reg_servo_angle>
+    1070:	40 e0       	ldi	r20, 0x00	; 0
+    1072:	50 e0       	ldi	r21, 0x00	; 0
+    1074:	66 e6       	ldi	r22, 0x66	; 102
+    1076:	73 e4       	ldi	r23, 0x43	; 67
+    1078:	8d e0       	ldi	r24, 0x0D	; 13
+    107a:	fe d8       	rcall	.-3588   	; 0x278 <reg_servo_angle>
+    107c:	40 e0       	ldi	r20, 0x00	; 0
+    107e:	50 e0       	ldi	r21, 0x00	; 0
+    1080:	60 ea       	ldi	r22, 0xA0	; 160
+    1082:	72 e4       	ldi	r23, 0x42	; 66
+    1084:	8e e0       	ldi	r24, 0x0E	; 14
+    1086:	f8 d8       	rcall	.-3600   	; 0x278 <reg_servo_angle>
+    1088:	40 e0       	ldi	r20, 0x00	; 0
+    108a:	50 e0       	ldi	r21, 0x00	; 0
+    108c:	66 e1       	ldi	r22, 0x16	; 22
+    108e:	73 e4       	ldi	r23, 0x43	; 67
+    1090:	80 e0       	ldi	r24, 0x00	; 0
+    1092:	f2 d8       	rcall	.-3612   	; 0x278 <reg_servo_angle>
+    1094:	40 e0       	ldi	r20, 0x00	; 0
+    1096:	50 e0       	ldi	r21, 0x00	; 0
+    1098:	6c e8       	ldi	r22, 0x8C	; 140
+    109a:	72 e4       	ldi	r23, 0x42	; 66
+    109c:	81 e0       	ldi	r24, 0x01	; 1
+    109e:	ec d8       	rcall	.-3624   	; 0x278 <reg_servo_angle>
+    10a0:	40 e0       	ldi	r20, 0x00	; 0
+    10a2:	50 e0       	ldi	r21, 0x00	; 0
+    10a4:	6c e5       	ldi	r22, 0x5C	; 92
+    10a6:	73 e4       	ldi	r23, 0x43	; 67
+    10a8:	82 e0       	ldi	r24, 0x02	; 2
+    10aa:	e6 d8       	rcall	.-3636   	; 0x278 <reg_servo_angle>
+    10ac:	40 e0       	ldi	r20, 0x00	; 0
+    10ae:	50 e0       	ldi	r21, 0x00	; 0
+    10b0:	66 e1       	ldi	r22, 0x16	; 22
+    10b2:	73 e4       	ldi	r23, 0x43	; 67
+    10b4:	8f e0       	ldi	r24, 0x0F	; 15
+    10b6:	e0 d8       	rcall	.-3648   	; 0x278 <reg_servo_angle>
+    10b8:	40 e0       	ldi	r20, 0x00	; 0
+    10ba:	50 e0       	ldi	r21, 0x00	; 0
+    10bc:	63 e5       	ldi	r22, 0x53	; 83
+    10be:	73 e4       	ldi	r23, 0x43	; 67
+    10c0:	80 e1       	ldi	r24, 0x10	; 16
+    10c2:	da d8       	rcall	.-3660   	; 0x278 <reg_servo_angle>
+    10c4:	40 e0       	ldi	r20, 0x00	; 0
+    10c6:	50 e0       	ldi	r21, 0x00	; 0
+    10c8:	64 ea       	ldi	r22, 0xA4	; 164
+    10ca:	72 e4       	ldi	r23, 0x42	; 66
+    10cc:	81 e1       	ldi	r24, 0x11	; 17
+    10ce:	d4 d8       	rcall	.-3672   	; 0x278 <reg_servo_angle>
+    10d0:	2f ef       	ldi	r18, 0xFF	; 255
+    10d2:	82 e5       	ldi	r24, 0x52	; 82
+    10d4:	97 e0       	ldi	r25, 0x07	; 7
+    10d6:	21 50       	subi	r18, 0x01	; 1
+    10d8:	80 40       	sbci	r24, 0x00	; 0
+    10da:	90 40       	sbci	r25, 0x00	; 0
+    10dc:	e1 f7       	brne	.-8      	; 0x10d6 <six_rot+0xde>
+    10de:	00 c0       	rjmp	.+0      	; 0x10e0 <six_rot+0xe8>
+    10e0:	00 00       	nop
+    10e2:	ee c8       	rjmp	.-3620   	; 0x2c0 <action>
+    10e4:	08 95       	ret
+
+000010e6 <seven_rot>:
+    10e6:	40 e0       	ldi	r20, 0x00	; 0
+    10e8:	50 e0       	ldi	r21, 0x00	; 0
+    10ea:	66 e1       	ldi	r22, 0x16	; 22
+    10ec:	73 e4       	ldi	r23, 0x43	; 67
+    10ee:	86 e0       	ldi	r24, 0x06	; 6
+    10f0:	c3 d8       	rcall	.-3706   	; 0x278 <reg_servo_angle>
+    10f2:	40 e0       	ldi	r20, 0x00	; 0
+    10f4:	50 e0       	ldi	r21, 0x00	; 0
+    10f6:	64 eb       	ldi	r22, 0xB4	; 180
+    10f8:	72 e4       	ldi	r23, 0x42	; 66
+    10fa:	87 e0       	ldi	r24, 0x07	; 7
+    10fc:	bd d8       	rcall	.-3718   	; 0x278 <reg_servo_angle>
+    10fe:	40 e0       	ldi	r20, 0x00	; 0
+    1100:	50 e0       	ldi	r21, 0x00	; 0
+    1102:	6c e5       	ldi	r22, 0x5C	; 92
+    1104:	73 e4       	ldi	r23, 0x43	; 67
+    1106:	88 e0       	ldi	r24, 0x08	; 8
+    1108:	b7 d8       	rcall	.-3730   	; 0x278 <reg_servo_angle>
+    110a:	40 e0       	ldi	r20, 0x00	; 0
+    110c:	50 e0       	ldi	r21, 0x00	; 0
+    110e:	66 e1       	ldi	r22, 0x16	; 22
+    1110:	73 e4       	ldi	r23, 0x43	; 67
+    1112:	89 e0       	ldi	r24, 0x09	; 9
+    1114:	b1 d8       	rcall	.-3742   	; 0x278 <reg_servo_angle>
+    1116:	40 e0       	ldi	r20, 0x00	; 0
+    1118:	50 e0       	ldi	r21, 0x00	; 0
+    111a:	63 e5       	ldi	r22, 0x53	; 83
+    111c:	73 e4       	ldi	r23, 0x43	; 67
+    111e:	8a e0       	ldi	r24, 0x0A	; 10
+    1120:	ab d8       	rcall	.-3754   	; 0x278 <reg_servo_angle>
+    1122:	40 e0       	ldi	r20, 0x00	; 0
+    1124:	50 e0       	ldi	r21, 0x00	; 0
+    1126:	64 ea       	ldi	r22, 0xA4	; 164
+    1128:	72 e4       	ldi	r23, 0x42	; 66
+    112a:	8b e0       	ldi	r24, 0x0B	; 11
+    112c:	a5 d8       	rcall	.-3766   	; 0x278 <reg_servo_angle>
+    112e:	40 e0       	ldi	r20, 0x00	; 0
+    1130:	50 e0       	ldi	r21, 0x00	; 0
+    1132:	66 e1       	ldi	r22, 0x16	; 22
+    1134:	73 e4       	ldi	r23, 0x43	; 67
+    1136:	83 e0       	ldi	r24, 0x03	; 3
+    1138:	9f d8       	rcall	.-3778   	; 0x278 <reg_servo_angle>
+    113a:	40 e0       	ldi	r20, 0x00	; 0
+    113c:	50 e0       	ldi	r21, 0x00	; 0
+    113e:	62 eb       	ldi	r22, 0xB2	; 178
+    1140:	72 e4       	ldi	r23, 0x42	; 66
+    1142:	84 e0       	ldi	r24, 0x04	; 4
+    1144:	99 d8       	rcall	.-3790   	; 0x278 <reg_servo_angle>
+    1146:	40 e0       	ldi	r20, 0x00	; 0
+    1148:	50 e0       	ldi	r21, 0x00	; 0
+    114a:	6a e5       	ldi	r22, 0x5A	; 90
+    114c:	73 e4       	ldi	r23, 0x43	; 67
+    114e:	85 e0       	ldi	r24, 0x05	; 5
+    1150:	93 d8       	rcall	.-3802   	; 0x278 <reg_servo_angle>
+    1152:	40 e0       	ldi	r20, 0x00	; 0
+    1154:	50 e0       	ldi	r21, 0x00	; 0
+    1156:	66 e1       	ldi	r22, 0x16	; 22
+    1158:	73 e4       	ldi	r23, 0x43	; 67
+    115a:	8c e0       	ldi	r24, 0x0C	; 12
+    115c:	8d d8       	rcall	.-3814   	; 0x278 <reg_servo_angle>
+    115e:	40 e0       	ldi	r20, 0x00	; 0
+    1160:	50 e0       	ldi	r21, 0x00	; 0
+    1162:	62 e5       	ldi	r22, 0x52	; 82
+    1164:	73 e4       	ldi	r23, 0x43	; 67
+    1166:	8d e0       	ldi	r24, 0x0D	; 13
+    1168:	87 d8       	rcall	.-3826   	; 0x278 <reg_servo_angle>
+    116a:	40 e0       	ldi	r20, 0x00	; 0
+    116c:	50 e0       	ldi	r21, 0x00	; 0
+    116e:	60 ea       	ldi	r22, 0xA0	; 160
+    1170:	72 e4       	ldi	r23, 0x42	; 66
+    1172:	8e e0       	ldi	r24, 0x0E	; 14
+    1174:	81 d8       	rcall	.-3838   	; 0x278 <reg_servo_angle>
+    1176:	40 e0       	ldi	r20, 0x00	; 0
+    1178:	50 e0       	ldi	r21, 0x00	; 0
+    117a:	66 e1       	ldi	r22, 0x16	; 22
+    117c:	73 e4       	ldi	r23, 0x43	; 67
+    117e:	80 e0       	ldi	r24, 0x00	; 0
+    1180:	7b d8       	rcall	.-3850   	; 0x278 <reg_servo_angle>
+    1182:	40 e0       	ldi	r20, 0x00	; 0
+    1184:	50 e0       	ldi	r21, 0x00	; 0
+    1186:	64 eb       	ldi	r22, 0xB4	; 180
+    1188:	72 e4       	ldi	r23, 0x42	; 66
+    118a:	81 e0       	ldi	r24, 0x01	; 1
+    118c:	75 d8       	rcall	.-3862   	; 0x278 <reg_servo_angle>
+    118e:	40 e0       	ldi	r20, 0x00	; 0
+    1190:	50 e0       	ldi	r21, 0x00	; 0
+    1192:	6c e5       	ldi	r22, 0x5C	; 92
+    1194:	73 e4       	ldi	r23, 0x43	; 67
+    1196:	82 e0       	ldi	r24, 0x02	; 2
+    1198:	6f d8       	rcall	.-3874   	; 0x278 <reg_servo_angle>
+    119a:	40 e0       	ldi	r20, 0x00	; 0
+    119c:	50 e0       	ldi	r21, 0x00	; 0
+    119e:	66 e1       	ldi	r22, 0x16	; 22
+    11a0:	73 e4       	ldi	r23, 0x43	; 67
+    11a2:	8f e0       	ldi	r24, 0x0F	; 15
+    11a4:	69 d8       	rcall	.-3886   	; 0x278 <reg_servo_angle>
+    11a6:	40 e0       	ldi	r20, 0x00	; 0
+    11a8:	50 e0       	ldi	r21, 0x00	; 0
+    11aa:	63 e5       	ldi	r22, 0x53	; 83
+    11ac:	73 e4       	ldi	r23, 0x43	; 67
+    11ae:	80 e1       	ldi	r24, 0x10	; 16
+    11b0:	63 d8       	rcall	.-3898   	; 0x278 <reg_servo_angle>
+    11b2:	40 e0       	ldi	r20, 0x00	; 0
+    11b4:	50 e0       	ldi	r21, 0x00	; 0
+    11b6:	64 ea       	ldi	r22, 0xA4	; 164
+    11b8:	72 e4       	ldi	r23, 0x42	; 66
+    11ba:	81 e1       	ldi	r24, 0x11	; 17
+    11bc:	5d d8       	rcall	.-3910   	; 0x278 <reg_servo_angle>
+    11be:	2f ef       	ldi	r18, 0xFF	; 255
+    11c0:	82 e5       	ldi	r24, 0x52	; 82
+    11c2:	97 e0       	ldi	r25, 0x07	; 7
+    11c4:	21 50       	subi	r18, 0x01	; 1
+    11c6:	80 40       	sbci	r24, 0x00	; 0
+    11c8:	90 40       	sbci	r25, 0x00	; 0
+    11ca:	e1 f7       	brne	.-8      	; 0x11c4 <seven_rot+0xde>
+    11cc:	00 c0       	rjmp	.+0      	; 0x11ce <seven_rot+0xe8>
+    11ce:	00 00       	nop
+    11d0:	77 c8       	rjmp	.-3858   	; 0x2c0 <action>
+    11d2:	08 95       	ret
+
+000011d4 <eight_rot>:
+    11d4:	40 e0       	ldi	r20, 0x00	; 0
+    11d6:	50 e0       	ldi	r21, 0x00	; 0
+    11d8:	66 e1       	ldi	r22, 0x16	; 22
+    11da:	73 e4       	ldi	r23, 0x43	; 67
+    11dc:	86 e0       	ldi	r24, 0x06	; 6
+    11de:	4c d8       	rcall	.-3944   	; 0x278 <reg_servo_angle>
+    11e0:	40 e0       	ldi	r20, 0x00	; 0
+    11e2:	50 e0       	ldi	r21, 0x00	; 0
+    11e4:	64 eb       	ldi	r22, 0xB4	; 180
+    11e6:	72 e4       	ldi	r23, 0x42	; 66
+    11e8:	87 e0       	ldi	r24, 0x07	; 7
+    11ea:	46 d8       	rcall	.-3956   	; 0x278 <reg_servo_angle>
+    11ec:	40 e0       	ldi	r20, 0x00	; 0
+    11ee:	50 e0       	ldi	r21, 0x00	; 0
+    11f0:	6c e5       	ldi	r22, 0x5C	; 92
+    11f2:	73 e4       	ldi	r23, 0x43	; 67
+    11f4:	88 e0       	ldi	r24, 0x08	; 8
+    11f6:	40 d8       	rcall	.-3968   	; 0x278 <reg_servo_angle>
+    11f8:	40 e0       	ldi	r20, 0x00	; 0
+    11fa:	50 e0       	ldi	r21, 0x00	; 0
+    11fc:	66 e1       	ldi	r22, 0x16	; 22
+    11fe:	73 e4       	ldi	r23, 0x43	; 67
+    1200:	89 e0       	ldi	r24, 0x09	; 9
+    1202:	3a d8       	rcall	.-3980   	; 0x278 <reg_servo_angle>
+    1204:	40 e0       	ldi	r20, 0x00	; 0
+    1206:	50 e0       	ldi	r21, 0x00	; 0
+    1208:	62 e6       	ldi	r22, 0x62	; 98
+    120a:	73 e4       	ldi	r23, 0x43	; 67
+    120c:	8a e0       	ldi	r24, 0x0A	; 10
+    120e:	34 d8       	rcall	.-3992   	; 0x278 <reg_servo_angle>
+    1210:	40 e0       	ldi	r20, 0x00	; 0
+    1212:	50 e0       	ldi	r21, 0x00	; 0
+    1214:	66 e9       	ldi	r22, 0x96	; 150
+    1216:	72 e4       	ldi	r23, 0x42	; 66
+    1218:	8b e0       	ldi	r24, 0x0B	; 11
+    121a:	2e d8       	rcall	.-4004   	; 0x278 <reg_servo_angle>
+    121c:	40 e0       	ldi	r20, 0x00	; 0
+    121e:	50 e0       	ldi	r21, 0x00	; 0
+    1220:	66 e1       	ldi	r22, 0x16	; 22
+    1222:	73 e4       	ldi	r23, 0x43	; 67
+    1224:	83 e0       	ldi	r24, 0x03	; 3
+    1226:	28 d8       	rcall	.-4016   	; 0x278 <reg_servo_angle>
+    1228:	40 e0       	ldi	r20, 0x00	; 0
+    122a:	50 e0       	ldi	r21, 0x00	; 0
+    122c:	64 e9       	ldi	r22, 0x94	; 148
+    122e:	72 e4       	ldi	r23, 0x42	; 66
+    1230:	84 e0       	ldi	r24, 0x04	; 4
+    1232:	22 d8       	rcall	.-4028   	; 0x278 <reg_servo_angle>
+    1234:	40 e0       	ldi	r20, 0x00	; 0
+    1236:	50 e0       	ldi	r21, 0x00	; 0
+    1238:	61 e6       	ldi	r22, 0x61	; 97
+    123a:	73 e4       	ldi	r23, 0x43	; 67
+    123c:	85 e0       	ldi	r24, 0x05	; 5
+    123e:	1c d8       	rcall	.-4040   	; 0x278 <reg_servo_angle>
+    1240:	40 e0       	ldi	r20, 0x00	; 0
+    1242:	50 e0       	ldi	r21, 0x00	; 0
+    1244:	66 e1       	ldi	r22, 0x16	; 22
+    1246:	73 e4       	ldi	r23, 0x43	; 67
+    1248:	8c e0       	ldi	r24, 0x0C	; 12
+    124a:	16 d8       	rcall	.-4052   	; 0x278 <reg_servo_angle>
+    124c:	40 e0       	ldi	r20, 0x00	; 0
+    124e:	50 e0       	ldi	r21, 0x00	; 0
+    1250:	62 e5       	ldi	r22, 0x52	; 82
+    1252:	73 e4       	ldi	r23, 0x43	; 67
+    1254:	8d e0       	ldi	r24, 0x0D	; 13
+    1256:	10 d8       	rcall	.-4064   	; 0x278 <reg_servo_angle>
+    1258:	40 e0       	ldi	r20, 0x00	; 0
+    125a:	50 e0       	ldi	r21, 0x00	; 0
+    125c:	60 ea       	ldi	r22, 0xA0	; 160
+    125e:	72 e4       	ldi	r23, 0x42	; 66
+    1260:	8e e0       	ldi	r24, 0x0E	; 14
+    1262:	0a d8       	rcall	.-4076   	; 0x278 <reg_servo_angle>
+    1264:	40 e0       	ldi	r20, 0x00	; 0
+    1266:	50 e0       	ldi	r21, 0x00	; 0
+    1268:	66 e1       	ldi	r22, 0x16	; 22
+    126a:	73 e4       	ldi	r23, 0x43	; 67
+    126c:	80 e0       	ldi	r24, 0x00	; 0
+    126e:	04 d8       	rcall	.-4088   	; 0x278 <reg_servo_angle>
+    1270:	40 e0       	ldi	r20, 0x00	; 0
+    1272:	50 e0       	ldi	r21, 0x00	; 0
+    1274:	64 eb       	ldi	r22, 0xB4	; 180
+    1276:	72 e4       	ldi	r23, 0x42	; 66
+    1278:	81 e0       	ldi	r24, 0x01	; 1
+    127a:	0e 94 3c 01 	call	0x278	; 0x278 <reg_servo_angle>
+    127e:	40 e0       	ldi	r20, 0x00	; 0
+    1280:	50 e0       	ldi	r21, 0x00	; 0
+    1282:	6c e5       	ldi	r22, 0x5C	; 92
+    1284:	73 e4       	ldi	r23, 0x43	; 67
+    1286:	82 e0       	ldi	r24, 0x02	; 2
+    1288:	0e 94 3c 01 	call	0x278	; 0x278 <reg_servo_angle>
+    128c:	40 e0       	ldi	r20, 0x00	; 0
+    128e:	50 e0       	ldi	r21, 0x00	; 0
+    1290:	66 e1       	ldi	r22, 0x16	; 22
+    1292:	73 e4       	ldi	r23, 0x43	; 67
+    1294:	8f e0       	ldi	r24, 0x0F	; 15
+    1296:	0e 94 3c 01 	call	0x278	; 0x278 <reg_servo_angle>
+    129a:	40 e0       	ldi	r20, 0x00	; 0
+    129c:	50 e0       	ldi	r21, 0x00	; 0
+    129e:	62 e6       	ldi	r22, 0x62	; 98
+    12a0:	73 e4       	ldi	r23, 0x43	; 67
+    12a2:	80 e1       	ldi	r24, 0x10	; 16
+    12a4:	0e 94 3c 01 	call	0x278	; 0x278 <reg_servo_angle>
+    12a8:	40 e0       	ldi	r20, 0x00	; 0
+    12aa:	50 e0       	ldi	r21, 0x00	; 0
+    12ac:	66 e9       	ldi	r22, 0x96	; 150
+    12ae:	72 e4       	ldi	r23, 0x42	; 66
+    12b0:	81 e1       	ldi	r24, 0x11	; 17
+    12b2:	0e 94 3c 01 	call	0x278	; 0x278 <reg_servo_angle>
+    12b6:	2f ef       	ldi	r18, 0xFF	; 255
+    12b8:	82 e5       	ldi	r24, 0x52	; 82
+    12ba:	97 e0       	ldi	r25, 0x07	; 7
+    12bc:	21 50       	subi	r18, 0x01	; 1
+    12be:	80 40       	sbci	r24, 0x00	; 0
+    12c0:	90 40       	sbci	r25, 0x00	; 0
+    12c2:	e1 f7       	brne	.-8      	; 0x12bc <eight_rot+0xe8>
+    12c4:	00 c0       	rjmp	.+0      	; 0x12c6 <eight_rot+0xf2>
+    12c6:	00 00       	nop
+    12c8:	0c 94 60 01 	jmp	0x2c0	; 0x2c0 <action>
+    12cc:	08 95       	ret
+
+000012ce <rot_left>:
+    12ce:	0b df       	rcall	.-490    	; 0x10e6 <seven_rot>
+    12d0:	93 de       	rcall	.-730    	; 0xff8 <six_rot>
+    12d2:	1b de       	rcall	.-970    	; 0xf0a <five_rot>
+    12d4:	a3 dd       	rcall	.-1210   	; 0xe1c <four_rot>
+    12d6:	2b dd       	rcall	.-1450   	; 0xd2e <three_rot>
+    12d8:	b3 dc       	rcall	.-1690   	; 0xc40 <two_rot>
+    12da:	3b dc       	rcall	.-1930   	; 0xb52 <one_rot>
+    12dc:	7b cf       	rjmp	.-266    	; 0x11d4 <eight_rot>
+    12de:	08 95       	ret
+
+000012e0 <rot_right>:
+    12e0:	02 df       	rcall	.-508    	; 0x10e6 <seven_rot>
+    12e2:	78 df       	rcall	.-272    	; 0x11d4 <eight_rot>
+    12e4:	36 dc       	rcall	.-1940   	; 0xb52 <one_rot>
+    12e6:	ac dc       	rcall	.-1704   	; 0xc40 <two_rot>
+    12e8:	22 dd       	rcall	.-1468   	; 0xd2e <three_rot>
+    12ea:	98 dd       	rcall	.-1232   	; 0xe1c <four_rot>
+    12ec:	0e de       	rcall	.-996    	; 0xf0a <five_rot>
+    12ee:	84 ce       	rjmp	.-760    	; 0xff8 <six_rot>
+    12f0:	08 95       	ret
+
+000012f2 <forward_left>:
+    12f2:	1d dc       	rcall	.-1990   	; 0xb2e <forward>
+    12f4:	1c dc       	rcall	.-1992   	; 0xb2e <forward>
+    12f6:	1b dc       	rcall	.-1994   	; 0xb2e <forward>
+    12f8:	1a dc       	rcall	.-1996   	; 0xb2e <forward>
+    12fa:	e9 cf       	rjmp	.-46     	; 0x12ce <rot_left>
+    12fc:	08 95       	ret
+
+000012fe <forward_right>:
+    12fe:	17 dc       	rcall	.-2002   	; 0xb2e <forward>
+    1300:	16 dc       	rcall	.-2004   	; 0xb2e <forward>
+    1302:	15 dc       	rcall	.-2006   	; 0xb2e <forward>
+    1304:	14 dc       	rcall	.-2008   	; 0xb2e <forward>
+    1306:	ec cf       	rjmp	.-40     	; 0x12e0 <rot_right>
+    1308:	08 95       	ret
+
+0000130a <servo_init>:
+    130a:	61 e0       	ldi	r22, 0x01	; 1
+    130c:	8e ef       	ldi	r24, 0xFE	; 254
+    130e:	0e 94 fd 00 	call	0x1fa	; 0x1fa <set_servo_status_return_level>
+    1312:	6f ef       	ldi	r22, 0xFF	; 255
+    1314:	73 e0       	ldi	r23, 0x03	; 3
+    1316:	8e ef       	ldi	r24, 0xFE	; 254
+    1318:	0e 94 26 01 	call	0x24c	; 0x24c <set_servo_torque>
+    131c:	66 e9       	ldi	r22, 0x96	; 150
+    131e:	70 e0       	ldi	r23, 0x00	; 0
+    1320:	8e ef       	ldi	r24, 0xFE	; 254
+    1322:	0c 94 10 01 	jmp	0x220	; 0x220 <set_servo_max_speed>
+    1326:	08 95       	ret
+
+00001328 <led_blink>:
+    1328:	00 97       	sbiw	r24, 0x00	; 0
+    132a:	b9 f0       	breq	.+46     	; 0x135a <led_blink+0x32>
+    132c:	29 9a       	sbi	0x05, 1	; 5
+    132e:	2f ef       	ldi	r18, 0xFF	; 255
+    1330:	33 ec       	ldi	r19, 0xC3	; 195
+    1332:	49 e0       	ldi	r20, 0x09	; 9
+    1334:	21 50       	subi	r18, 0x01	; 1
+    1336:	30 40       	sbci	r19, 0x00	; 0
+    1338:	40 40       	sbci	r20, 0x00	; 0
+    133a:	e1 f7       	brne	.-8      	; 0x1334 <led_blink+0xc>
+    133c:	00 c0       	rjmp	.+0      	; 0x133e <led_blink+0x16>
+    133e:	00 00       	nop
+    1340:	15 b8       	out	0x05, r1	; 5
+    1342:	2f ef       	ldi	r18, 0xFF	; 255
+    1344:	33 ec       	ldi	r19, 0xC3	; 195
+    1346:	49 e0       	ldi	r20, 0x09	; 9
+    1348:	21 50       	subi	r18, 0x01	; 1
+    134a:	30 40       	sbci	r19, 0x00	; 0
+    134c:	40 40       	sbci	r20, 0x00	; 0
+    134e:	e1 f7       	brne	.-8      	; 0x1348 <led_blink+0x20>
+    1350:	00 c0       	rjmp	.+0      	; 0x1352 <led_blink+0x2a>
+    1352:	00 00       	nop
+    1354:	01 97       	sbiw	r24, 0x01	; 1
+    1356:	00 97       	sbiw	r24, 0x00	; 0
+    1358:	49 f7       	brne	.-46     	; 0x132c <led_blink+0x4>
+    135a:	08 95       	ret
+
+0000135c <main_init>:
+	}
+}
+
+void main_init(void)
+{
+	DDRB |= 0x03;
+    135c:	84 b1       	in	r24, 0x04	; 4
+    135e:	83 60       	ori	r24, 0x03	; 3
+    1360:	84 b9       	out	0x04, r24	; 4
+	led_blink(3);
+    1362:	83 e0       	ldi	r24, 0x03	; 3
+    1364:	90 e0       	ldi	r25, 0x00	; 0
+    1366:	e0 df       	rcall	.-64     	; 0x1328 <led_blink>
+	uart_init();
+    1368:	0e 94 a5 00 	call	0x14a	; 0x14a <uart_init>
+	LCD_Init();
+    136c:	0e 94 7a 00 	call	0xf4	; 0xf4 <LCD_Init>
+	LCD_Clear();
+    1370:	0e 94 9a 00 	call	0x134	; 0x134 <LCD_Clear>
+	servo_init();
+    1374:	ca cf       	rjmp	.-108    	; 0x130a <servo_init>
+    1376:	08 95       	ret
+
+00001378 <main>:
+************************************************  HUVUDFUNKTION  ********************************************
+************************************************************************************************************/
+
+int main(void)
+{
+	main_init();
+    1378:	f1 df       	rcall	.-30     	; 0x135c <main_init>
+    137a:	2f ef       	ldi	r18, 0xFF	; 255
+    137c:	87 ea       	ldi	r24, 0xA7	; 167
+    137e:	91 e6       	ldi	r25, 0x61	; 97
+    1380:	21 50       	subi	r18, 0x01	; 1
+    1382:	80 40       	sbci	r24, 0x00	; 0
+    1384:	90 40       	sbci	r25, 0x00	; 0
+    1386:	e1 f7       	brne	.-8      	; 0x1380 <main+0x8>
+    1388:	00 c0       	rjmp	.+0      	; 0x138a <main+0x12>
+    138a:	00 00       	nop
+	_delay_ms(2000);
+	
+	stand();
+    138c:	0e 94 71 01 	call	0x2e2	; 0x2e2 <stand>
+    1390:	2f ef       	ldi	r18, 0xFF	; 255
+    1392:	87 ea       	ldi	r24, 0xA7	; 167
+    1394:	91 e6       	ldi	r25, 0x61	; 97
+    1396:	21 50       	subi	r18, 0x01	; 1
+    1398:	80 40       	sbci	r24, 0x00	; 0
+    139a:	90 40       	sbci	r25, 0x00	; 0
+    139c:	e1 f7       	brne	.-8      	; 0x1396 <main+0x1e>
+    139e:	00 c0       	rjmp	.+0      	; 0x13a0 <main+0x28>
+    13a0:	00 00       	nop
+	_delay_ms(2000);
+
+	while(1)
+	{
+		for(int i = 0; i < 5; i++)
+    13a2:	c0 e0       	ldi	r28, 0x00	; 0
+    13a4:	d0 e0       	ldi	r29, 0x00	; 0
+    13a6:	00 e0       	ldi	r16, 0x00	; 0
+    13a8:	10 e0       	ldi	r17, 0x00	; 0
+    13aa:	02 c0       	rjmp	.+4      	; 0x13b0 <main+0x38>
+		{
+			forward();
+    13ac:	c0 db       	rcall	.-2176   	; 0xb2e <forward>
+	stand();
+	_delay_ms(2000);
+
+	while(1)
+	{
+		for(int i = 0; i < 5; i++)
+    13ae:	21 96       	adiw	r28, 0x01	; 1
+    13b0:	c5 30       	cpi	r28, 0x05	; 5
+    13b2:	d1 05       	cpc	r29, r1
+    13b4:	dc f3       	brlt	.-10     	; 0x13ac <main+0x34>
+			forward();
+		}
+		
+		for(int i = 0; i < 5; i++)
+		{
+			backward();
+    13b6:	c4 db       	rcall	.-2168   	; 0xb40 <backward>
+    13b8:	c3 db       	rcall	.-2170   	; 0xb40 <backward>
+    13ba:	c2 db       	rcall	.-2172   	; 0xb40 <backward>
+    13bc:	c1 db       	rcall	.-2174   	; 0xb40 <backward>
+    13be:	c0 db       	rcall	.-2176   	; 0xb40 <backward>
+		}
+		
+		for(int i = 0; i < 5; i++)
+		{
+			rot_left();
+    13c0:	86 df       	rcall	.-244    	; 0x12ce <rot_left>
+    13c2:	85 df       	rcall	.-246    	; 0x12ce <rot_left>
+    13c4:	84 df       	rcall	.-248    	; 0x12ce <rot_left>
+    13c6:	83 df       	rcall	.-250    	; 0x12ce <rot_left>
+    13c8:	82 df       	rcall	.-252    	; 0x12ce <rot_left>
+		}
+		
+		for(int i = 0; i < 5; i++)
+		{
+			rot_right();
+    13ca:	8a df       	rcall	.-236    	; 0x12e0 <rot_right>
+    13cc:	89 df       	rcall	.-238    	; 0x12e0 <rot_right>
+    13ce:	88 df       	rcall	.-240    	; 0x12e0 <rot_right>
+    13d0:	87 df       	rcall	.-242    	; 0x12e0 <rot_right>
+    13d2:	86 df       	rcall	.-244    	; 0x12e0 <rot_right>
+		}
+		
+		for(int i = 0; i < 3; i++)
+		{
+			forward_left();
+    13d4:	8e df       	rcall	.-228    	; 0x12f2 <forward_left>
+    13d6:	8d df       	rcall	.-230    	; 0x12f2 <forward_left>
+    13d8:	8c df       	rcall	.-232    	; 0x12f2 <forward_left>
+		}
+		
+		for(int i = 0; i < 3; i++)
+		{
+			forward_right();
+    13da:	91 df       	rcall	.-222    	; 0x12fe <forward_right>
+    13dc:	90 df       	rcall	.-224    	; 0x12fe <forward_right>
+    13de:	8f df       	rcall	.-226    	; 0x12fe <forward_right>
+	stand();
+	_delay_ms(2000);
+
+	while(1)
+	{
+		for(int i = 0; i < 5; i++)
+    13e0:	c0 2f       	mov	r28, r16
+    13e2:	d1 2f       	mov	r29, r17
+    13e4:	e5 cf       	rjmp	.-54     	; 0x13b0 <main+0x38>
+
+000013e6 <__fixunssfsi>:
+    13e6:	33 d0       	rcall	.+102    	; 0x144e <__fp_splitA>
+    13e8:	88 f0       	brcs	.+34     	; 0x140c <__fixunssfsi+0x26>
+    13ea:	9f 57       	subi	r25, 0x7F	; 127
+    13ec:	90 f0       	brcs	.+36     	; 0x1412 <__fixunssfsi+0x2c>
+    13ee:	b9 2f       	mov	r27, r25
+    13f0:	99 27       	eor	r25, r25
+    13f2:	b7 51       	subi	r27, 0x17	; 23
+    13f4:	a0 f0       	brcs	.+40     	; 0x141e <__fixunssfsi+0x38>
+    13f6:	d1 f0       	breq	.+52     	; 0x142c <__fixunssfsi+0x46>
+    13f8:	66 0f       	add	r22, r22
+    13fa:	77 1f       	adc	r23, r23
+    13fc:	88 1f       	adc	r24, r24
+    13fe:	99 1f       	adc	r25, r25
+    1400:	1a f0       	brmi	.+6      	; 0x1408 <__fixunssfsi+0x22>
+    1402:	ba 95       	dec	r27
+    1404:	c9 f7       	brne	.-14     	; 0x13f8 <__fixunssfsi+0x12>
+    1406:	12 c0       	rjmp	.+36     	; 0x142c <__fixunssfsi+0x46>
+    1408:	b1 30       	cpi	r27, 0x01	; 1
+    140a:	81 f0       	breq	.+32     	; 0x142c <__fixunssfsi+0x46>
+    140c:	3a d0       	rcall	.+116    	; 0x1482 <__fp_zero>
+    140e:	b1 e0       	ldi	r27, 0x01	; 1
+    1410:	08 95       	ret
+    1412:	37 c0       	rjmp	.+110    	; 0x1482 <__fp_zero>
+    1414:	67 2f       	mov	r22, r23
+    1416:	78 2f       	mov	r23, r24
+    1418:	88 27       	eor	r24, r24
+    141a:	b8 5f       	subi	r27, 0xF8	; 248
+    141c:	39 f0       	breq	.+14     	; 0x142c <__fixunssfsi+0x46>
+    141e:	b9 3f       	cpi	r27, 0xF9	; 249
+    1420:	cc f3       	brlt	.-14     	; 0x1414 <__fixunssfsi+0x2e>
+    1422:	86 95       	lsr	r24
+    1424:	77 95       	ror	r23
+    1426:	67 95       	ror	r22
+    1428:	b3 95       	inc	r27
+    142a:	d9 f7       	brne	.-10     	; 0x1422 <__fixunssfsi+0x3c>
+    142c:	3e f4       	brtc	.+14     	; 0x143c <__fixunssfsi+0x56>
+    142e:	90 95       	com	r25
+    1430:	80 95       	com	r24
+    1432:	70 95       	com	r23
+    1434:	61 95       	neg	r22
+    1436:	7f 4f       	sbci	r23, 0xFF	; 255
+    1438:	8f 4f       	sbci	r24, 0xFF	; 255
+    143a:	9f 4f       	sbci	r25, 0xFF	; 255
+    143c:	08 95       	ret
+
+0000143e <__fp_split3>:
+    143e:	57 fd       	sbrc	r21, 7
+    1440:	90 58       	subi	r25, 0x80	; 128
+    1442:	44 0f       	add	r20, r20
+    1444:	55 1f       	adc	r21, r21
+    1446:	59 f0       	breq	.+22     	; 0x145e <__fp_splitA+0x10>
+    1448:	5f 3f       	cpi	r21, 0xFF	; 255
+    144a:	71 f0       	breq	.+28     	; 0x1468 <__fp_splitA+0x1a>
+    144c:	47 95       	ror	r20
+
+0000144e <__fp_splitA>:
+    144e:	88 0f       	add	r24, r24
+    1450:	97 fb       	bst	r25, 7
+    1452:	99 1f       	adc	r25, r25
+    1454:	61 f0       	breq	.+24     	; 0x146e <__fp_splitA+0x20>
+    1456:	9f 3f       	cpi	r25, 0xFF	; 255
+    1458:	79 f0       	breq	.+30     	; 0x1478 <__fp_splitA+0x2a>
+    145a:	87 95       	ror	r24
+    145c:	08 95       	ret
+    145e:	12 16       	cp	r1, r18
+    1460:	13 06       	cpc	r1, r19
+    1462:	14 06       	cpc	r1, r20
+    1464:	55 1f       	adc	r21, r21
+    1466:	f2 cf       	rjmp	.-28     	; 0x144c <__fp_split3+0xe>
+    1468:	46 95       	lsr	r20
+    146a:	f1 df       	rcall	.-30     	; 0x144e <__fp_splitA>
+    146c:	08 c0       	rjmp	.+16     	; 0x147e <__fp_splitA+0x30>
+    146e:	16 16       	cp	r1, r22
+    1470:	17 06       	cpc	r1, r23
+    1472:	18 06       	cpc	r1, r24
+    1474:	99 1f       	adc	r25, r25
+    1476:	f1 cf       	rjmp	.-30     	; 0x145a <__fp_splitA+0xc>
+    1478:	86 95       	lsr	r24
+    147a:	71 05       	cpc	r23, r1
+    147c:	61 05       	cpc	r22, r1
+    147e:	08 94       	sec
+    1480:	08 95       	ret
+
+00001482 <__fp_zero>:
+    1482:	e8 94       	clt
+
+00001484 <__fp_szero>:
+    1484:	bb 27       	eor	r27, r27
+    1486:	66 27       	eor	r22, r22
+    1488:	77 27       	eor	r23, r23
+    148a:	cb 01       	movw	r24, r22
+    148c:	97 f9       	bld	r25, 7
+    148e:	08 95       	ret
+
+00001490 <__mulsf3>:
+    1490:	0b d0       	rcall	.+22     	; 0x14a8 <__mulsf3x>
+    1492:	78 c0       	rjmp	.+240    	; 0x1584 <__fp_round>
+    1494:	69 d0       	rcall	.+210    	; 0x1568 <__fp_pscA>
+    1496:	28 f0       	brcs	.+10     	; 0x14a2 <__mulsf3+0x12>
+    1498:	6e d0       	rcall	.+220    	; 0x1576 <__fp_pscB>
+    149a:	18 f0       	brcs	.+6      	; 0x14a2 <__mulsf3+0x12>
+    149c:	95 23       	and	r25, r21
+    149e:	09 f0       	breq	.+2      	; 0x14a2 <__mulsf3+0x12>
+    14a0:	5a c0       	rjmp	.+180    	; 0x1556 <__fp_inf>
+    14a2:	5f c0       	rjmp	.+190    	; 0x1562 <__fp_nan>
+    14a4:	11 24       	eor	r1, r1
+    14a6:	ee cf       	rjmp	.-36     	; 0x1484 <__fp_szero>
+
+000014a8 <__mulsf3x>:
+    14a8:	ca df       	rcall	.-108    	; 0x143e <__fp_split3>
+    14aa:	a0 f3       	brcs	.-24     	; 0x1494 <__mulsf3+0x4>
+
+000014ac <__mulsf3_pse>:
+    14ac:	95 9f       	mul	r25, r21
+    14ae:	d1 f3       	breq	.-12     	; 0x14a4 <__mulsf3+0x14>
+    14b0:	95 0f       	add	r25, r21
+    14b2:	50 e0       	ldi	r21, 0x00	; 0
+    14b4:	55 1f       	adc	r21, r21
+    14b6:	62 9f       	mul	r22, r18
+    14b8:	f0 01       	movw	r30, r0
+    14ba:	72 9f       	mul	r23, r18
+    14bc:	bb 27       	eor	r27, r27
+    14be:	f0 0d       	add	r31, r0
+    14c0:	b1 1d       	adc	r27, r1
+    14c2:	63 9f       	mul	r22, r19
+    14c4:	aa 27       	eor	r26, r26
+    14c6:	f0 0d       	add	r31, r0
+    14c8:	b1 1d       	adc	r27, r1
+    14ca:	aa 1f       	adc	r26, r26
+    14cc:	64 9f       	mul	r22, r20
+    14ce:	66 27       	eor	r22, r22
+    14d0:	b0 0d       	add	r27, r0
+    14d2:	a1 1d       	adc	r26, r1
+    14d4:	66 1f       	adc	r22, r22
+    14d6:	82 9f       	mul	r24, r18
+    14d8:	22 27       	eor	r18, r18
+    14da:	b0 0d       	add	r27, r0
+    14dc:	a1 1d       	adc	r26, r1
+    14de:	62 1f       	adc	r22, r18
+    14e0:	73 9f       	mul	r23, r19
+    14e2:	b0 0d       	add	r27, r0
+    14e4:	a1 1d       	adc	r26, r1
+    14e6:	62 1f       	adc	r22, r18
+    14e8:	83 9f       	mul	r24, r19
+    14ea:	a0 0d       	add	r26, r0
+    14ec:	61 1d       	adc	r22, r1
+    14ee:	22 1f       	adc	r18, r18
+    14f0:	74 9f       	mul	r23, r20
+    14f2:	33 27       	eor	r19, r19
+    14f4:	a0 0d       	add	r26, r0
+    14f6:	61 1d       	adc	r22, r1
+    14f8:	23 1f       	adc	r18, r19
+    14fa:	84 9f       	mul	r24, r20
+    14fc:	60 0d       	add	r22, r0
+    14fe:	21 1d       	adc	r18, r1
+    1500:	82 2f       	mov	r24, r18
+    1502:	76 2f       	mov	r23, r22
+    1504:	6a 2f       	mov	r22, r26
+    1506:	11 24       	eor	r1, r1
+    1508:	9f 57       	subi	r25, 0x7F	; 127
+    150a:	50 40       	sbci	r21, 0x00	; 0
+    150c:	8a f0       	brmi	.+34     	; 0x1530 <__mulsf3_pse+0x84>
+    150e:	e1 f0       	breq	.+56     	; 0x1548 <__mulsf3_pse+0x9c>
+    1510:	88 23       	and	r24, r24
+    1512:	4a f0       	brmi	.+18     	; 0x1526 <__mulsf3_pse+0x7a>
+    1514:	ee 0f       	add	r30, r30
+    1516:	ff 1f       	adc	r31, r31
+    1518:	bb 1f       	adc	r27, r27
+    151a:	66 1f       	adc	r22, r22
+    151c:	77 1f       	adc	r23, r23
+    151e:	88 1f       	adc	r24, r24
+    1520:	91 50       	subi	r25, 0x01	; 1
+    1522:	50 40       	sbci	r21, 0x00	; 0
+    1524:	a9 f7       	brne	.-22     	; 0x1510 <__mulsf3_pse+0x64>
+    1526:	9e 3f       	cpi	r25, 0xFE	; 254
+    1528:	51 05       	cpc	r21, r1
+    152a:	70 f0       	brcs	.+28     	; 0x1548 <__mulsf3_pse+0x9c>
+    152c:	14 c0       	rjmp	.+40     	; 0x1556 <__fp_inf>
+    152e:	aa cf       	rjmp	.-172    	; 0x1484 <__fp_szero>
+    1530:	5f 3f       	cpi	r21, 0xFF	; 255
+    1532:	ec f3       	brlt	.-6      	; 0x152e <__mulsf3_pse+0x82>
+    1534:	98 3e       	cpi	r25, 0xE8	; 232
+    1536:	dc f3       	brlt	.-10     	; 0x152e <__mulsf3_pse+0x82>
+    1538:	86 95       	lsr	r24
+    153a:	77 95       	ror	r23
+    153c:	67 95       	ror	r22
+    153e:	b7 95       	ror	r27
+    1540:	f7 95       	ror	r31
+    1542:	e7 95       	ror	r30
+    1544:	9f 5f       	subi	r25, 0xFF	; 255
+    1546:	c1 f7       	brne	.-16     	; 0x1538 <__mulsf3_pse+0x8c>
+    1548:	fe 2b       	or	r31, r30
+    154a:	88 0f       	add	r24, r24
+    154c:	91 1d       	adc	r25, r1
+    154e:	96 95       	lsr	r25
+    1550:	87 95       	ror	r24
+    1552:	97 f9       	bld	r25, 7
+    1554:	08 95       	ret
+
+00001556 <__fp_inf>:
+    1556:	97 f9       	bld	r25, 7
+    1558:	9f 67       	ori	r25, 0x7F	; 127
+    155a:	80 e8       	ldi	r24, 0x80	; 128
+    155c:	70 e0       	ldi	r23, 0x00	; 0
+    155e:	60 e0       	ldi	r22, 0x00	; 0
+    1560:	08 95       	ret
+
+00001562 <__fp_nan>:
+    1562:	9f ef       	ldi	r25, 0xFF	; 255
+    1564:	80 ec       	ldi	r24, 0xC0	; 192
+    1566:	08 95       	ret
+
+00001568 <__fp_pscA>:
+    1568:	00 24       	eor	r0, r0
+    156a:	0a 94       	dec	r0
+    156c:	16 16       	cp	r1, r22
+    156e:	17 06       	cpc	r1, r23
+    1570:	18 06       	cpc	r1, r24
+    1572:	09 06       	cpc	r0, r25
+    1574:	08 95       	ret
+
+00001576 <__fp_pscB>:
+    1576:	00 24       	eor	r0, r0
+    1578:	0a 94       	dec	r0
+    157a:	12 16       	cp	r1, r18
+    157c:	13 06       	cpc	r1, r19
+    157e:	14 06       	cpc	r1, r20
+    1580:	05 06       	cpc	r0, r21
+    1582:	08 95       	ret
+
+00001584 <__fp_round>:
+    1584:	09 2e       	mov	r0, r25
+    1586:	03 94       	inc	r0
+    1588:	00 0c       	add	r0, r0
+    158a:	11 f4       	brne	.+4      	; 0x1590 <__fp_round+0xc>
+    158c:	88 23       	and	r24, r24
+    158e:	52 f0       	brmi	.+20     	; 0x15a4 <__fp_round+0x20>
+    1590:	bb 0f       	add	r27, r27
+    1592:	40 f4       	brcc	.+16     	; 0x15a4 <__fp_round+0x20>
+    1594:	bf 2b       	or	r27, r31
+    1596:	11 f4       	brne	.+4      	; 0x159c <__fp_round+0x18>
+    1598:	60 ff       	sbrs	r22, 0
+    159a:	04 c0       	rjmp	.+8      	; 0x15a4 <__fp_round+0x20>
+    159c:	6f 5f       	subi	r22, 0xFF	; 255
+    159e:	7f 4f       	sbci	r23, 0xFF	; 255
+    15a0:	8f 4f       	sbci	r24, 0xFF	; 255
+    15a2:	9f 4f       	sbci	r25, 0xFF	; 255
+    15a4:	08 95       	ret
+
+000015a6 <_exit>:
+    15a6:	f8 94       	cli
+
+000015a8 <__stop_program>:
+    15a8:	ff cf       	rjmp	.-2      	; 0x15a8 <__stop_program>

@@ -1,6 +1,5 @@
 #ifndef MAIN_H
-# define MAIN_H
-
+#define MAIN_H
 
 //Adresser i EEPROM dit olika data skrivs
 #define MAX_SPEED				   0x20
@@ -13,6 +12,8 @@
 #define LOWEST_VOLTAGE_LIMIT	   0X0c
 #define HIGHEST_VOLTAGE_LIMIT	   0x0d
 #define HIGHEST_TEMPERATURE_LIMIT  0x0b
+#define SERVO_ID                   0x03
+#define GLOBAL_ID				   0xfe
 
 //Startvinklar då roboten står upp
 #define STAND_DEG_00				150

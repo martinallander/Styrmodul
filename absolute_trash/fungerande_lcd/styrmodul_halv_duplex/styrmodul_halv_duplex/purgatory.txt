@@ -1,0 +1,970 @@
+/************************************************************************************************************
+*******************************************  FUNKTIONER FÖR ENKSKILDA BEN ***********************************
+************************************************************************************************************/
+
+Funktioner för att förflytta det vänstra främre benet
+void front_left_forward_start(void)
+{
+	reg_servo_angle(0, (STAND_DEG_00 + 5));
+	reg_servo_angle(1, (STAND_DEG_01 - 20));
+	reg_servo_angle(2, (STAND_DEG_02 + 30));
+}
+
+void front_left_forward_end(void)
+{
+	reg_servo_angle(0, (STAND_DEG_00 - 5));
+	reg_servo_angle(1, (STAND_DEG_01 + 60));
+	reg_servo_angle(2, (STAND_DEG_02 - 10));
+}
+
+
+//Funktioner för att förflytta det högra främre benet
+void front_right_forward_start(void)
+{
+	reg_servo_angle(15, (STAND_DEG_15 + 5));
+	reg_servo_angle(16, (STAND_DEG_16 - 20));
+	reg_servo_angle(17, (STAND_DEG_17 + 30));
+}
+void front_right_forward_end(void)
+{
+	reg_servo_angle(15, (STAND_DEG_15 - 5));
+	reg_servo_angle(16, (STAND_DEG_16 + 60));
+	reg_servo_angle(17, (STAND_DEG_17 - 10));
+}
+
+//Funktioner för att förflytta det vänstra mellersta benet
+void middle_left_forward_start(void)
+{
+	reg_servo_angle(3, (STAND_DEG_03 - 5));
+	reg_servo_angle(4, (STAND_DEG_04 + 10));
+	reg_servo_angle(5, STAND_DEG_05);
+}
+
+void middle_left_forward_end(void)
+{
+	reg_servo_angle(3, (STAND_DEG_03 + 5));
+	reg_servo_angle(4, (STAND_DEG_04 - 20));
+	reg_servo_angle(5, (STAND_DEG_05 + 30)); //tidigare 230
+}
+
+//Funktioner för att förflytta det högra mellersta benet
+void middle_right_forward_start(void)
+{
+	reg_servo_angle(12, (STAND_DEG_12 - 5));
+	reg_servo_angle(13, (STAND_DEG_13 + 10));
+	reg_servo_angle(14, STAND_DEG_14);
+}
+
+void middle_right_forward_end(void)
+{
+	reg_servo_angle(12, (STAND_DEG_12 + 5));
+	reg_servo_angle(13, (STAND_DEG_13 - 20));
+	reg_servo_angle(14, (STAND_DEG_14 + 30));
+}
+
+//Funktioner för att förflytta det bakre vänstra benet
+void back_left_forward_start(void)
+{
+	reg_servo_angle(6, (STAND_DEG_06 + 5));
+	reg_servo_angle(7, (STAND_DEG_07 + 20));
+	reg_servo_angle(8, (STAND_DEG_08 - 5));
+}
+
+void back_left_forward_end(void)
+{
+	reg_servo_angle(6, (STAND_DEG_06 - 5));
+	reg_servo_angle(7, (STAND_DEG_07 - 5));
+	reg_servo_angle(8, (STAND_DEG_08 + 10));
+}
+
+//Funktioner för att förflytta det högra bakre benet
+void back_right_forward_start(void)
+{
+	reg_servo_angle(9, (STAND_DEG_09 + 5));
+	reg_servo_angle(10, (STAND_DEG_10 + 20));
+	reg_servo_angle(11, (STAND_DEG_11 - 5));
+}
+
+void back_right_forward_end(void)
+{
+	reg_servo_angle(9, (STAND_DEG_09 - 5));
+	reg_servo_angle(10, (STAND_DEG_10 - 5));
+	reg_servo_angle(11, (STAND_DEG_11 + 10));
+}
+
+/************************************************************************************************************
+*******************************************  Funktioner är enskilda ben v.2  ********************************
+************************************************************************************************************/
+
+//Funktioner för att förflytta det vänstra främre benet
+void front_left_forward_start(void)
+{
+	reg_servo_angle(0, 155);
+	reg_servo_angle(1, 70);
+	reg_servo_angle(2, 260);
+}
+
+void front_left_forward_end(void)
+{
+	reg_servo_angle(0, 145);
+	reg_servo_angle(1, 150);
+	reg_servo_angle(2, 220);
+}
+
+
+//Funktioner för att förflytta det högra främre benet
+void front_right_forward_start(void)
+{
+	reg_servo_angle(15, 155);
+	reg_servo_angle(16, 190);
+	reg_servo_angle(17, 100);
+}
+void front_right_forward_end(void)
+{
+	reg_servo_angle(15, 145);
+	reg_servo_angle(16, 270);
+	reg_servo_angle(17, 60);
+}
+
+//Funktioner för att förflytta det vänstra mellersta benet
+void middle_left_forward_start(void)
+{
+	reg_servo_angle(3, 145);
+	reg_servo_angle(4, 100);
+	reg_servo_angle(5, 230);
+}
+
+void middle_left_forward_end(void)
+{
+	reg_servo_angle(3, 155);
+	reg_servo_angle(4, 70);
+	reg_servo_angle(5, 260); //tidigare 230
+}
+
+//Funktioner för att förflytta det högra mellersta benet
+void middle_right_forward_start(void)
+{
+	reg_servo_angle(12, 145);
+	reg_servo_angle(13, 230);
+	reg_servo_angle(14, 70);
+}
+
+void middle_right_forward_end(void)
+{
+	reg_servo_angle(12, 155);
+	reg_servo_angle(13, 200);
+	reg_servo_angle(14, 100);
+}
+
+//Funktioner för att förflytta det bakre vänstra benet
+void back_left_forward_start(void)
+{
+	reg_servo_angle(6, 155);
+	reg_servo_angle(7, 85);
+	reg_servo_angle(8, 225);
+}
+
+void back_left_forward_end(void)
+{
+	reg_servo_angle(6, 145);
+	reg_servo_angle(7, 110);
+	reg_servo_angle(8, 245);
+}
+
+//Funktioner för att förflytta det högra bakre benet
+void back_right_forward_start(void)
+{
+	reg_servo_angle(9, 155);
+	reg_servo_angle(10, 205);
+	reg_servo_angle(11, 65);
+}
+
+void back_right_forward_end(void)
+{
+	reg_servo_angle(9, 145);
+	reg_servo_angle(10, 230);
+	reg_servo_angle(11, 85);
+}
+
+
+
+
+
+//Invers kinematik-gång framåt och bakåt
+
+void one(void)
+{
+	int scale = 3;
+	
+	
+	reg_servo_angle(6, 127);
+	reg_servo_angle(7, 96);
+	reg_servo_angle(8, 219);
+	
+	reg_servo_angle(9, 195);
+	reg_servo_angle(10, 226);
+	reg_servo_angle(11, 63);
+	
+	reg_servo_angle(3, 139);
+	reg_servo_angle(4, 75);
+	reg_servo_angle(5, 235);
+	
+	reg_servo_angle(12, 139);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 75);
+	
+	reg_servo_angle(0, 195);
+	reg_servo_angle(1, 92);
+	reg_servo_angle(2, 227);
+	
+	reg_servo_angle(15, 127);
+	reg_servo_angle(16, 220);
+	reg_servo_angle(17, 72);
+	_delay_ms(50*scale);
+	action();
+	
+}
+
+void two(void)
+{
+	int scale = 3;
+	
+	
+	reg_servo_angle(6, 120);
+	reg_servo_angle(7, 94);
+	reg_servo_angle(8, 223);
+	
+	reg_servo_angle(9, 187);
+	reg_servo_angle(10, 225);
+	reg_servo_angle(11, 64);
+	
+	reg_servo_angle(3, 146);
+	reg_servo_angle(4, 74);
+	reg_servo_angle(5, 237);
+	
+	reg_servo_angle(12, 146);
+	reg_servo_angle(13, 208);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 187);
+	reg_servo_angle(1, 93);
+	reg_servo_angle(2, 226);
+	
+	reg_servo_angle(15, 120);
+	reg_servo_angle(16, 223);
+	reg_servo_angle(17, 67);
+	_delay_ms(20*scale);
+	action();
+}
+
+void three(void)
+{
+	int scale = 3;
+	
+	
+	reg_servo_angle(6, 113);
+	reg_servo_angle(7, 93);
+	reg_servo_angle(8, 226);
+	
+	reg_servo_angle(9, 180);
+	reg_servo_angle(10, 223);
+	reg_servo_angle(11, 67);
+	
+	reg_servo_angle(3, 154);
+	reg_servo_angle(4, 74);
+	reg_servo_angle(5, 237);
+	
+	reg_servo_angle(12, 154);
+	reg_servo_angle(13, 208);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 180);
+	reg_servo_angle(1, 94);
+	reg_servo_angle(2, 223);
+	
+	reg_servo_angle(15, 113);
+	reg_servo_angle(16, 225);
+	reg_servo_angle(17, 64);
+	_delay_ms(20*scale);
+	action();	
+}
+
+void four(void)
+{
+	int scale = 3;
+	
+	
+	reg_servo_angle(6, 105);
+	reg_servo_angle(7, 92);
+	reg_servo_angle(8, 227);
+	
+	reg_servo_angle(9, 173);
+	reg_servo_angle(10, 220);
+	reg_servo_angle(11, 72);
+	
+	reg_servo_angle(3, 161);
+	reg_servo_angle(4, 75);
+	reg_servo_angle(5, 235);
+	
+	reg_servo_angle(12, 161);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 75);
+	
+	reg_servo_angle(0, 173);
+	reg_servo_angle(1, 96);
+	reg_servo_angle(2, 219);
+	
+	reg_servo_angle(15, 105);
+	reg_servo_angle(16, 226);
+	reg_servo_angle(17, 63);
+	_delay_ms(50*scale);
+	action();
+}
+
+void fourandahalf(void)
+{
+	int scale = 3;
+	
+	
+	reg_servo_angle(6, 105);
+	reg_servo_angle(7, 92);
+	reg_servo_angle(8, 227);
+	
+	reg_servo_angle(9, 173);
+	reg_servo_angle(10, 204);
+	reg_servo_angle(11, 81);
+	
+	reg_servo_angle(3, 161);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 225);
+	
+	reg_servo_angle(12, 161);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 75);
+	
+	reg_servo_angle(0, 173);
+	reg_servo_angle(1, 96);
+	reg_servo_angle(2, 219);
+	
+	reg_servo_angle(15, 105);
+	reg_servo_angle(16, 208);
+	reg_servo_angle(17, 73);
+	_delay_ms(50*scale);
+	action();
+}
+
+void five(void)
+{
+	int scale = 3;
+	
+	
+	reg_servo_angle(6, 105);
+	reg_servo_angle(7, 74);
+	reg_servo_angle(8, 237);
+	
+	reg_servo_angle(9, 173);
+	reg_servo_angle(10, 204);
+	reg_servo_angle(11, 81);
+	
+	reg_servo_angle(3, 161);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 225);
+	
+	reg_servo_angle(12, 161);
+	reg_servo_angle(13, 225);
+	reg_servo_angle(14, 65);
+	
+	reg_servo_angle(0, 173);
+	reg_servo_angle(1, 80);
+	reg_servo_angle(2, 228);
+	
+	reg_servo_angle(15, 105);
+	reg_servo_angle(16, 208);
+	reg_servo_angle(17, 73);
+	_delay_ms(50*scale);
+	action();
+}
+
+void six(void)
+{
+	int scale = 3;
+	
+
+	reg_servo_angle(6, 113);
+	reg_servo_angle(7, 75);
+	reg_servo_angle(8, 236);
+	
+	reg_servo_angle(9, 180);
+	reg_servo_angle(10, 206);
+	reg_servo_angle(11, 77);
+	
+	reg_servo_angle(3, 154);
+	reg_servo_angle(4, 92);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 154);
+	reg_servo_angle(13, 226);
+	reg_servo_angle(14, 63);
+	
+	reg_servo_angle(0, 180);
+	reg_servo_angle(1, 77);
+	reg_servo_angle(2, 233);
+	
+	reg_servo_angle(15, 113);
+	reg_servo_angle(16, 207);
+	reg_servo_angle(17, 74);
+	_delay_ms(20*scale);
+	action();
+}
+
+void seven(void)
+{
+	int scale = 3;
+	
+	
+	reg_servo_angle(6, 120);
+	reg_servo_angle(7, 77);
+	reg_servo_angle(8, 233);
+	
+	reg_servo_angle(9, 187);
+	reg_servo_angle(10, 207);
+	reg_servo_angle(11, 74);
+	
+	reg_servo_angle(3, 146);
+	reg_servo_angle(4, 92);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 146);
+	reg_servo_angle(13, 226);
+	reg_servo_angle(14, 63);
+	
+	reg_servo_angle(0, 187);
+	reg_servo_angle(1, 75);
+	reg_servo_angle(2, 236);
+	
+	reg_servo_angle(15, 120);
+	reg_servo_angle(16, 206);
+	reg_servo_angle(17, 77);
+	_delay_ms(20*scale);
+	action();
+}
+
+void eight(void)
+{
+	int scale = 3;
+	
+	
+	reg_servo_angle(6, 127);
+	reg_servo_angle(7, 80);
+	reg_servo_angle(8, 228);
+	
+	reg_servo_angle(9, 195);
+	reg_servo_angle(10, 208);
+	reg_servo_angle(11, 73);
+	
+	reg_servo_angle(3, 139);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 225);
+	
+	reg_servo_angle(12, 139);
+	reg_servo_angle(13, 225);
+	reg_servo_angle(14, 65);
+	
+	reg_servo_angle(0, 195);
+	reg_servo_angle(1, 74);
+	reg_servo_angle(2, 237);
+	
+	reg_servo_angle(15, 127);
+	reg_servo_angle(16, 204);
+	reg_servo_angle(17, 81);
+	_delay_ms(50*scale);
+	action();
+}
+
+void nine(void)
+{
+	int scale = 3;
+	
+	reg_servo_angle(6, 127);
+	reg_servo_angle(7, 96);
+	reg_servo_angle(8, 219);
+	
+	reg_servo_angle(9, 195);
+	reg_servo_angle(10, 208);
+	reg_servo_angle(11, 73);
+	
+	reg_servo_angle(3, 139);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 225);
+	
+	reg_servo_angle(12, 139);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 75);
+
+	reg_servo_angle(0, 195);
+	reg_servo_angle(1, 92);
+	reg_servo_angle(2, 227);
+	
+	reg_servo_angle(15, 127);
+	reg_servo_angle(16, 204);
+	reg_servo_angle(17, 81);
+	_delay_ms(50*scale);
+	action();
+}
+
+MER gammalt skräp
+
+
+void front_right_leg_forward(void)
+{
+	int scale = 4;
+	//forward x = 15, z = 9 
+	//y = 10
+	_delay_ms(20*scale);
+	reg_servo_angle(0x06, 139);
+	reg_servo_angle(0x07, 112);
+	reg_servo_angle(0x08, 199);
+	action();
+	
+	//y = 8
+	_delay_ms(130*scale);
+	reg_servo_angle(0x06, 133);
+	reg_servo_angle(0x07, 108);
+	reg_servo_angle(0x08, 207);
+	action();
+	
+	//y = 4
+	_delay_ms(20*scale);
+	reg_servo_angle(0x06, 120);
+	reg_servo_angle(0x07, 103);
+	reg_servo_angle(0x08, 217);
+	action();
+	
+	//y = 0
+	_delay_ms(20*scale);
+	reg_servo_angle(0x06, 105);
+	reg_servo_angle(0x07, 101);
+	reg_servo_angle(0x08, 221);
+	action();
+	
+	//back z = 6
+	//y = 4
+	_delay_ms(130*scale);
+	reg_servo_angle(0x06, 120);
+	reg_servo_angle(0x07, 77);
+	reg_servo_angle(0x08, 233);
+	action();
+	
+	//y = 8
+	_delay_ms(20*scale);
+	reg_servo_angle(0x06, 133);
+	reg_servo_angle(0x07, 84);
+	reg_servo_angle(0x08, 222);
+	action();
+}
+
+void front_left_leg_forward(void)
+{
+	int scale = 4;
+	//forward x = -15, z = 9
+	//y = 0
+	_delay_ms(20*scale);
+	reg_servo_angle(9, 195);
+	reg_servo_angle(10, 199);
+	reg_servo_angle(11, 79);
+	action();
+	
+	//y = 4 Z = 6
+	_delay_ms(130*scale);
+	reg_servo_angle(9, 180);
+	reg_servo_angle(10, 223);
+	reg_servo_angle(11, 67);
+	action();
+	
+	//y = 8 z = 6
+	_delay_ms(20*scale);
+	reg_servo_angle(9, 167);
+	reg_servo_angle(10, 216);
+	reg_servo_angle(11, 78);
+	action();
+	
+	//y = 10
+	_delay_ms(20*scale);
+	reg_servo_angle(9, 161);
+	reg_servo_angle(10, 188);
+	reg_servo_angle(11, 101);
+	action();
+	
+	//y = 8
+	_delay_ms(130*scale);
+	reg_servo_angle(9, 167);
+	reg_servo_angle(10, 192);
+	reg_servo_angle(11, 93);
+	action();
+	
+	//y = 4
+	_delay_ms(20*scale);
+	reg_servo_angle(9, 180);
+	reg_servo_angle(10, 197);
+	reg_servo_angle(11, 83);
+	action();
+}
+
+void middle_right_leg_forward(void)
+{
+	int scale = 4;
+	//back x = 15, z = 9
+	//y = -5
+	_delay_ms(20*scale);
+	reg_servo_angle(0x03, 132);
+	reg_servo_angle(0x04, 104);
+	reg_servo_angle(0x05, 215);
+	action();
+	
+	// y = -3, z=6
+	_delay_ms(130*scale);
+	reg_servo_angle(0x03, 139);
+	reg_servo_angle(0x04, 75);
+	reg_servo_angle(0x05, 235);
+	action();
+	
+	//y=1, z=6
+	_delay_ms(20*scale);
+	reg_servo_angle(0x03, 154);
+	reg_servo_angle(0x04, 74);
+	reg_servo_angle(0x05, 237);
+	action();
+	
+	// y= 5
+	_delay_ms(20*scale);
+	reg_servo_angle(0x03, 168);
+	reg_servo_angle(0x04, 104);
+	reg_servo_angle(0x05, 215);
+	action();
+	
+	//y=1, z=9
+	_delay_ms(130*scale);
+	reg_servo_angle(0x03, 154);
+	reg_servo_angle(0x04, 101);
+	reg_servo_angle(0x05, 220);
+	action();
+	
+	//y=-3, z=9
+	_delay_ms(20*scale);
+	reg_servo_angle(0x03, 139);
+	reg_servo_angle(0x04, 102);
+	reg_servo_angle(0x05, 219);
+	action();
+}
+
+void middle_left_leg_forward(void)
+{
+	int scale = 4;
+	//forward x = -15, z = 9
+	//y = 5
+	_delay_ms(20*scale);
+	reg_servo_angle(12, 132);
+	reg_servo_angle(13, 196);
+	reg_servo_angle(14, 85);
+	action();
+	
+	//y = 1 
+	_delay_ms(130*scale);
+	reg_servo_angle(12, 146);
+	reg_servo_angle(13, 199);
+	reg_servo_angle(14, 80);
+	action();
+	
+	//y = -3 
+	_delay_ms(20*scale);
+	reg_servo_angle(12, 161);
+	reg_servo_angle(13, 198);
+	reg_servo_angle(14, 81);
+	action();
+	
+	//y = -5
+	_delay_ms(20*scale);
+	reg_servo_angle(12, 168);
+	reg_servo_angle(13, 196);
+	reg_servo_angle(14, 85);
+	action();
+	
+	//y = -3 Z = 6
+	_delay_ms(130*scale);
+	reg_servo_angle(12, 161);
+	reg_servo_angle(13, 225);
+	reg_servo_angle(14, 65);
+	action();
+	
+	//y = 1 z = 6
+	_delay_ms(20*scale);
+	reg_servo_angle(12, 146);
+	reg_servo_angle(13, 226);
+	reg_servo_angle(14, 63);
+	action();
+}
+
+void back_right_leg_forward(void)
+{
+	int scale = 4;
+	//forward x = 15, z = 9
+	//y = 0
+	_delay_ms(20*scale);
+	reg_servo_angle(0x00, 195);
+	reg_servo_angle(0x01, 101);
+	reg_servo_angle(0x02, 221);
+	action();
+	
+	//y = -2
+	_delay_ms(130*scale);
+	reg_servo_angle(0x00, 187);
+	reg_servo_angle(0x01, 101);
+	reg_servo_angle(0x02, 220);
+	action();
+	
+	//y = -6
+	_delay_ms(20*scale);
+	reg_servo_angle(0x00, 173);
+	reg_servo_angle(0x01, 105);
+	reg_servo_angle(0x02, 213);
+	action();
+	
+	//y = -10
+	_delay_ms(20*scale);
+	reg_servo_angle(0x00, 161);
+	reg_servo_angle(0x01, 112);
+	reg_servo_angle(0x02, 199);
+	action();
+	
+	//back Z = 6
+	//y = -6
+	_delay_ms(130*scale);
+	reg_servo_angle(0x00, 173);
+	reg_servo_angle(0x01, 80);
+	reg_servo_angle(0x02, 228);
+	action();
+	
+	//y = -2
+	_delay_ms(20*scale);
+	reg_servo_angle(0x00, 187);
+	reg_servo_angle(0x01, 75);
+	reg_servo_angle(0x02, 236);
+	action();
+}
+
+void back_left_leg_forward(void)
+{
+	int scale = 4;
+	//forward x = -15, z = 9
+	//y = -10
+	_delay_ms(20*scale);
+	reg_servo_angle(15, 139);
+	reg_servo_angle(16, 188);
+	reg_servo_angle(17, 101);
+	action();
+	
+	//y = -6 Z = 6
+	_delay_ms(130*scale);
+	reg_servo_angle(15, 127);
+	reg_servo_angle(16, 220);
+	reg_servo_angle(17, 72);
+	action();
+	
+	//y = -2 z = 6
+	_delay_ms(20*scale);
+	reg_servo_angle(15, 113);
+	reg_servo_angle(16, 225);
+	reg_servo_angle(17, 64);
+	action();
+	
+	//y = 0
+	_delay_ms(20*scale);
+	reg_servo_angle(15, 105);
+	reg_servo_angle(16, 199);
+	reg_servo_angle(17, 79);
+	action();
+	
+	//y = -2
+	_delay_ms(130*scale);
+	reg_servo_angle(15, 113);
+	reg_servo_angle(16, 199);
+	reg_servo_angle(17, 80);
+	action();
+	
+	//y = -6
+	_delay_ms(20*scale);
+	reg_servo_angle(15, 127);
+	reg_servo_angle(16, 195);
+	reg_servo_angle(17, 87);
+	action();
+}
+
+
+
+/************************************************************************************************************
+*******************************************  HÅRDKODAD GÅNG  ***********************************************
+************************************************************************************************************/
+
+void theos_forward_walk_start(void)
+{
+	back_left_forward_start();
+	middle_right_forward_start();
+	front_left_forward_start();
+	
+	back_right_forward_start();
+	middle_left_forward_start();
+	front_right_forward_start();
+}
+
+void theos_forward_walk_end(void)
+{
+	back_left_forward_end();
+	middle_right_forward_end();
+	front_left_forward_end();
+	
+	back_right_forward_end();
+	middle_left_forward_end();
+	front_right_forward_end();
+}
+
+
+
+		/*
+		int scale = 25;
+		_delay_ms(20*scale);
+		reg_servo_angle(9, 165);
+		reg_servo_angle(10, 221);
+		reg_servo_angle(11, 82);
+		action();
+		
+		_delay_ms(20*scale);
+		reg_servo_angle(9, 178);
+		reg_servo_angle(10, 211);
+		reg_servo_angle(11, 95);
+		action();
+		
+		_delay_ms(20*scale);
+		reg_servo_angle(9, 178);
+		reg_servo_angle(10, 199);
+		reg_servo_angle(11, 102);
+		action();
+		
+		_delay_ms(20*scale);
+		reg_servo_angle(9, 178);
+		reg_servo_angle(10, 199);
+		reg_servo_angle(11, 102);
+		action();
+		
+		_delay_ms(20*scale);
+		reg_servo_angle(9, 165);
+		reg_servo_angle(10, 210);
+		reg_servo_angle(11, 85);
+		action();
+		
+		_delay_ms(20*scale);
+		reg_servo_angle(9, 150);
+		reg_servo_angle(10, 211);
+		reg_servo_angle(11, 82);
+		action();
+		
+		_delay_ms(20*scale);
+		reg_servo_angle(9, 150);
+		reg_servo_angle(10, 211);
+		reg_servo_angle(11, 82);
+		action();
+		
+		_delay_ms(20*scale);
+		reg_servo_angle(9, 150);
+		reg_servo_angle(10, 226);
+		reg_servo_angle(11, 75);
+		action();
+		
+		*/
+
+
+/*
+int main (void)
+{
+	DDRB |= 0x03;
+	led_blink(3);
+	uart_init();
+	LCD_Init();
+
+	set_servo_status_return_level(0xfe, 0x01);
+	set_servo_torque(0xfe, 1023);
+	set_servo_max_speed(0xfe, 130);
+	_delay_ms(2000);
+	
+	const uint8_t *high_voltage_para[2] = {HIGHEST_VOLTAGE_LIMIT, 0x02};
+	const uint8_t *low_voltage_para[2] = {LOWEST_VOLTAGE_LIMIT, 0x01};
+	const uint8_t *temperature_para[2] = {HIGHEST_TEMPERATURE_LIMIT, 0x01};
+
+	char *lcd_value1 = "0";
+	char *lcd_value2 = "0";
+	char *lcd_value3 = "0";
+	uint16_t return_packet6;
+	uint16_t return_packet7;
+	uint16_t return_packet8;
+	LCD_Clear();
+	_delay_ms(2000);
+	
+	while(1)
+	{	
+		send_servo_command(8, READ, 2, high_voltage_para);
+		uint16_t high_volt = servo_read_status_packet();
+		itoa(high_volt, lcd_value1, 10);
+
+		send_servo_command(8, READ, 2, low_voltage_para);
+		uint16_t low_volt = servo_read_status_packet();
+		itoa(low_volt, lcd_value2, 10);
+		
+		send_servo_command(8, READ, 2, temperature_para);
+		uint16_t high_temp = servo_read_status_packet();
+		itoa(high_temp, lcd_value3, 10);
+		
+		LCD_String(lcd_value1);
+		LCD_Command(0x14);
+		LCD_Command(0x14);
+		LCD_Command(0x14);
+		LCD_String(lcd_value2);
+		LCD_Command(0x14);
+		LCD_Command(0x14);
+		LCD_Command(0x14);
+		LCD_String(lcd_value3);
+		_delay_ms(1000);
+		LCD_Clear();
+		
+		//
+		//reg_servo_angle(0, 150);
+		//reg_servo_angle(3, 150);
+		//reg_servo_angle(6, 150);
+		//reg_servo_angle(1, STAND_DEG_01);
+		//reg_servo_angle(4, STAND_DEG_01);
+		//reg_servo_angle(7, STAND_DEG_01);
+		//reg_servo_angle(2, STAND_DEG_02);
+		//reg_servo_angle(5, STAND_DEG_02);
+		//reg_servo_angle(8, STAND_DEG_02);
+		//action();
+		//_delay_ms(1000);
+		//reg_servo_angle(0, 120);
+		//reg_servo_angle(3, 120);
+		//reg_servo_angle(6, 120);
+		//reg_servo_angle(1, (STAND_DEG_01 + 30));
+		//reg_servo_angle(4, (STAND_DEG_01 + 30));
+		//reg_servo_angle(7, (STAND_DEG_01 + 30));
+		//reg_servo_angle(2, (STAND_DEG_02 - 30));
+		//reg_servo_angle(5, (STAND_DEG_02 - 30));
+		//reg_servo_angle(8, (STAND_DEG_02 - 30));
+		//action();
+		//_delay_ms(1000);
+	}
+
+	return 0;
+}
+
+
+*/
+
+
+
+
