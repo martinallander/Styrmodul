@@ -1,6 +1,10 @@
 ﻿#ifndef UART_H_
 #define UART_H_
 
+#ifndef F_CPU
+#define F_CPU 16000000UL							//Sätter CPU-klockan till 16 MHz
+#endif
+
 #include <util/delay.h>
 #include <avr/interrupt.h>
 #include <avr/io.h>

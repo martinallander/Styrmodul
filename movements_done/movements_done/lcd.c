@@ -1,5 +1,4 @@
 #include "lcd.h"
-#define F_CPU 16000000UL					
 
 void LCD_Command( unsigned char cmnd )
 {

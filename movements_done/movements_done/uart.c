@@ -1,6 +1,5 @@
 ﻿#include "uart.h"
 
-
 //Startar Recieve Mode
 void recieve_mode(void)
 {
@@ -17,7 +16,7 @@ void send_mode(void)
 void uart_init(void)
 {
 	UBRR0H = (unsigned char)(BAUDRATE>>8);							//Skifta registret 8 bitar åt höger
-	UBRR0L = (unsigned char)BAUDRATE;								//Sätt baudrate
+	UBRR0L = (unsigned char)BAUDRATE;							//Sätt baudrate
 	UCSR0C = (0<<USBS0)|(1<<UCSZ00)|(1<<UCSZ01)|(0<<UPM01);			//Sätter 1 stoppbit, samt 8-bitars dataformat
 	recieve_mode();
 }

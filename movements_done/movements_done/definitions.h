@@ -5,6 +5,14 @@
 #define F_CPU 16000000UL							//Sätter CPU-klockan till 16 MHz
 #endif 
 
+#define ALL_DATA_REQUEST 0x01
+#define ACC_DATA_REQUEST 0x02
+#define ANGLE_DATA_REQUEST 0x03
+#define DISTANCE_DATA_REQUEST 0x04
+#define IR_DATA_REQUEST 0x05
+
+#define SPI_DATA_OK 0x11
+
 //USART-definitioner
 #define TXD0_READY bit_is_set(UCSR0A,5)
 #define TXD0_FINISHED bit_is_set(UCSR0A,6)
@@ -15,16 +23,6 @@
 //Definiera baudrate
 #define BAUD 1000000
 #define BAUDRATE ((F_CPU)/(BAUD*16UL)-1)			//Sätt baudrate för UBRR enligt formel i databladet
-
-//Definitioner för olika kommandon för servona
-typedef enum ServoCommand
-{
-	PING = 1,
-	READ = 2,
-	WRITE = 3,
-	REG = 4,
-	ACTION = 5
-} ServoCommand;
 
 //Adresser i EEPROM dit olika data skrivs
 #define MAX_SPEED				   0x20

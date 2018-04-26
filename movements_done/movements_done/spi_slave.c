@@ -9,7 +9,7 @@
 
 void spi_init(void)
 {
-	SPCR |= (1 << SPIE);  
+	SPCR |= (1 << SPIE);
 	SPCR |= (1 << SPE);  //Enable SPI
 }
 
@@ -21,7 +21,7 @@ unsigned char spi_tranceiver (unsigned char indata)
 	return SPDR;											//Return received data
 }
 
-void data_direction_init()
+void data_direction_init(void)
 {
-	DDRB = (1<<DDB0)|(1<<DDB1)|(1<<DDB2)|(1<<DDB6);			//Set PB0, PB1, PB2 and PB6 (MISO) as outputs
+	DDRB = (1<<DDB0)|(1<<DDB1)|(1<<DDB2)|(1<<DDB6);			//Set PB0, PB1, PB2 and PB6 (MISO) as outputs	
 }

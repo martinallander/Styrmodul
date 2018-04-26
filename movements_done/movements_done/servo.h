@@ -1,12 +1,17 @@
 ﻿#ifndef SERVO_H_
 #define SERVO_H_
 
-#include <util/delay.h>
-#include <avr/interrupt.h>
-#include <avr/io.h>
-#include <stdlib.h>
-
 #include "uart.h"
+
+//Definitioner för olika kommandon för servona
+typedef enum ServoCommand
+{
+	PING = 1,
+	READ = 2,
+	WRITE = 3,
+	REG = 4,
+	ACTION = 5
+} ServoCommand;
 
 uint16_t servo_read_status_packet(void);
 

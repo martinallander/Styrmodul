@@ -1,12 +1,12 @@
 #ifndef LCD_H
 #define LCD_H
 
-#include <inttypes.h>
-#include <avr/pgmspace.h>
-
 #ifndef F_CPU
 #define F_CPU 16000000UL
 #endif
+
+#include <inttypes.h>
+#include <avr/pgmspace.h>
 
 #include <avr/io.h>
 #include <util/delay.h>
