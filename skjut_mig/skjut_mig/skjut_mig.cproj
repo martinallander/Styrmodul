@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>6.2</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
-    <ProjectGuid>{6e12b81e-bd1c-4a0d-8a9b-fa103d4997bd}</ProjectGuid>
+    <ProjectGuid>{8c82d323-325f-4e27-9978-5b93afa78131}</ProjectGuid>
     <avrdevice>ATmega1284P</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
@@ -12,9 +12,9 @@
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>movements_done</AssemblyName>
-    <Name>movements_done</Name>
-    <RootNamespace>movements_done</RootNamespace>
+    <AssemblyName>skjut_mig</AssemblyName>
+    <Name>skjut_mig</Name>
+    <RootNamespace>skjut_mig</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
@@ -126,31 +126,16 @@
     <Compile Include="led.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="main.c">
+    <Compile Include="new_main.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="servo.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="servo.h">
+    <Compile Include="new_main.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="spi_slave.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="spi_slave.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="uart.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="uart.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="walk.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="walk.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

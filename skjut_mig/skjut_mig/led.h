@@ -1,7 +1,4 @@
-﻿#ifndef LED_H_
-#define LED_H_
-
-#ifndef F_CPU
+﻿#ifndef F_CPU
 #define F_CPU 16000000UL
 #endif
 
@@ -13,4 +10,4 @@ void led_blink_red (uint16_t i);
 
 void led_blink_green (uint16_t i);
 
-#endif
+void led_blink_yellow (uint16_t i);

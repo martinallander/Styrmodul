@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "skjut_mig", "skjut_mig\skjut_mig.cproj", "{8C82D323-325F-4E27-9978-5B93AFA78131}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C82D323-325F-4E27-9978-5B93AFA78131}.Debug|AVR.ActiveCfg = Debug|AVR
+		{8C82D323-325F-4E27-9978-5B93AFA78131}.Debug|AVR.Build.0 = Debug|AVR
+		{8C82D323-325F-4E27-9978-5B93AFA78131}.Release|AVR.ActiveCfg = Release|AVR
+		{8C82D323-325F-4E27-9978-5B93AFA78131}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

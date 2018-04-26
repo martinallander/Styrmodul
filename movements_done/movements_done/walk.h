@@ -1,3 +1,6 @@
+#ifndef WALK_H_
+#define WALK_H_
+
 #include <util/delay.h>
 #include <avr/interrupt.h>
 #include <avr/io.h>
@@ -5,6 +8,8 @@
 
 #include "definitions.h"
 #include "spi_slave.h"
+#include "led.h"
+#include "servo.h"
 
 void stand(void);
 
@@ -36,3 +41,5 @@ void forward_left(void);
 void forward_right(void);
 
 void execute_command(void); 
+
+#endif /* WALK_H_ */

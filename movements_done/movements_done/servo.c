@@ -23,7 +23,6 @@ uint16_t servo_read_status_packet(void)
 	}
 	
 	uint8_t CheckSum = uart_recieve();
-	led_blink(1);													//Signalerar att överföringen är klar
 	return ValueOfParameters;										//Om det är vinklar som hämtas så måste ValueOfParameters multipliceras med (uint16_t)300/1023
 }
 

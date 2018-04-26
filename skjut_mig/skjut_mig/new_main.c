@@ -1,10 +1,179 @@
-﻿#include <stdbool.h>
+﻿#ifndef F_CPU
+#define F_CPU 16000000UL					//Sätt CPU-klockan till 16 MHz
+#endif
 
-#include "walk.h"
-
+#include "new_main.h"
+#include <stdbool.h>
 
 bool is_moving = false;
 bool data_sending = false;
+
+/************************************************************************************************************
+*******************************************  FUNKTIONER FÖR UART  *******************************************
+************************************************************************************************************/
+
+//Startar Recieve Mode
+void recieve_mode(void)
+{
+	UCSR0B = (0<<TXEN0)|(1<<RXEN0);
+}
+
+//Startar Send Mode
+void send_mode(void)
+{
+	UCSR0B = (1<<TXEN0)|(0<<RXEN0);
+}
+
+//Initiera UART
+void uart_init(void)
+{
+	UBRR0H = (unsigned char)(BAUDRATE>>8);							//Skifta registret 8 bitar åt höger
+	UBRR0L = (unsigned char)BAUDRATE;								//Sätt baudrate
+	UCSR0C = (0<<USBS0)|(1<<UCSZ00)|(1<<UCSZ01)|(0<<UPM01);			//Sätter 1 stoppbit, samt 8-bitars dataformat
+	recieve_mode();
+}
+
+//Skicka med UART
+void uart_transmit(unsigned char data)
+{
+	while(!(UCSR0A & (1<<UDRE0)));									//Väntar på att "transmit-buffern" ska bli tom genom att kolla UDREn-flaggan
+	UDR0 = data;												    //Ladda in datan i registret (UDR = Uart Data Register)
+}
+
+//Hämta/Ta emot med UART
+unsigned char uart_recieve(void)
+{
+	while(!(UCSR0A & (1<<RXC0)));									//Väntar på att data ska finnas i "receive-buffern" genom att kolla RXCn-flaggan
+	return UDR0;													//Returnera data
+}
+
+/************************************************************************************************************
+**************************************  FUNKTIONER FÖR GET-KOMMANDON  **************************************
+************************************************************************************************************/
+
+//Läser igenom hela statuspaketet i servot och returnerar efterfrågat parametervärde
+uint16_t servo_read_status_packet(void)
+{
+	uint16_t ValueOfParameters = 0;
+	uint8_t Start1 = uart_recieve();								//Läser igenom de olika delarna av statuspaketet och sparar i variabler. Varje del är 1 byte stor
+	uint8_t Start2 = uart_recieve();								//Statuspaketet inleds med två stycken startbytes
+	uint8_t ID = uart_recieve();
+	uint8_t Length = uart_recieve();
+	uint8_t Error = uart_recieve();
+	uint8_t HelpVariable = 0;
+	
+	while(Length > 2)												//Läser av parametervärdena och sparar värdet i ValueOfParameters
+	{
+		ValueOfParameters = ValueOfParameters + (uart_recieve() << (8*HelpVariable));
+		HelpVariable++;
+		Length--;
+	}
+	
+	uint8_t CheckSum = uart_recieve();
+	led_blink(1);													//Signalerar att överföringen är klar
+	return ValueOfParameters;										//Om det är vinklar som hämtas så måste ValueOfParameters multipliceras med (uint16_t)300/1023
+}
+
+/************************************************************************************************************
+**************************************  FUNKTIONER FÖR SET-KOMMANDON  **************************************
+************************************************************************************************************/
+
+//Skicka ett kommando till ett servo
+void send_servo_command(const uint8_t servoId, const ServoCommand commandByte, const uint8_t numParams, const uint8_t *params)
+{
+	send_mode();
+	UCSR0A = UCSR0A | (0 << 6);										//Gjorde så att vi kunde skicka en instruktion efter en instruktion/read.
+	uart_transmit(0xff);											//Skickar 2 stycken startbytes
+	uart_transmit(0xff);
+	
+	uart_transmit(servoId);											//Skickar servo-ID
+	uint8_t checksum = servoId;
+	
+	uart_transmit(numParams + 2);									//Skickar antal parametrar + 2
+	uart_transmit((uint8_t)commandByte);							//Skickar själva kommandot
+	checksum += numParams + 2 + commandByte;
+	
+	for(uint8_t i = 0; i < numParams; i++)
+	{
+		uart_transmit(params[i]);									//Skickar parametrarna
+		checksum += params[i];
+	}
+	
+	cli();															//Blockerar avbrott
+	uart_transmit(~checksum);										//Skickar checksum med inverterade bitar
+	while(!TXD0_FINISHED) {}										//TXD0 sätts till 1 då all data shiftats ut ifrån USART:en. Väntar tills den sänt klart det sista
+	recieve_mode();
+	sei();															//Tillåter avbrott igen
+}
+
+//Sätt vinkel för ett servon
+void set_servo_angle (const uint8_t servoId, const float angle)
+{
+	const uint16_t angleValue = (uint16_t)(angle * (1023.0 / 300.0));
+	const uint8_t highByte = (uint8_t)((angleValue >> 8) & 0xff);
+	const uint8_t lowByte = (uint8_t)(angleValue & 0xff);
+	const uint8_t params[3] = {GOAL_ANGLE, lowByte, highByte};
+	send_servo_command (servoId, WRITE, 3, params);
+}
+
+//Välj när ett servo ska skicka tillbaka data. returnlevel kan ha tre olika värden:
+//0 - Svara inte på några instruktioner
+//1 - Svara bara på READ_DATA-instruktioner
+//2 - Svara på alla instruktioner
+void set_servo_status_return_level (const uint8_t servoId, const uint8_t returnlevel)
+{
+	const uint8_t params[2] = {RETURN_LEVEL, returnlevel};
+	send_servo_command (servoId, WRITE, 2, params);
+}
+
+//Sätt maximal vinkalhastighet för ett servo
+void set_servo_max_speed (const uint8_t servoId, const uint16_t speedValue)
+{
+	const uint8_t highByte = (uint8_t)((speedValue >> 8) & 0xff);
+	const uint8_t lowByte = (uint8_t)(speedValue & 0xff);
+	const uint8_t params[3] = {MAX_SPEED, lowByte, highByte};
+	send_servo_command(servoId, WRITE, 3, params);
+}
+
+//Sätter gräns för tillåten belastning för ett servo
+void set_servo_torque (const uint8_t servoId, const uint16_t torqueValue)
+{
+	const uint8_t highByte = (uint8_t)((torqueValue >> 8) & 0xff);
+	const uint8_t lowByte = (uint8_t)(torqueValue & 0xff);
+	const uint8_t params[3] = {TORQUE, lowByte, highByte};
+	send_servo_command(servoId, WRITE, 3, params);
+}
+
+//Sätter gränser för tillåtna servovinklar
+void set_servo_angle_limit (const uint8_t servoId, const uint16_t lowerLimit, const uint16_t higherLimit)
+{
+	const uint8_t highByte1 = (uint8_t)((lowerLimit >> 8) & 0xff);
+	const uint8_t lowByte1 = (uint8_t)(lowerLimit & 0xff);
+	const uint8_t params1[3] = {LOWER_ANGLE_LIMIT, lowByte1, highByte1};
+	send_servo_command(servoId, WRITE, 3, params1);
+
+	const uint8_t highByte2 = (uint8_t)((higherLimit >> 8) & 0xff);
+	const uint8_t lowByte2 = (uint8_t)(higherLimit & 0xff);
+	const uint8_t params2[3] = {HIGHER_ANGLE_LIMIT, lowByte2, highByte2};
+	send_servo_command(servoId, WRITE, 3, params2);
+}
+
+//Laddar ett servo med en vinkel
+void reg_servo_angle (const uint8_t servoId, const float angle)
+{
+	const uint16_t angleValue = (uint16_t)(angle * (1023.0 / 300.0));
+	const uint8_t highByte = (uint8_t)((angleValue >> 8) & 0xff);
+	const uint8_t lowByte = (uint8_t)(angleValue & 0xff);
+	const uint8_t params[3] = {GOAL_ANGLE, lowByte, highByte};
+	send_servo_command (servoId, REG, 3, params);
+}
+
+//Utför de instruktioner som servona har laddats med
+void action(void)
+{
+	const uint8_t params[1] = {0};
+	send_servo_command (0xfe, ACTION, 0, params);
+}
 
 /************************************************************************************************************
 ************************************************  RÖRELSEFUNKTIONER  ****************************************
@@ -635,8 +804,36 @@ void forward_right(void)
 }
 
 /************************************************************************************************************
-*********************************************  AVBROTT  *****************************************************
+********************************************  ÖVRIGA FUNKTIONER  ********************************************
 ************************************************************************************************************/
+
+//Initiera standardinställningar för servona
+void servo_init(void)
+{
+	set_servo_status_return_level(0xfe, 0x01);
+	set_servo_torque(0xfe, 1023);
+	set_servo_max_speed(0xfe, 150);
+}
+
+//Funktion för att få LED:en på virkortet att blinka
+void led_blink(uint16_t i)
+{
+	while(i > 0)
+	{
+		PORTB |= (1 << 1);
+		_delay_ms(200);
+		PORTB = (0 << 1);
+		_delay_ms(200);
+		i--;
+	}
+}
+
+
+
+/************************************************************************************************************
+************************************************  HUVUDFUNKTION  ********************************************
+************************************************************************************************************/
+
 
 void execute_command(void)
 {
@@ -655,7 +852,6 @@ void execute_command(void)
 			is_moving = true;
 			forward();
 			is_moving = false;
-			led_blink_red(1);
 			break;
 		
 		case WALK_BACKWARD :
@@ -675,19 +871,19 @@ void execute_command(void)
 			rot_right();
 			is_moving = false;
 			break;
-			
+		
 		case TURN_LEFT :
 			is_moving = true;
 			forward_left();
 			is_moving = false;
 			break;
-			
+		
 		case TURN_RIGHT :
 			is_moving = true;
 			forward_right();
 			is_moving = false;
 			break;
-			
+		
 		case STAND_UP :
 			is_moving = true;
 			stand();
@@ -701,12 +897,31 @@ void execute_command(void)
 	return;
 }
 
-ISR(SPI_STC_vect)  
-{  
+ISR(SPI_STC_vect)
+{
 	//led_blink_green(1);
 	if (!(data_sending))
 	{
 		data_sending = true;
 		execute_command();
 	}
+}
+
+void main_init(void)
+{
+	spi_init();
+	data_direction_init();
+	led_blink(3);
+	uart_init();
+	servo_init();
+}
+
+int main(void)
+{
+	main_init();
+	_delay_ms(2000);
+	stand();
+	_delay_ms(2000);
+	while(1){};
+	return 0;
 }
