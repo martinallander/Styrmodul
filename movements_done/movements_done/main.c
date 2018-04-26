@@ -1,32 +1,13 @@
-#ifndef F_CPU
-#define F_CPU 16000000UL					//Sätt CPU-klockan till 16 MHz
-#endif
-
-#include <avr/io.h>
-#include <avr/interrupt.h>
-#include <util/delay.h>
-
-#include "servo.h"
-#include "uart.h"
 #include "walk.h"
 #include "lcd.h"
-#include "led.h"
-
 
 void main_init(void)
 {
-	DDRB |= 0x03;
+	spi_init();
+	data_direction_init();
+	led_blink_green(1);
 	uart_init();
-	led_blink_green(1);
-	//spi_init();
-	//data_direction_init();
-	//LCD_Init();
-	//LCD_Clear();
 	servo_init();
-	led_blink_green(1);
-	//sei();
-	stand();
-	led_blink_green(1);
 }
 
 /************************************************************************************************************
@@ -37,6 +18,9 @@ void main_init(void)
 int main(void)
 {
 	main_init();
+	_delay_ms(2000);
+	stand();
+	_delay_ms(2000);
 	//DDRB |= 0x03;
 	//uart_init();
 	////led_blink_red(1);

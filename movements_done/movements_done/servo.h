@@ -6,7 +6,6 @@
 #include <avr/io.h>
 #include <stdlib.h>
 
-#include "definitions.h"
 #include "uart.h"
 
 uint16_t servo_read_status_packet(void);

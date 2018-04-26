@@ -1,12 +1,8 @@
 #ifndef WALK_H_
 #define WALK_H_
 
-#include <util/delay.h>
-#include <avr/interrupt.h>
-#include <avr/io.h>
 #include <stdlib.h>
 
-#include "definitions.h"
 #include "spi_slave.h"
 #include "led.h"
 #include "servo.h"
