@@ -4,5 +4,15 @@
 
 lcd.c
 
+led.c
+
 main.c
+
+servo.c
+
+spi_slave.c
+
+uart.c
+
+walk.c
 

@@ -38,7 +38,12 @@ SUBDIRS :=
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../lcd.c \
-../main.c
+../led.c \
+../main.c \
+../servo.c \
+../spi_slave.c \
+../uart.c \
+../walk.c
 
 
 PREPROCESSING_SRCS += 
@@ -49,19 +54,39 @@ ASM_SRCS +=
 
 OBJS +=  \
 lcd.o \
-main.o
+led.o \
+main.o \
+servo.o \
+spi_slave.o \
+uart.o \
+walk.o
 
 OBJS_AS_ARGS +=  \
 lcd.o \
-main.o
+led.o \
+main.o \
+servo.o \
+spi_slave.o \
+uart.o \
+walk.o
 
 C_DEPS +=  \
 lcd.d \
-main.d
+led.d \
+main.d \
+servo.d \
+spi_slave.d \
+uart.d \
+walk.d
 
 C_DEPS_AS_ARGS +=  \
 lcd.d \
-main.d
+led.d \
+main.d \
+servo.d \
+spi_slave.d \
+uart.d \
+walk.d
 
 OUTPUT_FILE_PATH +=main.elf
 
@@ -77,6 +102,16 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
+
+
+
+
+
+
+
+
 
 
 
