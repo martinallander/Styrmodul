@@ -1,4 +1,8 @@
-﻿#include <avr/io.h>
+﻿#ifndef F_CPU
+#define F_CPU 16000000UL							//Sätter CPU-klockan till 16 MHz
+#endif
+
+#include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include "definitions.h"

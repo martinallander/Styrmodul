@@ -1,6 +1,10 @@
 ﻿#ifndef SERVO_H_
 #define SERVO_H_
 
+#ifndef F_CPU
+#define F_CPU 16000000UL							//Sätter CPU-klockan till 16 MHz
+#endif
+
 #include "uart.h"
 
 //Definitioner för olika kommandon för servona

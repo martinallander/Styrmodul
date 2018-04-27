@@ -1,6 +1,10 @@
 #ifndef WALK_H_
 #define WALK_H_
 
+#ifndef F_CPU
+#define F_CPU 16000000UL							//Sätter CPU-klockan till 16 MHz
+#endif
+
 #include <stdlib.h>
 
 #include "spi_slave.h"
