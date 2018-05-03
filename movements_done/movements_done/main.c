@@ -1,4 +1,5 @@
 #include "walk.h"
+#include <stdbool.h>
 
 void main_init(void)
 {
@@ -17,13 +18,10 @@ int main(void)
 	main_init();
 	_delay_ms(2000);
 	stand();
-	_delay_ms(5000);
+	_delay_ms(2000);
+	led_blink_red(1);
 	
-
-	while(1)
-	{
-		led_blink_red(1);
-	}
+	while(1){set_data_sending(false);}
 /*
 	while(1)
 	{

@@ -1,10 +1,9 @@
-﻿#include <stdbool.h>
-
-#include "walk.h"
-
+﻿#include "walk.h"
 
 bool is_moving = false;
 bool data_sending = false;
+
+const int delay_scale = 2;
 
 /************************************************************************************************************
 ************************************************  RÖRELSEFUNKTIONER  ****************************************
@@ -43,8 +42,6 @@ void stand(void)
 //Funktioner som utgör gångstilarna för rörelse framåt och bakåt
 void one(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 153);
 	reg_servo_angle(7, 92);
 	reg_servo_angle(8, 227);
@@ -69,14 +66,12 @@ void one(void)
 	reg_servo_angle(16, 240);
 	reg_servo_angle(17, 62);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void two(void)
 {
-	int scale = 3;
-
 	reg_servo_angle(6, 147);
 	reg_servo_angle(7, 87);
 	reg_servo_angle(8, 237);
@@ -101,14 +96,12 @@ void two(void)
 	reg_servo_angle(16, 240);
 	reg_servo_angle(17, 60);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void three(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 147);
 	reg_servo_angle(7, 87);
 	reg_servo_angle(8, 237);
@@ -133,14 +126,12 @@ void three(void)
 	reg_servo_angle(16, 213);
 	reg_servo_angle(17, 63);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void four(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 147);
 	reg_servo_angle(7, 60);
 	reg_servo_angle(8, 240);
@@ -165,14 +156,12 @@ void four(void)
 	reg_servo_angle(16, 213);
 	reg_servo_angle(17, 63);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void five(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 153);
 	reg_servo_angle(7, 60);
 	reg_servo_angle(8, 238);
@@ -197,14 +186,12 @@ void five(void)
 	reg_servo_angle(16, 208);
 	reg_servo_angle(17, 73);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void six(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 157);
 	reg_servo_angle(7, 60);
 	reg_servo_angle(8, 226);
@@ -229,14 +216,12 @@ void six(void)
 	reg_servo_angle(16, 203);
 	reg_servo_angle(17, 83);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void seven(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 157);
 	reg_servo_angle(7, 97);
 	reg_servo_angle(8, 217);
@@ -261,14 +246,12 @@ void seven(void)
 	reg_servo_angle(16, 203);
 	reg_servo_angle(17, 83);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void eight(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 157);
 	reg_servo_angle(7, 97);
 	reg_servo_angle(8, 217);
@@ -293,7 +276,7 @@ void eight(void)
 	reg_servo_angle(16, 240);
 	reg_servo_angle(17, 74);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
@@ -330,8 +313,6 @@ void backward(void)
 //Funktionerna som utgör gångstilarna rotera höger och rotera vänster
 void one_rot(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 150);
 	reg_servo_angle(7, 90);
 	reg_servo_angle(8, 220);
@@ -356,14 +337,12 @@ void one_rot(void)
 	reg_servo_angle(16, 221);
 	reg_servo_angle(17, 82);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void two_rot(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 150);
 	reg_servo_angle(7, 90);
 	reg_servo_angle(8, 220);
@@ -388,14 +367,12 @@ void two_rot(void)
 	reg_servo_angle(16, 211);
 	reg_servo_angle(17, 95);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void three_rot(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 150);
 	reg_servo_angle(7, 90);
 	reg_servo_angle(8, 220);
@@ -420,14 +397,12 @@ void three_rot(void)
 	reg_servo_angle(16, 199);
 	reg_servo_angle(17, 102);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void four_rot(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 150);
 	reg_servo_angle(7, 70);
 	reg_servo_angle(8, 220);
@@ -452,14 +427,12 @@ void four_rot(void)
 	reg_servo_angle(16, 199);
 	reg_servo_angle(17, 102);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void five_rot(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 150);
 	reg_servo_angle(7, 70);
 	reg_servo_angle(8, 220);
@@ -484,14 +457,12 @@ void five_rot(void)
 	reg_servo_angle(16, 210);
 	reg_servo_angle(17, 85);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void six_rot(void)
 {
-	int scale = 3;
-
 	reg_servo_angle(6, 150);
 	reg_servo_angle(7, 70);
 	reg_servo_angle(8, 220);
@@ -516,14 +487,12 @@ void six_rot(void)
 	reg_servo_angle(16, 211);
 	reg_servo_angle(17, 82);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void seven_rot(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 150);
 	reg_servo_angle(7, 90);
 	reg_servo_angle(8, 220);
@@ -548,14 +517,12 @@ void seven_rot(void)
 	reg_servo_angle(16, 211);
 	reg_servo_angle(17, 82);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
 void eight_rot(void)
 {
-	int scale = 3;
-	
 	reg_servo_angle(6, 150);
 	reg_servo_angle(7, 90);
 	reg_servo_angle(8, 220);
@@ -580,7 +547,7 @@ void eight_rot(void)
 	reg_servo_angle(16, 226);
 	reg_servo_angle(17, 75);
 	
-	_delay_ms(50*scale);
+	_delay_ms(50*delay_scale);
 	action();
 }
 
@@ -655,7 +622,6 @@ void execute_command(void)
 			is_moving = true;
 			forward();
 			is_moving = false;
-			led_blink_red(1);
 			break;
 		
 		case WALK_BACKWARD :
@@ -701,9 +667,13 @@ void execute_command(void)
 	return;
 }
 
+void set_data_sending(bool value)
+{
+	data_sending = value;
+}
+
 ISR(SPI_STC_vect)  
 {  
-	//led_blink_green(1);
 	if (!(data_sending))
 	{
 		data_sending = true;

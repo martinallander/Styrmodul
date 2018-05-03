@@ -6,6 +6,7 @@
 #endif
 
 #include <stdlib.h>
+#include <stdbool.h>
 
 #include "spi_slave.h"
 #include "led.h"
@@ -41,5 +42,6 @@ void forward_left(void);
 void forward_right(void);
 
 void execute_command(void); 
+void set_data_sending(bool value);
 
 #endif /* WALK_H_ */

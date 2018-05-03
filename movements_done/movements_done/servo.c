@@ -136,5 +136,5 @@ void servo_init(void)
 {
 	set_servo_status_return_level(0xfe, 0x01);
 	set_servo_torque(0xfe, 1023);
-	set_servo_max_speed(0xfe, 150);
+	set_servo_max_speed(0xfe, 210);
 }
