@@ -280,6 +280,246 @@ void eight(void)
 	action();
 }
 
+void onen(void)
+{
+	reg_servo_angle(6, 150);
+	reg_servo_angle(7, 94);
+	reg_servo_angle(8, 223);
+	
+	reg_servo_angle(9, 147);
+	reg_servo_angle(10, 240);
+	reg_servo_angle(11, 62);
+	
+	reg_servo_angle(3, 150);
+	reg_servo_angle(4, 64);
+	reg_servo_angle(5, 237);
+	
+	reg_servo_angle(12, 150);
+	reg_servo_angle(13, 208);
+	reg_servo_angle(14, 73);
+	
+	reg_servo_angle(0, 147);
+	reg_servo_angle(1, 92);
+	reg_servo_angle(2, 227);
+	
+	reg_servo_angle(15, 153);
+	reg_servo_angle(16, 240);
+	reg_servo_angle(17, 62);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void twon(void)
+{
+	reg_servo_angle(6, 147);
+	reg_servo_angle(7, 87);
+	reg_servo_angle(8, 237);
+	
+	reg_servo_angle(9, 143);
+	reg_servo_angle(10, 235);
+	reg_servo_angle(11, 74);
+	
+	reg_servo_angle(3, 158);
+	reg_servo_angle(4, 70);
+	reg_servo_angle(5, 236);
+	
+	reg_servo_angle(12, 158);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 143);
+	reg_servo_angle(1, 97);
+	reg_servo_angle(2, 217);
+	
+	reg_servo_angle(15, 147);
+	reg_servo_angle(16, 240);
+	reg_servo_angle(17, 60);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void threen(void)
+{
+	reg_servo_angle(6, 147);
+	reg_servo_angle(7, 87);
+	reg_servo_angle(8, 237);
+	
+	reg_servo_angle(9, 143);
+	reg_servo_angle(10, 203);
+	reg_servo_angle(11, 83);
+	
+	reg_servo_angle(3, 158);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 158);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 143);
+	reg_servo_angle(1, 97);
+	reg_servo_angle(2, 217);
+	
+	reg_servo_angle(15, 147);
+	reg_servo_angle(16, 213);
+	reg_servo_angle(17, 63);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void fourn(void)
+{
+	reg_servo_angle(6, 147);
+	reg_servo_angle(7, 60);
+	reg_servo_angle(8, 240);
+	
+	reg_servo_angle(9, 143);
+	reg_servo_angle(10, 203);
+	reg_servo_angle(11, 83);
+	
+	reg_servo_angle(3, 158);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 158);
+	reg_servo_angle(13, 234);
+	reg_servo_angle(14, 64);
+	
+	reg_servo_angle(0, 143);
+	reg_servo_angle(1, 60);
+	reg_servo_angle(2, 226);
+	
+	reg_servo_angle(15, 147);
+	reg_servo_angle(16, 213);
+	reg_servo_angle(17, 63);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void fiven(void)
+{
+	reg_servo_angle(6, 150);
+	reg_servo_angle(7, 77);
+	reg_servo_angle(8, 233);
+	
+	reg_servo_angle(9, 147);
+	reg_servo_angle(10, 208);
+	reg_servo_angle(11, 73);
+	
+	reg_servo_angle(3, 150);
+	reg_servo_angle(4, 92);
+	reg_servo_angle(5, 227);
+	
+	reg_servo_angle(12, 150);
+	reg_servo_angle(13, 235);
+	reg_servo_angle(14, 63);
+	
+	reg_servo_angle(0, 147);
+	reg_servo_angle(1, 60);
+	reg_servo_angle(2, 238);
+	
+	reg_servo_angle(15, 153);
+	reg_servo_angle(16, 208);
+	reg_servo_angle(17, 73);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void sixn(void)
+{
+	reg_servo_angle(6, 152);
+	reg_servo_angle(7, 88);
+	reg_servo_angle(8, 216);
+	
+	reg_servo_angle(9, 153);
+	reg_servo_angle(10, 213);
+	reg_servo_angle(11, 63);
+	
+	reg_servo_angle(3, 142);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 142);
+	reg_servo_angle(13, 235);
+	reg_servo_angle(14, 64);
+	
+	reg_servo_angle(0, 153);
+	reg_servo_angle(1, 60);
+	reg_servo_angle(2, 240);
+	
+	reg_servo_angle(15, 157);
+	reg_servo_angle(16, 203);
+	reg_servo_angle(17, 83);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void sevenn(void)
+{
+	reg_servo_angle(6, 152);
+	reg_servo_angle(7, 103);
+	reg_servo_angle(8, 207);
+	
+	reg_servo_angle(9, 153);
+	reg_servo_angle(10, 213);
+	reg_servo_angle(11, 63);
+	
+	reg_servo_angle(3, 142);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 142);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 153);
+	reg_servo_angle(1, 87);
+	reg_servo_angle(2, 237);
+	
+	reg_servo_angle(15, 157);
+	reg_servo_angle(16, 203);
+	reg_servo_angle(17, 83);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void eightn(void)
+{
+	reg_servo_angle(6, 152);
+	reg_servo_angle(7, 103);
+	reg_servo_angle(8, 207);
+	
+	reg_servo_angle(9, 153);
+	reg_servo_angle(10, 240);
+	reg_servo_angle(11, 60);
+	
+	reg_servo_angle(3, 142);
+	reg_servo_angle(4, 65);
+	reg_servo_angle(5, 236);
+	
+	reg_servo_angle(12, 142);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 153);
+	reg_servo_angle(1, 87);
+	reg_servo_angle(2, 237);
+	
+	reg_servo_angle(15, 157);
+	reg_servo_angle(16, 240);
+	reg_servo_angle(17, 74);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
 //Funktion för gång framåt
 void forward(void)
 {
@@ -291,6 +531,18 @@ void forward(void)
 	five();
 	six();
 	seven();
+}
+
+void forward_new(void)
+{
+	eightn();
+	onen();
+	twon();
+	threen();
+	fourn();
+	fiven();
+	sixn();
+	sevenn();
 }
 
 //Funktion för gång bakåt
@@ -306,6 +558,513 @@ void backward(void)
 	eight();
 }
 
+/************************************************************************************************************
+*********************************************  SVÄNGA HÖGER OCH VÄNSTER  ************************************
+************************************************************************************************************/
+
+void one_turnl(void)
+{
+	reg_servo_angle(6, 153);
+	reg_servo_angle(7, 92);
+	reg_servo_angle(8, 227);
+	
+	reg_servo_angle(9, 150);
+	reg_servo_angle(10, 240);
+	reg_servo_angle(11, 67);
+	
+	reg_servo_angle(3, 150);
+	reg_servo_angle(4, 64);
+	reg_servo_angle(5, 237);
+	
+	reg_servo_angle(12, 150);
+	reg_servo_angle(13, 208);
+	reg_servo_angle(14, 73);
+	
+	reg_servo_angle(0, 147);
+	reg_servo_angle(1, 92);
+	reg_servo_angle(2, 227);
+	
+	reg_servo_angle(15, 153);
+	reg_servo_angle(16, 240);
+	reg_servo_angle(17, 62);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void two_turnl(void)
+{
+	reg_servo_angle(6, 147);
+	reg_servo_angle(7, 87);
+	reg_servo_angle(8, 237);
+	
+	reg_servo_angle(9, 148);
+	reg_servo_angle(10, 235);
+	reg_servo_angle(11, 73);
+	
+	reg_servo_angle(3, 158);
+	reg_servo_angle(4, 70);
+	reg_servo_angle(5, 236);
+	
+	reg_servo_angle(12, 158);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 143);
+	reg_servo_angle(1, 97);
+	reg_servo_angle(2, 217);
+	
+	reg_servo_angle(15, 147);
+	reg_servo_angle(16, 240);
+	reg_servo_angle(17, 60);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void three_turnl(void)
+{
+	reg_servo_angle(6, 147);
+	reg_servo_angle(7, 87);
+	reg_servo_angle(8, 237);
+	
+	reg_servo_angle(9, 148);
+	reg_servo_angle(10, 197);
+	reg_servo_angle(11, 93);
+	
+	reg_servo_angle(3, 158);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 158);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 143);
+	reg_servo_angle(1, 97);
+	reg_servo_angle(2, 217);
+	
+	reg_servo_angle(15, 147);
+	reg_servo_angle(16, 213);
+	reg_servo_angle(17, 63);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void four_turnl(void)
+{
+	reg_servo_angle(6, 147);
+	reg_servo_angle(7, 60);
+	reg_servo_angle(8, 240);
+	
+	reg_servo_angle(9, 148);
+	reg_servo_angle(10, 197);
+	reg_servo_angle(11, 93);
+	
+	reg_servo_angle(3, 158);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 158);
+	reg_servo_angle(13, 234);
+	reg_servo_angle(14, 64);
+	
+	reg_servo_angle(0, 143);
+	reg_servo_angle(1, 60);
+	reg_servo_angle(2, 226);
+	
+	reg_servo_angle(15, 147);
+	reg_servo_angle(16, 213);
+	reg_servo_angle(17, 63);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void five_turnl(void)
+{
+	reg_servo_angle(6, 153);
+	reg_servo_angle(7, 60);
+	reg_servo_angle(8, 238);
+	
+	reg_servo_angle(9, 150);
+	reg_servo_angle(10, 206);
+	reg_servo_angle(11, 77);
+	
+	reg_servo_angle(3, 150);
+	reg_servo_angle(4, 92);
+	reg_servo_angle(5, 227);
+	
+	reg_servo_angle(12, 150);
+	reg_servo_angle(13, 235);
+	reg_servo_angle(14, 63);
+	
+	reg_servo_angle(0, 147);
+	reg_servo_angle(1, 60);
+	reg_servo_angle(2, 238);
+	
+	reg_servo_angle(15, 153);
+	reg_servo_angle(16, 208);
+	reg_servo_angle(17, 73);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void six_turnl(void)
+{
+	reg_servo_angle(6, 157);
+	reg_servo_angle(7, 60);
+	reg_servo_angle(8, 226);
+	
+	reg_servo_angle(9, 153);
+	reg_servo_angle(10, 213);
+	reg_servo_angle(11, 63);
+	
+	reg_servo_angle(3, 142);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 142);
+	reg_servo_angle(13, 235);
+	reg_servo_angle(14, 64);
+	
+	reg_servo_angle(0, 153);
+	reg_servo_angle(1, 60);
+	reg_servo_angle(2, 240);
+	
+	reg_servo_angle(15, 157);
+	reg_servo_angle(16, 203);
+	reg_servo_angle(17, 83);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void seven_turnl(void)
+{
+	reg_servo_angle(6, 157);
+	reg_servo_angle(7, 97);
+	reg_servo_angle(8, 217);
+	
+	reg_servo_angle(9, 153);
+	reg_servo_angle(10, 213);
+	reg_servo_angle(11, 63);
+	
+	reg_servo_angle(3, 142);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 142);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 153);
+	reg_servo_angle(1, 87);
+	reg_servo_angle(2, 237);
+	
+	reg_servo_angle(15, 157);
+	reg_servo_angle(16, 203);
+	reg_servo_angle(17, 83);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void eight_turnl(void)
+{
+	reg_servo_angle(6, 157);
+	reg_servo_angle(7, 97);
+	reg_servo_angle(8, 217);
+	
+	reg_servo_angle(9, 153);
+	reg_servo_angle(10, 240);
+	reg_servo_angle(11, 60);
+	
+	reg_servo_angle(3, 142);
+	reg_servo_angle(4, 65);
+	reg_servo_angle(5, 236);
+	
+	reg_servo_angle(12, 142);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 153);
+	reg_servo_angle(1, 87);
+	reg_servo_angle(2, 237);
+	
+	reg_servo_angle(15, 157);
+	reg_servo_angle(16, 240);
+	reg_servo_angle(17, 74);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void one_turnr(void)
+{
+	reg_servo_angle(6, 150);
+	reg_servo_angle(7, 94);
+	reg_servo_angle(8, 223);
+	
+	reg_servo_angle(9, 150);
+	reg_servo_angle(10, 240);
+	reg_servo_angle(11, 67);
+	
+	reg_servo_angle(3, 150);
+	reg_servo_angle(4, 64);
+	reg_servo_angle(5, 237);
+	
+	reg_servo_angle(12, 150);
+	reg_servo_angle(13, 208);
+	reg_servo_angle(14, 73);
+	
+	reg_servo_angle(0, 147);
+	reg_servo_angle(1, 92);
+	reg_servo_angle(2, 227);
+	
+	reg_servo_angle(15, 153);
+	reg_servo_angle(16, 240);
+	reg_servo_angle(17, 62);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void two_turnr(void)
+{
+	reg_servo_angle(6, 147);
+	reg_servo_angle(7, 87);
+	reg_servo_angle(8, 237);
+	
+	reg_servo_angle(9, 143);
+	reg_servo_angle(10, 235);
+	reg_servo_angle(11, 74);
+	
+	reg_servo_angle(3, 158);
+	reg_servo_angle(4, 70);
+	reg_servo_angle(5, 236);
+	
+	reg_servo_angle(12, 158);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 143);
+	reg_servo_angle(1, 97);
+	reg_servo_angle(2, 217);
+	
+	reg_servo_angle(15, 147);
+	reg_servo_angle(16, 240);
+	reg_servo_angle(17, 60);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void three_turnr(void)
+{
+	reg_servo_angle(6, 147);
+	reg_servo_angle(7, 87);
+	reg_servo_angle(8, 237);
+	
+	reg_servo_angle(9, 143);
+	reg_servo_angle(10, 203);
+	reg_servo_angle(11, 83);
+	
+	reg_servo_angle(3, 158);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 158);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 143);
+	reg_servo_angle(1, 97);
+	reg_servo_angle(2, 217);
+	
+	reg_servo_angle(15, 147);
+	reg_servo_angle(16, 213);
+	reg_servo_angle(17, 63);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void four_turnr(void)
+{
+	reg_servo_angle(6, 147);
+	reg_servo_angle(7, 60);
+	reg_servo_angle(8, 240);
+	
+	reg_servo_angle(9, 143);
+	reg_servo_angle(10, 203);
+	reg_servo_angle(11, 83);
+	
+	reg_servo_angle(3, 158);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 158);
+	reg_servo_angle(13, 234);
+	reg_servo_angle(14, 64);
+	
+	reg_servo_angle(0, 143);
+	reg_servo_angle(1, 60);
+	reg_servo_angle(2, 226);
+	
+	reg_servo_angle(15, 147);
+	reg_servo_angle(16, 213);
+	reg_servo_angle(17, 63);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void five_turnr(void)
+{
+	reg_servo_angle(6, 150);
+	reg_servo_angle(7, 68);
+	reg_servo_angle(8, 233);
+	
+	reg_servo_angle(9, 150);
+	reg_servo_angle(10, 206);
+	reg_servo_angle(11, 77);
+	
+	reg_servo_angle(3, 150);
+	reg_servo_angle(4, 92);
+	reg_servo_angle(5, 227);
+	
+	reg_servo_angle(12, 150);
+	reg_servo_angle(13, 235);
+	reg_servo_angle(14, 63);
+	
+	reg_servo_angle(0, 147);
+	reg_servo_angle(1, 60);
+	reg_servo_angle(2, 238);
+	
+	reg_servo_angle(15, 153);
+	reg_servo_angle(16, 208);
+	reg_servo_angle(17, 73);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void six_turnr(void)
+{
+	reg_servo_angle(6, 152);
+	reg_servo_angle(7, 68);
+	reg_servo_angle(8, 216);
+	
+	reg_servo_angle(9, 158);
+	reg_servo_angle(10, 208);
+	reg_servo_angle(11, 73);
+	
+	reg_servo_angle(3, 142);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 142);
+	reg_servo_angle(13, 235);
+	reg_servo_angle(14, 64);
+	
+	reg_servo_angle(0, 153);
+	reg_servo_angle(1, 60);
+	reg_servo_angle(2, 240);
+	
+	reg_servo_angle(15, 157);
+	reg_servo_angle(16, 203);
+	reg_servo_angle(17, 83);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void seven_turnr(void)
+{
+	reg_servo_angle(6, 152);
+	reg_servo_angle(7, 103);
+	reg_servo_angle(8, 207);
+	
+	reg_servo_angle(9, 158);
+	reg_servo_angle(10, 208);
+	reg_servo_angle(11, 73);
+	
+	reg_servo_angle(3, 142);
+	reg_servo_angle(4, 93);
+	reg_servo_angle(5, 226);
+	
+	reg_servo_angle(12, 142);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 153);
+	reg_servo_angle(1, 87);
+	reg_servo_angle(2, 237);
+	
+	reg_servo_angle(15, 157);
+	reg_servo_angle(16, 203);
+	reg_servo_angle(17, 83);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void eight_turnr(void)
+{
+	reg_servo_angle(6, 152);
+	reg_servo_angle(7, 103);
+	reg_servo_angle(8, 207);
+	
+	reg_servo_angle(9, 158);
+	reg_servo_angle(10, 235);
+	reg_servo_angle(11, 63);
+	
+	reg_servo_angle(3, 142);
+	reg_servo_angle(4, 65);
+	reg_servo_angle(5, 236);
+	
+	reg_servo_angle(12, 142);
+	reg_servo_angle(13, 207);
+	reg_servo_angle(14, 74);
+	
+	reg_servo_angle(0, 153);
+	reg_servo_angle(1, 87);
+	reg_servo_angle(2, 237);
+	
+	reg_servo_angle(15, 157);
+	reg_servo_angle(16, 240);
+	reg_servo_angle(17, 74);
+	
+	_delay_ms(50*delay_scale);
+	action();
+}
+
+void turn_left(void)
+{
+	eight_turnl();
+	one_turnl();
+	two_turnl();
+	three_turnl();
+	four_turnl();
+	five_turnl();
+	six_turnl();
+	seven_turnl();
+}
+
+void turn_right(void)
+{
+	eight_turnr();
+	one_turnr();
+	two_turnr();
+	three_turnr();
+	four_turnr();
+	five_turnr();
+	six_turnr();
+	seven_turnr();
+}
 /************************************************************************************************************
 *********************************************  ROTERA HÖGER OCH VÄNSTER  ************************************
 ************************************************************************************************************/
@@ -620,7 +1379,7 @@ void execute_command(void)
 	{
 		case WALK_FORWARD :
 			is_moving = true;
-			forward();
+			forward_new();
 			is_moving = false;
 			break;
 		
@@ -644,13 +1403,13 @@ void execute_command(void)
 			
 		case TURN_LEFT :
 			is_moving = true;
-			forward_left();
+			turn_left();
 			is_moving = false;
 			break;
 			
 		case TURN_RIGHT :
 			is_moving = true;
-			forward_right();
+			turn_right();
 			is_moving = false;
 			break;
 			

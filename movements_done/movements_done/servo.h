@@ -31,7 +31,7 @@ void set_servo_torque (const uint8_t servoId, const uint16_t torqueValue);
 
 void set_servo_angle_limit (const uint8_t servoId, const uint16_t lowerLimit, const uint16_t higherLimit);
 
-void reg_servo_angle (const uint8_t servoId, const float angle);
+void reg_servo_angle (const uint8_t servoId, float angle);
 
 void action(void);
 

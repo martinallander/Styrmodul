@@ -111,8 +111,13 @@ void set_servo_angle_limit (const uint8_t servoId, const uint16_t lowerLimit, co
 }
 
 //Laddar ett servo med en vinkel
-void reg_servo_angle (const uint8_t servoId, const float angle)
+void reg_servo_angle (const uint8_t servoId, float angle)
 {
+	//P.g.a. felmonterat servo.
+	if (servoId == 16)
+	{
+		angle = angle - 90;
+	}
 	const uint16_t angleValue = (uint16_t)(angle * (1023.0 / 300.0));
 	const uint8_t highByte = (uint8_t)((angleValue >> 8) & 0xff);
 	const uint8_t lowByte = (uint8_t)(angleValue & 0xff);
@@ -136,5 +141,5 @@ void servo_init(void)
 {
 	set_servo_status_return_level(0xfe, 0x01);
 	set_servo_torque(0xfe, 1023);
-	set_servo_max_speed(0xfe, 210);
+	set_servo_max_speed(0xfe, 150);
 }

@@ -16,18 +16,19 @@ void main_init(void)
 int main(void)
 {
 	main_init();
+	
 	_delay_ms(2000);
 	stand();
-	_delay_ms(2000);
+	_delay_ms(5000);
 	led_blink_red(1);
 	
 	while(1){set_data_sending(false);}
-/*
+	/*
 	while(1)
 	{
-		for(int i = 0; i < 5; i++)
+		for(int i = 0; i < 10; i++)
 		{
-			forward();
+			forward_new();
 		}
 		
 		for(int i = 0; i < 5; i++)
@@ -54,7 +55,7 @@ int main(void)
 		{
 			forward_right();
 		}
-
+		
 	}	
 */
 	return 0;
