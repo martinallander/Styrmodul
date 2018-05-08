@@ -16,10 +16,11 @@ void main_init(void)
 int main(void)
 {
 	main_init();
-	_delay_ms(2000);
+	_delay_ms(1000);
 	stand();
-	_delay_ms(2000);
+	_delay_ms(1000);
 	led_blink_red(1);
+	led_blink_green(1);
 	
 	while(1){set_data_sending(false);}
 /*
