@@ -13,6 +13,7 @@ void main_init(void)
 ************************************************  HUVUDFUNKTION  ********************************************
 ************************************************************************************************************/
 
+
 int main(void)
 {
 	main_init();
@@ -21,13 +22,25 @@ int main(void)
 	_delay_ms(1000);
 	led_blink_red(1);
 	led_blink_green(1);
-	
-    while(1)
+
+
+
+	while(1)
 	{
-	   set_data_sending(false);
+		set_data_sending(false);
 	}
 	
-	/*
+/*
+
+		for (int i = 0; i < 18; i++)
+		{
+			walk_forward_left();
+		}
+		
+
+	
+    
+	
 	for (int i = 0; i < 18; i++)
 	{
 		reg_servo_angle(i, 150);

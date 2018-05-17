@@ -14,7 +14,8 @@ typedef enum ServoCommand
 	READ = 2,
 	WRITE = 3,
 	REG = 4,
-	ACTION = 5
+	ACTION = 5,
+	RESET = 6
 } ServoCommand;
 
 uint16_t servo_read_status_packet(void);

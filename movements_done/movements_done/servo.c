@@ -123,35 +123,40 @@ void reg_servo_angle (const uint8_t servoId, float angle)
 
 void set_servo_max_temp(const uint8_t servoId, const uint16_t tempValue)
 {
-	uint8_t highByte = (uint8_t)((tempValue >> 8) & 0xff);
-	uint8_t lowByte = (uint8_t)(tempValue & 0xff);
-	uint8_t params[3] = {HIGHEST_TEMPERATURE_LIMIT, lowByte, highByte};
-	send_servo_command(servoId, WRITE, 3, params);
+	uint8_t params[2] = {HIGHEST_TEMPERATURE_LIMIT, tempValue};
+	send_servo_command(servoId, WRITE, 2, params);
 }
 
 void set_servo_max_volt(const uint8_t servoId, const uint16_t voltValue)
 {
-	uint8_t highByte = (uint8_t)((voltValue >> 8) & 0xff);
-	uint8_t lowByte = (uint8_t)(voltValue & 0xff);
-	uint8_t params[3] = {HIGHEST_TEMPERATURE_LIMIT, lowByte, highByte};
-	send_servo_command(servoId, WRITE, 3, params);
+	uint8_t params[2] = {HIGHEST_VOLTAGE_LIMIT, voltValue};
+	send_servo_command(servoId, WRITE, 2, params);
 }
 
 void set_alarm_shutdown(const uint8_t servoId, const uint16_t alarmBits)
 {
-	uint8_t highByte = (uint8_t)((alarmBits >> 8) & 0xff);
-	uint8_t lowByte = (uint8_t)(alarmBits & 0xff);
-	uint8_t params[3] = {SHUTDOWN_ID, lowByte, highByte};
-	send_servo_command(servoId, WRITE, 3, params);
+	uint8_t params[2] = {SHUTDOWN_ID, alarmBits};
+	send_servo_command(servoId, WRITE, 2, params);
 }
 
 void set_alarm_led(const uint8_t servoId, const uint16_t alarmBits)
 {
-	uint8_t highByte = (uint8_t)((alarmBits >> 8) & 0xff);
-	uint8_t lowByte = (uint8_t)(alarmBits & 0xff);
-	uint8_t params[3] = {ALARM_LED_ID, lowByte, highByte};
-	send_servo_command(servoId, WRITE, 3, params);
+	uint8_t params[2] = {ALARM_LED_ID, alarmBits};
+	send_servo_command(servoId, WRITE, 2, params);
 }
+
+void set_torque_enable(const uint8_t servoId, const uint16_t torqueBits)
+{
+	uint8_t params[2] = {TORQUE_ENABLE_ID, torqueBits};
+	send_servo_command(servoId, WRITE, 2, params);
+}
+
+void reset_servo(const uint8_t servoId)
+{
+	uint8_t params[1] = {0};
+	send_servo_command(servoId, RESET, 2, params);
+}
+
 
 //Utför de instruktioner som servona har laddats med
 void action(void)
@@ -168,9 +173,10 @@ void action(void)
 void servo_init(void)
 {
 	set_servo_status_return_level(0xfe, 0x00);
-	set_servo_torque(0xfe, 1023);
+	set_servo_torque(0xfe, 800);
 	set_servo_max_speed(0xfe, 150);
 	set_servo_max_temp(0xfe, 70);
 	set_alarm_shutdown(0xfe, 7); 
 	set_alarm_led(0xfe, 4);
+	set_torque_enable(0xfe, 1);
 }

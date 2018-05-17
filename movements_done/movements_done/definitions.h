@@ -27,7 +27,7 @@
 //Adresser i EEPROM dit olika data skrivs
 #define MAX_SPEED				   0x20
 #define GOAL_ANGLE				   0x1e
-#define TORQUE					   0x22
+#define TORQUE					   0x0E
 #define RETURN_LEVEL			   0x10				//När servot ska skicka tillbaka data
 #define LOWER_ANGLE_LIMIT    	   0x06
 #define HIGHER_ANGLE_LIMIT         0x08
@@ -39,6 +39,7 @@
 #define GLOBAL_ID				   0xfe
 #define SHUTDOWN_ID				   0x12
 #define ALARM_LED_ID			   0x11
+#define TORQUE_ENABLE_ID		   0x18
 
 //Startvinklar då roboten står upp
 #define STAND_DEG_00				150

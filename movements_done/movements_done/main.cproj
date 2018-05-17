@@ -111,6 +111,9 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="graveyard.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="definitions.h">
       <SubType>compile</SubType>
     </Compile>

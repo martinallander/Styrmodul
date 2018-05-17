@@ -37,6 +37,7 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../graveyard.c \
 ../lcd.c \
 ../led.c \
 ../main.c \
@@ -53,6 +54,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+graveyard.o \
 lcd.o \
 led.o \
 main.o \
@@ -62,6 +64,7 @@ uart.o \
 walk.o
 
 OBJS_AS_ARGS +=  \
+graveyard.o \
 lcd.o \
 led.o \
 main.o \
@@ -71,6 +74,7 @@ uart.o \
 walk.o
 
 C_DEPS +=  \
+graveyard.d \
 lcd.d \
 led.d \
 main.d \
@@ -80,6 +84,7 @@ uart.d \
 walk.d
 
 C_DEPS_AS_ARGS +=  \
+graveyard.d \
 lcd.d \
 led.d \
 main.d \
@@ -102,6 +107,8 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 
