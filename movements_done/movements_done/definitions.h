@@ -38,6 +38,7 @@
 #define SERVO_ID                   0x03
 #define GLOBAL_ID				   0xfe
 #define SHUTDOWN_ID				   0x12
+#define ALARM_LED_ID			   0x11
 
 //Startvinklar då roboten står upp
 #define STAND_DEG_00				150

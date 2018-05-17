@@ -22,7 +22,6 @@ int main(void)
 	led_blink_red(1);
 	led_blink_green(1);
 	
-	
     while(1)
 	{
 	   set_data_sending(false);

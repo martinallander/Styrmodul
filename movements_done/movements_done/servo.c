@@ -145,6 +145,14 @@ void set_alarm_shutdown(const uint8_t servoId, const uint16_t alarmBits)
 	send_servo_command(servoId, WRITE, 3, params);
 }
 
+void set_alarm_led(const uint8_t servoId, const uint16_t alarmBits)
+{
+	uint8_t highByte = (uint8_t)((alarmBits >> 8) & 0xff);
+	uint8_t lowByte = (uint8_t)(alarmBits & 0xff);
+	uint8_t params[3] = {ALARM_LED_ID, lowByte, highByte};
+	send_servo_command(servoId, WRITE, 3, params);
+}
+
 //Utför de instruktioner som servona har laddats med
 void action(void)
 {
@@ -164,4 +172,5 @@ void servo_init(void)
 	set_servo_max_speed(0xfe, 150);
 	set_servo_max_temp(0xfe, 70);
 	set_alarm_shutdown(0xfe, 7); 
+	set_alarm_led(0xfe, 4);
 }
