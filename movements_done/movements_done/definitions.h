@@ -37,6 +37,7 @@
 #define HIGHEST_TEMPERATURE_LIMIT  0x0b
 #define SERVO_ID                   0x03
 #define GLOBAL_ID				   0xfe
+#define SHUTDOWN_ID				   0x12
 
 //Startvinklar då roboten står upp
 #define STAND_DEG_00				150

@@ -16,47 +16,81 @@ void main_init(void)
 int main(void)
 {
 	main_init();
-	
-	_delay_ms(2000);
+	_delay_ms(1000);
 	stand();
-	_delay_ms(5000);
+	_delay_ms(1000);
 	led_blink_red(1);
+	led_blink_green(1);
 	
-	while(1){set_data_sending(false);}
+	
+    while(1)
+	{
+	   set_data_sending(false);
+	}
+	
 	/*
+	for (int i = 0; i < 18; i++)
+	{
+		reg_servo_angle(i, 150);
+		action();
+		_delay_ms(1000);
+	}
+	
+	
+    while(1)
+	{
+		set_data_sending(false);
+	}
+	
+	
 	while(1)
 	{
-		for(int i = 0; i < 10; i++)
+		for(int i = 0; i < 3; i++)
 		{
 			forward_new();
 		}
-		
-		for(int i = 0; i < 5; i++)
+			
+		for(int i = 0; i < 3; i++)
 		{
 			backward();
 		}
-		
-		for(int i = 0; i < 5; i++)
+			
+		for(int i = 0; i < 3; i++)
 		{
 			rot_left();
 		}
-		
-		for(int i = 0; i < 5; i++)
+			
+		for(int i = 0; i < 3; i++)
 		{
 			rot_right();
 		}
-		
+			
 		for(int i = 0; i < 3; i++)
 		{
-			forward_left();
+			turn_left();
 		}
-		
+			
 		for(int i = 0; i < 3; i++)
 		{
-			forward_right();
+			turn_right();
 		}
 		
-	}	
+		const uint8_t params1[2] = {SERVO_ID, 16};
+		send_servo_command(1, WRITE, 2, params1);
+			
+	}
+	
+
+
+	for (int i = 0; i < 18; i++)
+	{
+		set_servo_angle(i, 150);
+		_delay_ms(1000);
+	}
+	
+	
+
+	
 */
 	return 0;
 }

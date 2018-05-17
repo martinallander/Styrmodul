@@ -33,6 +33,7 @@ uint16_t servo_read_status_packet(void)
 //Skicka ett kommando till ett servo
 void send_servo_command(const uint8_t servoId, const ServoCommand commandByte, const uint8_t numParams, const uint8_t *params)
 {
+	cli();															//Blockerar avbrott
 	send_mode();
 	UCSR0A = UCSR0A | (0 << 6);										//Gjorde så att vi kunde skicka en instruktion efter en instruktion/read.
 	uart_transmit(0xff);											//Skickar 2 stycken startbytes
@@ -51,7 +52,6 @@ void send_servo_command(const uint8_t servoId, const ServoCommand commandByte, c
 		checksum += params[i];
 	}
 	
-	cli();															//Blockerar avbrott
 	uart_transmit(~checksum);										//Skickar checksum med inverterade bitar
 	while(!TXD0_FINISHED) {}										//TXD0 sätts till 1 då all data shiftats ut ifrån USART:en. Väntar tills den sänt klart det sista
 	recieve_mode();
@@ -61,10 +61,10 @@ void send_servo_command(const uint8_t servoId, const ServoCommand commandByte, c
 //Sätt vinkel för ett servon
 void set_servo_angle (const uint8_t servoId, const float angle)
 {
-	const uint16_t angleValue = (uint16_t)(angle * (1023.0 / 300.0));
-	const uint8_t highByte = (uint8_t)((angleValue >> 8) & 0xff);
-	const uint8_t lowByte = (uint8_t)(angleValue & 0xff);
-	const uint8_t params[3] = {GOAL_ANGLE, lowByte, highByte};
+	uint16_t angleValue = (uint16_t)(angle * (1023.0 / 300.0));
+	uint8_t highByte = (uint8_t)((angleValue >> 8) & 0xff);
+	uint8_t lowByte = (uint8_t)(angleValue & 0xff);
+	uint8_t params[3] = {GOAL_ANGLE, lowByte, highByte};
 	send_servo_command (servoId, WRITE, 3, params);
 }
 
@@ -74,61 +74,81 @@ void set_servo_angle (const uint8_t servoId, const float angle)
 //2 - Svara på alla instruktioner
 void set_servo_status_return_level (const uint8_t servoId, const uint8_t returnlevel)
 {
-	const uint8_t params[2] = {RETURN_LEVEL, returnlevel};
+	uint8_t params[2] = {RETURN_LEVEL, returnlevel};
 	send_servo_command (servoId, WRITE, 2, params);
 }
 
 //Sätt maximal vinkalhastighet för ett servo
 void set_servo_max_speed (const uint8_t servoId, const uint16_t speedValue)
 {
-	const uint8_t highByte = (uint8_t)((speedValue >> 8) & 0xff);
-	const uint8_t lowByte = (uint8_t)(speedValue & 0xff);
-	const uint8_t params[3] = {MAX_SPEED, lowByte, highByte};
+	uint8_t highByte = (uint8_t)((speedValue >> 8) & 0xff);
+	uint8_t lowByte = (uint8_t)(speedValue & 0xff);
+	uint8_t params[3] = {MAX_SPEED, lowByte, highByte};
 	send_servo_command(servoId, WRITE, 3, params);
 }
 
 //Sätter gräns för tillåten belastning för ett servo
 void set_servo_torque (const uint8_t servoId, const uint16_t torqueValue)
 {
-	const uint8_t highByte = (uint8_t)((torqueValue >> 8) & 0xff);
-	const uint8_t lowByte = (uint8_t)(torqueValue & 0xff);
-	const uint8_t params[3] = {TORQUE, lowByte, highByte};
+	uint8_t highByte = (uint8_t)((torqueValue >> 8) & 0xff);
+	uint8_t lowByte = (uint8_t)(torqueValue & 0xff);
+	uint8_t params[3] = {TORQUE, lowByte, highByte};
 	send_servo_command(servoId, WRITE, 3, params);
 }
 
 //Sätter gränser för tillåtna servovinklar
 void set_servo_angle_limit (const uint8_t servoId, const uint16_t lowerLimit, const uint16_t higherLimit)
 {
-	const uint8_t highByte1 = (uint8_t)((lowerLimit >> 8) & 0xff);
-	const uint8_t lowByte1 = (uint8_t)(lowerLimit & 0xff);
-	const uint8_t params1[3] = {LOWER_ANGLE_LIMIT, lowByte1, highByte1};
+	uint8_t highByte1 = (uint8_t)((lowerLimit >> 8) & 0xff);
+	uint8_t lowByte1 = (uint8_t)(lowerLimit & 0xff);
+	uint8_t params1[3] = {LOWER_ANGLE_LIMIT, lowByte1, highByte1};
 	send_servo_command(servoId, WRITE, 3, params1);
 
-	const uint8_t highByte2 = (uint8_t)((higherLimit >> 8) & 0xff);
-	const uint8_t lowByte2 = (uint8_t)(higherLimit & 0xff);
-	const uint8_t params2[3] = {HIGHER_ANGLE_LIMIT, lowByte2, highByte2};
+	uint8_t highByte2 = (uint8_t)((higherLimit >> 8) & 0xff);
+	uint8_t lowByte2 = (uint8_t)(higherLimit & 0xff);
+	uint8_t params2[3] = {HIGHER_ANGLE_LIMIT, lowByte2, highByte2};
 	send_servo_command(servoId, WRITE, 3, params2);
 }
 
 //Laddar ett servo med en vinkel
 void reg_servo_angle (const uint8_t servoId, float angle)
 {
-	//P.g.a. felmonterat servo.
-	if (servoId == 16)
-	{
-		angle = angle - 90;
-	}
-	const uint16_t angleValue = (uint16_t)(angle * (1023.0 / 300.0));
-	const uint8_t highByte = (uint8_t)((angleValue >> 8) & 0xff);
-	const uint8_t lowByte = (uint8_t)(angleValue & 0xff);
-	const uint8_t params[3] = {GOAL_ANGLE, lowByte, highByte};
+	uint16_t angleValue = (uint16_t)(angle * (1023.0 / 300.0));
+	uint8_t highByte = (uint8_t)((angleValue >> 8) & 0xff);
+	uint8_t lowByte = (uint8_t)(angleValue & 0xff);
+	uint8_t params[3] = {GOAL_ANGLE, lowByte, highByte};
 	send_servo_command (servoId, REG, 3, params);
+}
+
+
+void set_servo_max_temp(const uint8_t servoId, const uint16_t tempValue)
+{
+	uint8_t highByte = (uint8_t)((tempValue >> 8) & 0xff);
+	uint8_t lowByte = (uint8_t)(tempValue & 0xff);
+	uint8_t params[3] = {HIGHEST_TEMPERATURE_LIMIT, lowByte, highByte};
+	send_servo_command(servoId, WRITE, 3, params);
+}
+
+void set_servo_max_volt(const uint8_t servoId, const uint16_t voltValue)
+{
+	uint8_t highByte = (uint8_t)((voltValue >> 8) & 0xff);
+	uint8_t lowByte = (uint8_t)(voltValue & 0xff);
+	uint8_t params[3] = {HIGHEST_TEMPERATURE_LIMIT, lowByte, highByte};
+	send_servo_command(servoId, WRITE, 3, params);
+}
+
+void set_alarm_shutdown(const uint8_t servoId, const uint16_t alarmBits)
+{
+	uint8_t highByte = (uint8_t)((alarmBits >> 8) & 0xff);
+	uint8_t lowByte = (uint8_t)(alarmBits & 0xff);
+	uint8_t params[3] = {SHUTDOWN_ID, lowByte, highByte};
+	send_servo_command(servoId, WRITE, 3, params);
 }
 
 //Utför de instruktioner som servona har laddats med
 void action(void)
 {
-	const uint8_t params[1] = {0};
+	uint8_t params[1] = {0};
 	send_servo_command (0xfe, ACTION, 0, params);
 }
 
@@ -139,7 +159,9 @@ void action(void)
 //Initiera standardinställningar för servona
 void servo_init(void)
 {
-	set_servo_status_return_level(0xfe, 0x01);
+	set_servo_status_return_level(0xfe, 0x00);
 	set_servo_torque(0xfe, 1023);
 	set_servo_max_speed(0xfe, 150);
+	set_servo_max_temp(0xfe, 70);
+	set_alarm_shutdown(0xfe, 7); 
 }

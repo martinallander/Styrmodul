@@ -24,6 +24,7 @@ void seven(void);
 void eight(void);
 
 void forward(void);
+void forward_new(void);
 void backward(void);
 
 void one_rot(void);
@@ -40,6 +41,9 @@ void rot_right(void);
 
 void forward_left(void);
 void forward_right(void);
+
+void turn_left(void);
+void turn_right(void);
 
 void execute_command(void); 
 void set_data_sending(bool value);

@@ -3,7 +3,7 @@
 bool is_moving = false;
 bool data_sending = false;
 
-const int delay_scale = 2;
+const float delay_scale = 2.5;
 
 /************************************************************************************************************
 ************************************************  RÖRELSEFUNKTIONER  ****************************************
@@ -40,6 +40,7 @@ void stand(void)
 ************************************************************************************************************/
 
 //Funktioner som utgör gångstilarna för rörelse framåt och bakåt
+
 void one(void)
 {
 	reg_servo_angle(6, 153);
@@ -548,7 +549,6 @@ void forward_new(void)
 //Funktion för gång bakåt
 void backward(void)
 {
-	seven();
 	six();
 	five();
 	four();
@@ -556,6 +556,7 @@ void backward(void)
 	two();
 	one();
 	eight();
+	seven();
 }
 
 /************************************************************************************************************
@@ -1374,46 +1375,52 @@ void execute_command(void)
 		data_sending = false;
 		return;
 	}
-	spi_tranceiver(READY);
 	switch(data)
 	{
 		case WALK_FORWARD :
+			spi_tranceiver(READY);
 			is_moving = true;
 			forward_new();
 			is_moving = false;
 			break;
 		
 		case WALK_BACKWARD :
+			spi_tranceiver(READY);
 			is_moving = true;
 			backward();
 			is_moving = false;
 			break;
 		
 		case ROTATE_LEFT :
+			spi_tranceiver(READY);
 			is_moving = true;
 			rot_left();
 			is_moving = false;
 			break;
 		
 		case ROTATE_RIGHT :
+			spi_tranceiver(READY);
 			is_moving = true;
 			rot_right();
 			is_moving = false;
 			break;
 			
 		case TURN_LEFT :
+			spi_tranceiver(READY);
 			is_moving = true;
 			turn_left();
 			is_moving = false;
 			break;
 			
 		case TURN_RIGHT :
+			spi_tranceiver(READY);
 			is_moving = true;
 			turn_right();
 			is_moving = false;
 			break;
 			
 		case STAND_UP :
+			spi_tranceiver(READY);
 			is_moving = true;
 			stand();
 			is_moving = false;
